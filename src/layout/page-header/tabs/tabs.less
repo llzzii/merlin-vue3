@@ -1,0 +1,120 @@
+.ml-tab-views {
+  z-index: 10;
+  height: 32px;
+  line-height: 32px;
+  background-color: #fff;
+  border-bottom: 1px solid #d9d9d9;
+
+  /deep/.ant-tabs {
+    .ant-tabs-nav {
+      padding-top: 2px;
+      height: 30px;
+      margin: 0;
+      background-color: #fff;
+      border: 0;
+      box-shadow: none;
+
+      .ant-tabs-tab {
+        height: 28px;
+        padding-right: 12px;
+        font-size: 12px;
+        padding-left: 12px;
+        line-height: 28px;
+        background-color: #fff;
+        transition: none;
+        .ant-tabs-tab-remove {
+          opacity: 0;
+          padding: 0;
+          margin-left: 4px;
+        }
+        &:hover {
+          .ant-tabs-tab-remove {
+            opacity: 1;
+          }
+        }
+
+        // > div {
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
+      }
+      .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: #fff !important;
+      }
+      .ant-tabs-tab-with-remove {
+        height: 28px;
+        color: inherit;
+        transition: none;
+        margin-left: 2px;
+        margin-right: -4px;
+        &:hover {
+          .ant-tabs-tab-remove {
+            opacity: 1;
+            i {
+              color: rgba(0, 0, 0, 0.8) !important;
+            }
+          }
+        }
+
+        // &:hover {
+        //   svg {
+        //     width: 0.8em;
+        //   }
+        // }
+      }
+
+      .ant-tabs-tab:not(.ant-tabs-tab-active) {
+        &:hover {
+          color: #1890ff;
+        }
+      }
+
+      .ant-tabs-tab-active {
+        position: relative;
+        padding-left: 18px;
+        background: #1890ff;
+        border: 0;
+        transition: none;
+        color: #fff !important;
+
+        &:hover {
+          .ant-tabs-tab-remove {
+            opacity: 1;
+            i {
+              color: #fff !important;
+            }
+          }
+        }
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    .ant-tabs-nav > div:nth-child(1) {
+      padding: 0 6px;
+
+      .ant-tabs-tab {
+        margin-right: 3px !important;
+      }
+    }
+  }
+
+  .ant-tabs-tab:not(.ant-tabs-tab-active) {
+    .anticon-close {
+      font-size: 12px;
+
+      svg {
+        width: 0.6em;
+      }
+    }
+  }
+}
+
+.ant-tabs-tab .ant-tabs-tab-remove .anticon.ml-close-icon {
+  font-size: 16px;
+  display: inline-flex;
+  margin-top: 8px;
+}
