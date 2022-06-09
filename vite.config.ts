@@ -5,8 +5,13 @@ import vue from '@vitejs/plugin-vue';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 import VitePluginCertificate from 'vite-plugin-mkcert';
 import { viteMockServe } from 'vite-plugin-mock';
+import { loadEnv } from 'vite';
+
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
+  const root = process.cwd();
+
+  const { VITE_PORT } = loadEnv(mode, root);
   return {
     plugins: [
       vue(),
@@ -56,7 +61,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       https: true,
       // Listening on all local IPs
       host: true,
-      port: 3200,
+      port: Number(VITE_PORT),
       proxy: {
         // 使用 proxy 实例
         '/basic-api': {
