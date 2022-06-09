@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { VXETable, VxeGridInstance, VxeGridProps } from 'vxe-table';
+  import { VxeGridInstance, VxeGridProps } from 'vxe-table';
   import { ref } from 'vue';
   const props = withDefaults(
     defineProps<{
