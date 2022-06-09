@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Recordable } from 'vite-plugin-mock';
 import { HttpService } from './request';
 const httpService = new HttpService();
@@ -18,4 +19,26 @@ export const getTreeTableData = (params?: Recordable) => {
     method: 'get',
     params,
   });
+};
+
+export const getTreeTableData2 = () => {
+  const api = (params?: Recordable) =>
+    httpService.instance({
+      method: 'get',
+      timeout: 10000,
+      url: `/basic-api/table/getTreeDemoList2`,
+      params,
+    });
+  return useRequest<any[]>(api);
+};
+
+export const getTreeTableData3 = () => {
+  const api = (params?: Recordable) =>
+    httpService.instance({
+      method: 'get',
+      timeout: 10000,
+      url: `/basic-api/table/getTreeDemoList3`,
+      params,
+    });
+  return useRequest<any[]>(api);
 };

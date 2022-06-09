@@ -50,6 +50,42 @@ export const treeList = (keyword) => {
   return result;
 };
 
+export const treeData = (pId) => {
+  const result = [] as Recordable[];
+  for (let index = 1; index < 5; index++) {
+    result.push({
+      title: `选项${index}`,
+      value: `${index}`,
+      key: `${index}`,
+      id: `${index}`,
+      parentId: pId,
+      'hasChild|1': [true, false],
+      endTime: '@datetime',
+      address: '@city()',
+      name: '@cname()',
+    });
+  }
+  return result;
+};
+
+export const treeData2 = () => {
+  const result = [] as Recordable[];
+  for (let index = 1; index < 50; index++) {
+    result.push({
+      title: `选项${index}`,
+      value: `${index}`,
+      key: `${index}`,
+      id: index,
+      parentId: index < 10 ? 0 : index - 10,
+      'hasChild|1': [true, false],
+      endTime: '@datetime',
+      address: '@city()',
+      name: '@cname()',
+    });
+  }
+  return result;
+};
+
 export default [
   {
     url: '/basic-api/table/getTreeDemoList',
@@ -58,6 +94,22 @@ export default [
       const { keyword } = query;
       console.log(keyword);
       return resultSuccess(treeList(keyword));
+    },
+  },
+  {
+    url: '/basic-api/table/getTreeDemoList2',
+    method: 'get',
+    response: ({ query }) => {
+      const { pId } = query;
+
+      return resultSuccess(treeData(pId));
+    },
+  },
+  {
+    url: '/basic-api/table/getTreeDemoList3',
+    method: 'get',
+    response: () => {
+      return resultSuccess(treeData2());
     },
   },
 ] as MockMethod[];

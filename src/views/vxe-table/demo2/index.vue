@@ -1,27 +1,62 @@
 <template>
-  <DefaultTreeTableWapper
-    ref="defaultTableWapper"
-    :columns="columns"
-    :toolbar="toolbar"
-    :showPagination="false"
-    :tableData="tableData"
-    :tableConfig="tableConfig"
-    :tableFunc="tableFunc"
-    :showSeq="false"
-  >
-    <template #toolbar_buttons="{ $table }">
-      <a-space>
-        <a-button @click="clickThis($table)">获取选中行</a-button>
-        <a-button @click="getParent($table)">获取高亮行的父信息</a-button>
-      </a-space>
-    </template>
-    <template #endTime="{ rowData, index }">
-      <span style="color: red">自定义内容:{{ rowData.endTime }}</span>
-    </template>
-  </DefaultTreeTableWapper>
+  <a-row>
+    <a-col :span="8">
+      <h3>后端处理数据</h3>
+      <DefaultTreeTableWapper
+        ref="defaultTableWapper"
+        :columns="columns"
+        :toolbar="toolbar"
+        :showPagination="false"
+        :tableData="tableData"
+        :tableConfig="tableConfig"
+        :tableFunc="tableFunc"
+        :showSeq="false"
+      >
+        <template #toolbar_buttons="{ $table }">
+          <a-space>
+            <a-button @click="clickThis($table)">获取选中行</a-button>
+            <a-button @click="getParent($table)">获取高亮行的父信息</a-button>
+          </a-space>
+        </template>
+        <template #endTime="{ rowData, index }">
+          <span style="color: red">自定义内容:{{ rowData.endTime }}</span>
+        </template>
+      </DefaultTreeTableWapper></a-col
+    >
+    <a-col :span="8">
+      <h3>懒加载</h3>
+      <DefaultTreeTableWapper
+        :columns="columns"
+        :showPagination="false"
+        :tableData="tableData2"
+        :tableConfig="tableConfig2"
+        :tableFunc="tableFunc"
+        :showSeq="false"
+      >
+        <template #endTime="{ rowData, index }">
+          <span style="color: red">自定义内容:{{ rowData.endTime }}</span>
+        </template>
+      </DefaultTreeTableWapper>
+    </a-col>
+    <a-col :span="8">
+      <h3>前端处理数据</h3>
+      <DefaultTreeTableWapper
+        :columns="columns"
+        :showPagination="false"
+        :tableData="tableData3"
+        :tableConfig="tableConfig3"
+        :tableFunc="tableFunc"
+        :showSeq="false"
+      >
+        <template #endTime="{ rowData, index }">
+          <span style="color: red">自定义内容:{{ rowData.endTime }}</span>
+        </template>
+      </DefaultTreeTableWapper></a-col
+    >
+  </a-row>
 </template>
 <script lang="ts" setup>
-  import { getTreeTableData } from '@/api/demo';
+  import { getTreeTableData, getTreeTableData2, getTreeTableData3 } from '@/api/demo';
   import { DefaultTreeTableWapper } from '@/components';
   import { onMounted, reactive, unref, ref, createVNode } from 'vue';
   import _ from 'lodash';
@@ -30,7 +65,13 @@
   import { VxeColumnProps } from 'vxe-table';
 
   const defaultTableWapper = ref({});
+  let tableData2 = ref<any>([]);
+  let tableData3 = ref<any>([]);
+
   const { run, data: tableData } = getTreeTableData({ keyword: 'table' });
+  const { run: run2 } = getTreeTableData2();
+  const { run: run3 } = getTreeTableData3();
+
   const columns: VxeColumnProps = [
     {
       key: 4,
@@ -160,8 +201,72 @@
       }),
     });
   };
+
+  let tableConfig2 = reactive<any>({
+    ...defaultTableConfig,
+    ...{
+      border: 'none',
+      resizable: false,
+      showHeader: false,
+      maxHeight: 300,
+      sortConfig: {
+        showIcon: false,
+      },
+      showSeq: false,
+      showFooter: false,
+      customConfig: {
+        checkMethod: ({ column }) => {
+          console.log('🚀 ~ file: index.vue ~ line 93 ~ column', column);
+          return true;
+        },
+      },
+      treeConfig: {
+        rowField: 'id',
+        parentField: 'parentId',
+        indent: 13,
+        line: true,
+        lazy: 'true',
+        hasChild: 'hasChild',
+        loadMethod: async ({ row }) => {
+          console.log('🚀 ~ file: index.vue ~ line 212 ~ loadMethod: ~ row', row);
+          return await run2(row.id);
+        },
+      },
+    },
+  });
+
+  let tableConfig3 = reactive<any>({
+    ...defaultTableConfig,
+    ...{
+      border: 'none',
+      resizable: false,
+      showHeader: false,
+      maxHeight: 300,
+      sortConfig: {
+        showIcon: false,
+      },
+      showSeq: false,
+      showFooter: false,
+      customConfig: {
+        checkMethod: ({ column }) => {
+          console.log('🚀 ~ file: index.vue ~ line 93 ~ column', column);
+          return true;
+        },
+      },
+      treeConfig: {
+        transform: true,
+        rowField: 'id',
+        parentField: 'parentId',
+        indent: 13,
+      },
+    },
+  });
+
   onMounted(async () => {
     await run();
+    tableData2.value = await run2({ pId: '' });
+    tableData3.value = await run3();
+    console.log('🚀 ~ file: index.vue ~ line 222 ~ onMounted ~ tableData2', tableData2);
   });
 </script>
 <style scoped>

@@ -167,6 +167,7 @@ export class HttpService {
       data.value =
         option.onFinish && option.onFinish(data.value) ? option.onFinish(data.value) : data.value;
       option.polling && _.delay(run, option.pollingInterval as number);
+      return data.value;
     };
     // 自动调用
     option.autoRun && run();
