@@ -15,8 +15,8 @@ export const VxeDemo: AppRouteRecordRaw = {
   children: [
     {
       path: 'demo1',
-      name: 'demo1',
-      component: import('@/views/vxe-table/demo1/index.vue'),
+      name: 'vxeDemo1',
+      component: () => import('@/views/vxe-table/demo1/index.vue'),
       meta: {
         title: '普通列表',
         hideBreadcrumb: false,
@@ -26,8 +26,8 @@ export const VxeDemo: AppRouteRecordRaw = {
     },
     {
       path: 'demo2',
-      name: 'demo2',
-      component: import('@/views/vxe-table/demo2/index.vue'),
+      name: 'vxeDemo2',
+      component: () => import('@/views/vxe-table/demo2/index.vue'),
       meta: {
         title: '树列表',
         hideBreadcrumb: false,
@@ -37,7 +37,7 @@ export const VxeDemo: AppRouteRecordRaw = {
     },
     {
       path: 'demo3',
-      name: 'demo3',
+      name: 'vxeDemo3',
       component: () => import('@/views/vxe-table/demo3/index.vue'),
       meta: {
         title: '可编辑列表',
@@ -59,7 +59,7 @@ export const VxeDemo: AppRouteRecordRaw = {
     },
     {
       path: 'demo5',
-      name: 'demo5',
+      name: 'vxeDemo5',
       component: () => import('@/views/vxe-table/demo5/index.vue'),
       meta: {
         title: 'AntDesignTable',

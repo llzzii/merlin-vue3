@@ -15,7 +15,7 @@ export const DragDemo: AppRouteRecordRaw = {
   children: [
     {
       path: 'demo1',
-      name: 'demo1',
+      name: 'dragDemo1',
       component: import('@/views/drag/demo/index.vue'),
       meta: {
         title: 'vueUse拖拽',
@@ -26,7 +26,7 @@ export const DragDemo: AppRouteRecordRaw = {
     },
     {
       path: 'demo2',
-      name: 'demo2',
+      name: 'dragDemo2',
       component: import('@/views/drag/demo2/index.vue'),
       meta: {
         title: 'vueUse放入',

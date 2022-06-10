@@ -2,7 +2,7 @@
   <div class="ml-menu">
     <a-menu
       v-model:open-keys="menuState.openKeys"
-      v-model:selected-keys="selectedKeys"
+      v-model:selected-keys="menuState.selectedKeys"
       mode="inline"
       theme="dark"
       @click="menuClick"
@@ -32,30 +32,21 @@
   import { findNode, getAllParentPath } from '@/utils';
   import { listenerRouteChange } from '@/logics/mitt/routeChange';
   import { useMenuStore } from '@/stores/modules/menu';
+  const currentRoute = useRoute();
 
   const menuState = reactive<MenuState>({
     defaultSelectedKeys: ['/dashboard'],
     openKeys: [],
-    selectedKeys: ['/dashboard'],
+    selectedKeys: [currentRoute.fullPath],
     collapsedOpenKeys: [],
   });
   const { run, data: menus } = getMenu();
   const router = useRouter();
-  const currentRoute = useRoute();
   const menuStore = useMenuStore();
   const currentActiveMenu = ref('');
 
-  const selectedKeys = computed(() => [currentRoute.fullPath]);
+  // menuState.selectedKeys = computed(() => [currentRoute.fullPath]);
 
-  watch(
-    () => selectedKeys.value,
-    (n) => {
-      console.log('🚀 ~ file: index.vue ~ line 53 ~ n', n);
-    },
-    {
-      immediate: true,
-    },
-  );
   const menuClick = ({ key }: { key: string; keyPath: string[] }) => {
     router.push(key);
   };
