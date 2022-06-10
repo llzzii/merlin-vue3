@@ -57,5 +57,16 @@ export const VxeDemo: AppRouteRecordRaw = {
         hideTab: false,
       },
     },
+    {
+      path: 'demo5',
+      name: 'demo5',
+      component: () => import('@/views/vxe-table/demo5/index.vue'),
+      meta: {
+        title: 'AntDesignTable',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
   ],
 };

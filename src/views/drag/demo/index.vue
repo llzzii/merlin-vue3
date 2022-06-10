@@ -55,8 +55,18 @@
       if (!unref(dRightEl)) return;
       const top = unref(dRightEl).getBoundingClientRect().top;
       const left = unref(dRightEl).getBoundingClientRect().left;
-      rstyle.left = unref(rx) - left + 'px';
-      rstyle.top = unref(ry) - top + 'px';
+      const w =
+        unref(dRightEl).getBoundingClientRect().width -
+        unref(rightEl).getBoundingClientRect().width;
+      const h =
+        unref(dRightEl).getBoundingClientRect().height -
+        unref(rightEl).getBoundingClientRect().height;
+      const afterx = unref(rx) - left;
+      const aftery = unref(ry) - top;
+      if (afterx > 0 && aftery > 0 && afterx < w && aftery < h) {
+        rstyle.left = unref(rx) - left + 'px';
+        rstyle.top = unref(ry) - top + 'px';
+      }
     },
   });
 </script>

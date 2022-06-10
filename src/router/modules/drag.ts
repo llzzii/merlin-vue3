@@ -18,7 +18,18 @@ export const DragDemo: AppRouteRecordRaw = {
       name: 'demo1',
       component: import('@/views/drag/demo/index.vue'),
       meta: {
-        title: 'vueUse',
+        title: 'vueUse拖拽',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
+    {
+      path: 'demo2',
+      name: 'demo2',
+      component: import('@/views/drag/demo2/index.vue'),
+      meta: {
+        title: 'vueUse放入',
         hideBreadcrumb: false,
         hideMenu: false,
         hideTab: false,
