@@ -57,6 +57,13 @@ const demos = {
       path: '/vxe-demo/demo4',
       children: [],
     },
+    {
+      id: '3-5',
+      icon: 'icon-daimashili',
+      name: '拖拽',
+      path: '/drag/demo1',
+      children: [],
+    },
   ],
 };
 const system = {
