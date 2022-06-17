@@ -62,7 +62,6 @@
   import _ from 'lodash';
   import { defaultTableConfig, defaultTableFunc } from '@/constrant/table.constrant';
   import { Modal } from 'ant-design-vue';
-  import { VxeColumnProps } from 'vxe-table';
 
   const defaultTableWapper = ref({});
   let tableData2 = ref<any>([]);
@@ -72,7 +71,7 @@
   const { run: run2 } = getTreeTableData2();
   const { run: run3 } = getTreeTableData3();
 
-  const columns: VxeColumnProps = [
+  const columns = [
     {
       key: 4,
       field: 'name',

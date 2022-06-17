@@ -51,10 +51,6 @@
       fullPath,
       meta: { hideTab, currentActiveMenu },
     } = route;
-    console.log(
-      '🚀 ~ file: index.vue ~ line 66 ~ listenerRouteChange ~  activeKeyRef.value',
-      activeKeyRef.value,
-    );
 
     if (!route || name === REDIRECT_NAME) {
       return;
@@ -79,14 +75,12 @@
   const handleChange = (activeKey: any) => {
     activeKeyRef.value = activeKey;
     const { push, replace } = router;
-    console.log('🚀 ~ file: index.vue ~ line 86 ~ handleChange ~ getTabsState', getTabsState);
 
     push(activeKey);
   };
 
   // Close the current tab
   const handleEdit = (targetKey: string) => {
-    console.log('🚀 ~ file: index.vue ~ line 99 ~ handleEdit ~ menuStore', menuStore);
     menuStore.closeTabByKey(targetKey, router);
   };
 </script>

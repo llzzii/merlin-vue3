@@ -150,7 +150,7 @@
   let tableConfig = reactive<any>({
     ...defaultTableConfig,
     ...{
-      maxHeight: 300,
+      maxHeight: 600,
       showFooter: true,
       sortConfig: {
         showIcon: false,

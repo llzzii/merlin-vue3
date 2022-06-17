@@ -137,6 +137,14 @@
     defaultTableFunc,
   } from '../../constrant/table.constrant';
   import _ from 'lodash';
+  import {
+    VxeColumnProps,
+    VxePagerProps,
+    VxeTableInstance,
+    VxeTableProps,
+    VxeToolbarInstance,
+    VxeToolbarProps,
+  } from 'vxe-table';
 
   const props = withDefaults(
     defineProps<{

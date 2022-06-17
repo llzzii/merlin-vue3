@@ -36,7 +36,6 @@ export class HttpService {
     autoRun: true,
     // 调用完毕可执行的函数
     onFinish: (e: any) => {
-      console.log('🚀 ~ file: request.ts ~ line 39 ~ HttpService ~ e', e);
       if (e.code === 0) {
         return e.result;
       } else {
@@ -161,7 +160,6 @@ export class HttpService {
       // const option = Object.assign({}, this.defaultOption, options);
       loading.value = true;
       data.value = await promiseRequest(params);
-      console.log('🚀 ~ file: request.ts ~ line 131 ~ HttpService ~ run ~ data.value', data.value);
 
       loading.value = false;
       data.value =

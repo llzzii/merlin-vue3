@@ -78,6 +78,20 @@ const demos = {
       path: '/drag/demo2',
       children: [],
     },
+    {
+      id: '3-7',
+      icon: 'icon-daimashili',
+      name: '拖拽布局',
+      path: '/drag/demo3',
+      children: [],
+    },
+    {
+      id: '3-8',
+      icon: 'icon-daimashili',
+      name: '字体',
+      path: '/drag/demo4',
+      children: [],
+    },
   ],
 };
 const system = {

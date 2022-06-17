@@ -110,7 +110,6 @@ export const useMenuStore = defineStore({
       }
       this.cacheTabList = cacheMap;
       sessionCache().set('tabList', this.tabList);
-      console.log('🚀 ~ file: menu.ts ~ line 116 ~ updateCacheTab ~ this.tabList', this.tabList);
     },
 
     async closeTab(tab: RouteLocationNormalized, router: Router) {

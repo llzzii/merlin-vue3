@@ -77,6 +77,8 @@
     regionList,
   } from './config';
   let handelTableDataValue = reactive<Array<any>>([]);
+  const { run, data: tableData } = getTableData();
+
   const handelTableData = () => {
     if (!unref(tableData)) return [];
     pagination.total = unref(tableData).length;
@@ -100,7 +102,6 @@
       handelTableData();
     },
   });
-  const { run, data: tableData } = getTableData();
 
   onMounted(async () => {
     await run();

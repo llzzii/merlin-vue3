@@ -35,5 +35,27 @@ export const DragDemo: AppRouteRecordRaw = {
         hideTab: false,
       },
     },
+    {
+      path: 'demo3',
+      name: 'dragDemo3',
+      component: import('@/views/drag/demo3/index.vue'),
+      meta: {
+        title: '拖拽布局',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
+    {
+      path: 'demo4',
+      name: 'dragDemo4',
+      component: import('@/views/cnchar/index.vue'),
+      meta: {
+        title: '字体',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
   ],
 };

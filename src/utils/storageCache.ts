@@ -1,16 +1,16 @@
-import { decodeByBase64, encryptByBase64 } from ".";
-import { isNullOrUnDef } from "./is";
+import { decodeByBase64, encryptByBase64 } from '.';
+import { isNullOrUnDef } from './is';
 
 class WebStorage {
   private storage: Storage = window.sessionStorage;
-  private prefixKey: string = "ml";
-  private isEncryptToBase64: boolean = false;
+  private prefixKey = 'ml';
+  private isEncryptToBase64 = false;
   constructor(
     opt = {
       storage: window.sessionStorage,
-      prefixKey: "ml",
+      prefixKey: 'ml',
       isEncryptToBase64: false,
-    }
+    },
   ) {
     this.storage = opt.storage;
     this.prefixKey = opt.prefixKey;
@@ -41,21 +41,15 @@ class WebStorage {
     const storageData = JSON.stringify({
       value: value,
       time: Date.now(),
-      expire: !isNullOrUnDef(expire)
-        ? new Date().getTime() + expire * 1000
-        : null,
+      expire: !isNullOrUnDef(expire) ? new Date().getTime() + expire * 1000 : null,
     });
-    const stringData = this.isEncryptToBase64
-      ? encryptByBase64(storageData)
-      : storageData;
+    const stringData = this.isEncryptToBase64 ? encryptByBase64(storageData) : storageData;
     this.storage.setItem(this.getKey(key), stringData);
     console.log(
       `🚀 ~ file: storageCache.ts ~ WebStorage ~ set ~ size ${
-        this.storage === window.sessionStorage
-          ? "sessionStorage"
-          : "localStorage"
+        this.storage === window.sessionStorage ? 'sessionStorage' : 'localStorage'
       }已使用：`,
-      this.size()
+      this.size(),
     );
   }
 
@@ -92,30 +86,30 @@ class WebStorage {
   }
 
   size() {
-    var size = 0;
+    let size = 0;
     if (this.storage) {
-      for (let item in this.storage) {
+      for (const item in this.storage) {
         if (this.storage.hasOwnProperty(item)) {
           size += this.storage.getItem(item)?.length || 0;
         }
       }
-      return (size / 1024 / 1024).toFixed(4) + "MB";
+      return (size / 1024 / 1024).toFixed(4) + 'MB';
     }
   }
 }
 
 export const sessionCache = (
   opt = {
-    prefixKey: "ml",
+    prefixKey: 'ml',
     storage: sessionStorage,
     isEncryptToBase64: false,
-  }
+  },
 ) => {
   return new WebStorage(opt);
 };
 
 export const localCache = (
-  opt = { prefixKey: "ml", storage: localStorage, isEncryptToBase64: true }
+  opt = { prefixKey: 'ml', storage: localStorage, isEncryptToBase64: true },
 ) => {
   return new WebStorage(opt);
 };

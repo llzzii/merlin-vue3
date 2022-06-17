@@ -70,7 +70,6 @@
   async function handleMenuChange(route?: RouteLocationNormalizedLoaded) {
     const path =
       (route || unref(currentRoute)).meta?.currentActiveMenu || (route || unref(currentRoute)).path;
-    console.log('🚀 ~ file: index.vue ~ line 83 ~ handleMenuChange ~ path', path);
     setOpenKeys(path);
     if (unref(currentActiveMenu)) return;
     if (!unref(menus)) {
@@ -78,10 +77,6 @@
     }
     const parentPaths = await getAllParentPath(unref(menus), path as string);
     menuState.selectedKeys = parentPaths;
-    console.log(
-      '🚀 ~ file: BasicMenu.vue ~ line 148 ~ handleMenuChange ~ parentPaths',
-      parentPaths,
-    );
   }
 
   onMounted(async () => {
@@ -89,7 +84,6 @@
     menuStore.setMenuData(unref(menus));
     setOpenKeys(currentRoute.path);
     const openNode = findNode(unref(menus), (n) => n.path === '/dashboard');
-    console.log('🚀 ~ file: index.vue ~ line 65 ~ onMounted ~ openNode', openNode);
   });
 </script>
 <style scoped lang="less">
