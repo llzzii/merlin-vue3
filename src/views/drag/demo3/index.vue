@@ -1,6 +1,6 @@
 <template>
   <GridLayout v-model:layout="testLayout" :responsive="true">
-    <GridLayoutItem
+    <GridItem
       v-for="item in testLayout"
       :key="item.i"
       :static="item.static"
@@ -20,11 +20,12 @@
       <!--<custom-drag-element :text="item.i"></custom-drag-element>-->
       {{ item.i }}
       <!--<button @click="clicked">CLICK ME!</button>-->
-    </GridLayoutItem>
+    </GridItem>
   </GridLayout>
 </template>
 
 <script lang="ts" setup>
+  import { GridLayout, GridItem } from '@/components';
   let testLayout = [
     {
       x: 0,
@@ -38,7 +39,7 @@
       minY: 0,
       maxY: 2,
     },
-    { x: 2, y: 0, w: 2, h: 4, i: '1', resizable: null, draggable: null, static: true },
+    { x: 2, y: 0, w: 2, h: 4, i: '1', resizable: null, draggable: null, static: false },
     {
       x: 4,
       y: 0,
@@ -60,7 +61,7 @@
     { x: 0, y: 5, w: 2, h: 5, i: '6', resizable: false, draggable: false, static: false },
     { x: 2, y: 5, w: 2, h: 5, i: '7', resizable: false, draggable: false, static: false },
     { x: 4, y: 5, w: 2, h: 5, i: '8', resizable: false, draggable: false, static: false },
-    { x: 6, y: 3, w: 2, h: 4, i: '9', resizable: false, draggable: false, static: true },
+    { x: 6, y: 3, w: 2, h: 4, i: '9', resizable: false, draggable: false, static: false },
     { x: 8, y: 4, w: 2, h: 4, i: '10', resizable: false, draggable: false, static: false },
     {
       x: 10,

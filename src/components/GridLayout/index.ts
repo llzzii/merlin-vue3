@@ -1,4 +1,4 @@
-import GridItem from './GridItem.vue';
+import GridItem from './GridLayoutItem.vue';
 import GridLayout from './GridLayout.vue';
 // import ResponsiveGridLayout from './ResponsiveGridLayout.vue';
 

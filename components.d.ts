@@ -31,6 +31,7 @@ declare module '@vue/runtime-core' {
     DropContainer: typeof import('./src/components/DropContainer/index.vue')['default']
     GridItem: typeof import('./src/components/GridLayout/GridItem.vue')['default']
     GridLayout: typeof import('./src/components/GridLayout/GridLayout.vue')['default']
+    GridLayout2: typeof import('./src/components/GridLayout/GridLayout2.vue')['default']
     GridLayoutItem: typeof import('./src/components/GridLayout/GridLayoutItem.vue')['default']
     GridWapper: typeof import('./src/components/TableWapper/GridWapper.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']

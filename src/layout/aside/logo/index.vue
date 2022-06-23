@@ -7,36 +7,36 @@
   </div>
 </template>
 <script lang="ts" setup name="Logo">
-const { collapsed } = defineProps(["collapsed"]);
-console.log(collapsed);
+  const { collapsed } = defineProps(['collapsed']);
+  console.log(collapsed);
 </script>
 <script lang="ts">
-export default {
-  name: "Logo",
-};
+  export default {
+    name: 'Logo',
+  };
 </script>
 
 <style lang="less" scoped>
-.logo {
-  display: flex;
-  flex-shrink: 0;
-  height: 48px;
-  padding: 10px 4px 10px 25px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  &__img {
-    width: 36px;
-    height: 36px;
-  }
+  .logo {
+    display: flex;
+    flex-shrink: 0;
+    height: 48px;
+    padding: 10px 4px 10px 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &__img {
+      width: 36px;
+      height: 36px;
+    }
 
-  &__title {
-    font-size: 16px;
-    font-weight: 700;
-    transition: all 0.5s;
-    line-height: normal;
-    color: #fff;
+    &__title {
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.5s;
+      line-height: normal;
+      color: #fff;
+    }
   }
-}
 </style>

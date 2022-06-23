@@ -107,7 +107,7 @@
         :current-page="pagination.currentPage"
         :page-size="pagination.pageSize"
         :total="pagination.total"
-        @page-change="pagination.onTableChange"
+        @page-change="pagination?.onTableChange"
         style="height: 48px !important"
       />
     </template>
@@ -122,6 +122,16 @@
   } from '../../constrant/table.constrant';
   import _ from 'lodash';
 
+  import {
+    VxeColumnProps,
+    VxePagerProps,
+    VxeTableInstance,
+    VxeTableListeners,
+    VxeTableProps,
+    VxeToolbarInstance,
+    VxeToolbarProps,
+  } from 'vxe-table';
+
   const props = withDefaults(
     defineProps<{
       tableData: Array<any>;
@@ -129,23 +139,23 @@
       loading?: boolean;
       showSeq?: boolean;
       pagination?: VxePagerProps;
-      toolbar?: VxeToolbarProps;
+      toolbar?: VxeToolbarProps | null;
       tableConfig?: VxeTableProps;
       showPagination?: boolean;
       showCheckbox?: boolean;
-      tableFunc?: VxeTableProps;
+      tableFunc?: VxeTableListeners;
     }>(),
     {
       tableData: () => [],
-      columns: () => [],
+      columns: () => [] as VxeColumnProps,
       loading: false,
       showSeq: true,
       showCheckbox: true,
       showPagination: true,
-      pagination: defaultPagination,
+      pagination: () => defaultPagination,
       toolbar: null,
-      tableConfig: defaultTableConfig,
-      tableFunc: defaultTableFunc,
+      tableConfig: () => defaultTableConfig,
+      tableFunc: () => defaultTableFunc,
     },
   );
   let xTable = ref({} as VxeTableInstance);

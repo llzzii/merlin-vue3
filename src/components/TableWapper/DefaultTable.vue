@@ -141,6 +141,7 @@
     VxeColumnProps,
     VxePagerProps,
     VxeTableInstance,
+    VxeTableListeners,
     VxeTableProps,
     VxeToolbarInstance,
     VxeToolbarProps,
@@ -153,23 +154,23 @@
       loading?: boolean;
       showSeq?: boolean;
       pagination?: VxePagerProps;
-      toolbar?: VxeToolbarProps;
+      toolbar?: VxeToolbarProps | null;
       tableConfig?: VxeTableProps;
       showPagination?: boolean;
       showCheckbox?: boolean;
-      tableFunc?: VxeTableProps;
+      tableFunc?: VxeTableListeners;
     }>(),
     {
       tableData: () => [],
-      columns: () => [],
+      columns: () => [] as VxeColumnProps,
       loading: false,
       showSeq: true,
       showCheckbox: true,
       showPagination: true,
-      pagination: defaultPagination,
-      toolbar: null,
-      tableConfig: defaultTableConfig,
-      tableFunc: defaultTableFunc,
+      pagination: () => defaultPagination,
+      toolbar: () => null,
+      tableConfig: () => defaultTableConfig,
+      tableFunc: () => defaultTableFunc,
     },
   );
   let xTable = ref({} as VxeTableInstance);

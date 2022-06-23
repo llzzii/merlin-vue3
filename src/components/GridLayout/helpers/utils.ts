@@ -1,3 +1,5 @@
+import mitt from '@/utils/mitt';
+
 export type LayoutItem = {
   i: string;
   x: number;
@@ -86,7 +88,9 @@ export function compact(layout: Layout, verticalCompact: boolean): Layout {
 
   for (let i = 0, len = sorted.length; i < len; i++) {
     let l = sorted[i];
-
+    if (l.i == '4') {
+      console.log(l, '{{{{{{{{{]');
+    }
     // Don't move static elements
     if (!l.static) {
       l = compactItem(compareWith, l, verticalCompact);
@@ -420,3 +424,4 @@ export function validateLayout(layout: Layout, contextName = 'Layout'): void {
     }
   }
 }
+export const gridEmitter = mitt();
