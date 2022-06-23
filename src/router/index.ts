@@ -2,6 +2,7 @@ import Dashboard from '@/views/dashboard/index.vue';
 import { Recordable } from 'vite-plugin-mock';
 import { defineComponent } from 'vue';
 import { RouteMeta, RouteRecordRaw } from 'vue-router';
+import { OtherDemo } from './modules/demo';
 import { DragDemo } from './modules/drag';
 import { PAGE_NOT_FOUND_ROUTE } from './modules/error';
 import { Management } from './modules/manage';
@@ -29,6 +30,7 @@ const routers = [
   Management,
   VxeDemo,
   DragDemo,
+  OtherDemo,
   PAGE_NOT_FOUND_ROUTE,
 ];
 

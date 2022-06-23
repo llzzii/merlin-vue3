@@ -29,6 +29,7 @@ declare module '@vue/runtime-core' {
     DefaultTable: typeof import('./src/components/TableWapper/DefaultTable.vue')['default']
     DefaultTreeTable: typeof import('./src/components/TableWapper/DefaultTreeTable.vue')['default']
     DropContainer: typeof import('./src/components/DropContainer/index.vue')['default']
+    EditorContainer: typeof import('./src/components/EditorContainer/index.vue')['default']
     GridItem: typeof import('./src/components/GridLayout/GridItem.vue')['default']
     GridLayout: typeof import('./src/components/GridLayout/GridLayout.vue')['default']
     GridLayout2: typeof import('./src/components/GridLayout/GridLayout2.vue')['default']

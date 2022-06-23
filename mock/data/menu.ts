@@ -92,6 +92,13 @@ const demos = {
       path: '/drag/demo4',
       children: [],
     },
+    {
+      id: '3-9',
+      icon: 'icon-daimashili',
+      name: 'MD编辑器',
+      path: '/demos/demo1',
+      children: [],
+    },
   ],
 };
 const system = {
