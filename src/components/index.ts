@@ -3,7 +3,7 @@ import { DefaultTableWapper, DefaultTreeTableWapper, GridWapper } from './TableW
 import DropContainer from './DropContainer/index.vue';
 import EditorContainer from './EditorContainer/index.vue';
 import { GridLayout, GridItem } from './GridLayout';
-
+import CountTo from './CountTo/index.vue';
 export {
   DefaultTableWapper,
   DefaultTreeTableWapper,
@@ -12,4 +12,5 @@ export {
   GridLayout,
   GridItem,
   EditorContainer,
+  CountTo,
 };
