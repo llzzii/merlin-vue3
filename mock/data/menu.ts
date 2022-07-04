@@ -116,7 +116,52 @@ const system = {
     },
   ],
 };
-const menuList = [dashboard, management, demos, system];
+
+const echarts = {
+  id: '5',
+  icon: 'icon-xitong',
+  name: '图表',
+  path: '/echarts',
+  children: [
+    {
+      id: '5-1',
+      icon: 'icon-zuozhe',
+      name: '图表1',
+      path: '/echarts/demo1',
+      children: [],
+    },
+    {
+      id: '5-2',
+      icon: 'icon-zuozhe',
+      name: '大屏',
+      path: '/echarts/demo2',
+      children: [],
+    },
+  ],
+};
+const components = {
+  id: '6',
+  icon: 'icon-xitong',
+  name: '组件',
+  path: '/components',
+  children: [
+    {
+      id: '6-1',
+      icon: 'icon-zuozhe',
+      name: '边框',
+      path: '/components/borders',
+      children: [],
+    },
+    {
+      id: '6-2',
+      icon: 'icon-zuozhe',
+      name: '装饰',
+      path: '/components/decoration',
+      children: [],
+    },
+  ],
+};
+const menuList = [dashboard, management, components, demos, echarts, system];
 export default [
   {
     url: '/basic-api/system/getMenuList',

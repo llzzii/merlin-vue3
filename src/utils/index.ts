@@ -1,7 +1,7 @@
-import { Menu } from "@/layout/aside/menu/menu";
-import { RouteLocationNormalized, RouteRecordNormalized } from "vue-router";
-import UTF8 from "crypto-js/enc-utf8";
-import Base64 from "crypto-js/enc-base64";
+import { Menu } from '@/layout/aside/menu/menu';
+import { RouteLocationNormalized, RouteRecordNormalized } from 'vue-router';
+import UTF8 from 'crypto-js/enc-utf8';
+import Base64 from 'crypto-js/enc-base64';
 
 interface TreeHelperConfig {
   id: string;
@@ -9,17 +9,13 @@ interface TreeHelperConfig {
   pid: string;
 }
 const DEFAULT_CONFIG: TreeHelperConfig = {
-  id: "id",
-  children: "children",
-  pid: "pid",
+  id: 'id',
+  children: 'children',
+  pid: 'pid',
 };
-const getConfig = (config: Partial<TreeHelperConfig>) =>
-  Object.assign({}, DEFAULT_CONFIG, config);
+const getConfig = (config: Partial<TreeHelperConfig>) => Object.assign({}, DEFAULT_CONFIG, config);
 
-export function treeToList<T = any>(
-  tree: any,
-  config: Partial<TreeHelperConfig> = {}
-): T {
+export function treeToList<T = any>(tree: any, config: Partial<TreeHelperConfig> = {}): T {
   config = getConfig(config);
   const { children } = config;
   const result: any = [...tree];
@@ -33,7 +29,7 @@ export function treeToList<T = any>(
 export function findNode<T = any>(
   tree: any,
   func: Fn,
-  config: Partial<TreeHelperConfig> = {}
+  config: Partial<TreeHelperConfig> = {},
 ): T | null {
   config = getConfig(config);
   const { children } = config;
@@ -48,7 +44,7 @@ export function findNode<T = any>(
 export function findPath<T = any>(
   tree: any,
   func: Fn,
-  config: Partial<TreeHelperConfig> = {}
+  config: Partial<TreeHelperConfig> = {},
 ): T | T[] | null {
   config = getConfig(config);
   const path: T[] = [];
@@ -73,10 +69,7 @@ export function findPath<T = any>(
   return null;
 }
 
-export function getAllParentPath<T = any>(
-  treeData: T[] | undefined,
-  path: string
-) {
+export function getAllParentPath<T = any>(treeData: T[] | undefined, path: string) {
   const menuList = findPath(treeData, (n) => n.path === path) as any;
   return (menuList || []).map((item) => item.path);
 }
@@ -84,7 +77,7 @@ export function getAllParentPath<T = any>(
 export function treeFilter<T = any>(
   tree: T[],
   func: (n: T) => boolean,
-  config: Partial<TreeHelperConfig> = {}
+  config: Partial<TreeHelperConfig> = {},
 ): T[] {
   config = getConfig(config);
   const children = config.children as string;
@@ -100,9 +93,7 @@ export function treeFilter<T = any>(
 }
 
 // 获取路由的数据信息
-export function getRawRoute(
-  route: RouteLocationNormalized
-): RouteLocationNormalized {
+export function getRawRoute(route: RouteLocationNormalized): RouteLocationNormalized {
   if (!route) return route;
   const { matched, ...opt } = route;
   return {

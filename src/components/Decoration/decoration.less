@@ -1,0 +1,138 @@
+.dv-decoration-1 {
+  width: 100%;
+  height: 100%;
+
+  svg {
+    transform-origin: left top;
+  }
+}
+
+.dv-decoration-2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.dv-decoration-3 {
+  width: 100%;
+  height: 100%;
+
+  svg {
+    transform-origin: left top;
+  }
+}
+.dv-decoration-4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .dv-container {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    flex: 1;
+  }
+
+  .normal {
+    animation: ani-height ease-in-out infinite;
+    left: 50%;
+    margin-left: -2px;
+  }
+
+  .reverse {
+    animation: ani-width ease-in-out infinite;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  @keyframes ani-height {
+    0% {
+      height: 0%;
+    }
+
+    70% {
+      height: 100%;
+    }
+
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes ani-width {
+    0% {
+      width: 0%;
+    }
+
+    70% {
+      width: 100%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+.dv-decoration-5 {
+  width: 100%;
+  height: 100%;
+}
+
+.dv-decoration-6 {
+  width: 100%;
+  height: 100%;
+
+  svg {
+    transform-origin: left top;
+  }
+}
+
+.dv-decoration-7 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dv-decoration-8 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform-origin: left top;
+  }
+}
+
+.dv-decoration-9 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.dv-decoration-10 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .decoration-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

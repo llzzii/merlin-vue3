@@ -4,6 +4,7 @@
   min-height: 100%;
   background-color: #f4f7f9;
   min-width: 1024px;
+  height: 100%;
 
   &-sider {
     position: relative;
@@ -60,6 +61,8 @@
   .ml-layout-content {
     flex: none;
     margin-top: 80px;
+    height: calc(100% - 80px);
+    overflow: auto;
   }
   .ml-layout-main {
     flex-direction: column;

@@ -1,8 +1,10 @@
 import { Recordable } from 'vite-plugin-mock';
 import { defineComponent } from 'vue';
 import { RouteMeta, RouteRecordRaw } from 'vue-router';
+import { ComponentsDemo } from './modules/components';
 import { OtherDemo } from './modules/demo';
 import { DragDemo } from './modules/drag';
+import { EchartsDemo } from './modules/echarts';
 import { PAGE_NOT_FOUND_ROUTE } from './modules/error';
 import { Management } from './modules/manage';
 import { VxeDemo } from './modules/vxeDemo';
@@ -33,6 +35,8 @@ const routers = [
   VxeDemo,
   DragDemo,
   OtherDemo,
+  EchartsDemo,
+  ComponentsDemo,
   PAGE_NOT_FOUND_ROUTE,
 ];
 
