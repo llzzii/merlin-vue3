@@ -35,5 +35,27 @@ export const ComponentsDemo: AppRouteRecordRaw = {
         hideTab: false,
       },
     },
+    {
+      path: 'lines1',
+      name: 'lines1Demo',
+      component: import('@/views/components/lines/lines1.vue'),
+      meta: {
+        title: '时间轴',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
+    {
+      path: 'lines2',
+      name: 'lines2Demo',
+      component: import('@/views/components/lines/lines2.vue'),
+      meta: {
+        title: '分类轴',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
   ],
 };

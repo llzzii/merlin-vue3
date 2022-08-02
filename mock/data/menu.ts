@@ -159,6 +159,20 @@ const components = {
       path: '/components/decoration',
       children: [],
     },
+    {
+      id: '6-3',
+      icon: 'icon-zuozhe',
+      name: '时间轴',
+      path: '/components/lines1',
+      children: [],
+    },
+    {
+      id: '6-4',
+      icon: 'icon-zuozhe',
+      name: '分类轴',
+      path: '/components/lines2',
+      children: [],
+    },
   ],
 };
 const menuList = [dashboard, management, components, demos, echarts, system];
