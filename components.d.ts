@@ -34,6 +34,7 @@ declare module '@vue/runtime-core' {
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
     ATag: typeof import('ant-design-vue/es')['Tag']
+    AUpload: typeof import('ant-design-vue/es')['Upload']
     AzLine: typeof import('./src/components/AzLine/index.vue')['default']
     BBox1: typeof import('./src/components/BorderBox/BBox1.vue')['default']
     BBox10: typeof import('./src/components/BorderBox/BBox10.vue')['default']
@@ -106,6 +107,7 @@ declare module '@vue/runtime-core' {
     TestElement: typeof import('./src/components/GridLayout/TestElement.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     TimeLine: typeof import('./src/components/TimeLine/index.vue')['default']
+    UploadFile: typeof import('./src/components/UploadFile/index.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }

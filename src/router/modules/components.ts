@@ -14,6 +14,17 @@ export const ComponentsDemo: AppRouteRecordRaw = {
   },
   children: [
     {
+      path: 'index',
+      name: 'indexDemo',
+      component: import('@/views/components/index.vue'),
+      meta: {
+        title: '汇总',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
+    {
       path: 'borders',
       name: 'bordersDemo',
       component: import('@/views/components/borders.vue'),

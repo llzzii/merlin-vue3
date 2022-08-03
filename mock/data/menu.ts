@@ -146,6 +146,13 @@ const components = {
   path: '/components',
   children: [
     {
+      id: '6-0',
+      icon: 'icon-zuozhe',
+      name: '汇总',
+      path: '/components/index',
+      children: [],
+    },
+    {
       id: '6-1',
       icon: 'icon-zuozhe',
       name: '边框',

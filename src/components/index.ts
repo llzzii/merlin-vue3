@@ -31,6 +31,7 @@ import Decoration10 from './Decoration/Decoration10.vue';
 import Decoration11 from './Decoration/Decoration11.vue';
 import TimeLine from './TimeLine/index.vue';
 import AzLine from './AzLine/index.vue';
+import UploadFile from './UploadFile/index.vue';
 
 export {
   DefaultTableWapper,
@@ -68,4 +69,5 @@ export {
   Decoration11,
   TimeLine,
   AzLine,
+  UploadFile,
 };
