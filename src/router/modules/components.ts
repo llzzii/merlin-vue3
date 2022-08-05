@@ -68,5 +68,16 @@ export const ComponentsDemo: AppRouteRecordRaw = {
         hideTab: false,
       },
     },
+    {
+      path: 'fileList',
+      name: 'fileList',
+      component: import('@/views/components/file-list.vue'),
+      meta: {
+        title: '文件列表',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
   ],
 };

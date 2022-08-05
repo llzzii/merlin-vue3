@@ -23,7 +23,7 @@
           }"
         ></div>
         <div class="file-item-process">
-          <div class="file-name" :title="item.fileName">{{ item.fileName }}22</div>
+          <div class="file-name" :title="item.fileName">{{ item.fileName }}</div>
           <a-progress :percent="item.percent" />
           <div class="file-size">
             <div> {{ toSize(item.loaded) }} </div>
@@ -39,7 +39,7 @@
   import { ref, onMounted, reactive } from 'vue';
   import { type UploadProps, message } from 'ant-design-vue';
   import * as qiniu from 'qiniu-js';
-  import { getQiNiuToken } from '@/api/upload';
+  import { getQiNiuToken, getBucketsList } from '@/api/upload';
   import { ImgSize, typeMap } from './icon.constrant';
   const fileLists = ref<Array<any>>([]);
   let token = ref('');
@@ -98,7 +98,8 @@
   };
   onMounted(() => {
     token.value = getQiNiuToken();
-    console.log('🚀 ~ file: index.vue ~ line 12 ~ onMounted ~ token', token);
+    const list = getBucketsList();
+    console.log('🚀 ~ file: index.vue ~ line 12 ~ onMounted ~ token', token, list);
   });
 </script>
 <style lang="less" scoped>

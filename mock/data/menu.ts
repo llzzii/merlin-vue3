@@ -180,6 +180,13 @@ const components = {
       path: '/components/lines2',
       children: [],
     },
+    {
+      id: '6-6',
+      icon: 'icon-zuozhe',
+      name: '文件列表',
+      path: '/components/fileList',
+      children: [],
+    },
   ],
 };
 const menuList = [dashboard, management, components, demos, echarts, system];

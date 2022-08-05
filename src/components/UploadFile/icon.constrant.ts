@@ -77,3 +77,6 @@ export const typeMap = {
     y: 80,
   },
 };
+
+export const previewImageSuffix = ['jpg', 'png', 'tiff', 'swf', 'gif', 'jpeg'];
+export const previewSuffix = ['xls', 'xlsx', 'docx', 'doc', 'ppt', 'pptx', 'pdf'];

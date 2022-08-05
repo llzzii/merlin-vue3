@@ -9,12 +9,14 @@ const httpService = new HttpService();
 const useRequest = httpService.useRequest;
 
 const methods = {
-  buckets: 'https://rs.qbox.me/buckets', //空间列表
+  buckets: 'http://rfzdamvd3.hd-bkt.clouddn.com/buckets', //空间列表
   domains: 'https://api.qiniu.com/v6/domain/list', //空间对应的域名列表(授权空间域名返回为空)
   count: 'https://api.qiniu.com/v6/count', //统计文件数量(标准存储)
   count_line: 'https://api.qiniu.com/v6/count_line', //统计文件数量(低频存储)
   space: 'https://api.qiniu.com/v6/space', //统计文件空间(低频存储)
   space_line: 'https://api.qiniu.com/v6/space_line', //统计文件空间(低频存储)
+  file_list: '/qiniu-api/imglist?bucket=merlin90', //文件列表
+  token: '/qiniu-api/gettoken', //token
 };
 const config = {
   ACCESS_KEY: 'S9pRCZiUr0GZHL9w0ecDTUscG4MiRstcowEueM_D',
@@ -27,6 +29,24 @@ export const getBuckets = () => {
     url: methods.buckets,
     timeout: 10000,
     method: 'get',
+  });
+};
+export const getBucketsList = () => {
+  const api = () =>
+    httpService.instance({
+      url: methods.file_list,
+      timeout: 10000,
+      method: 'get',
+    });
+  return useRequest<any[]>(api);
+};
+
+export const getToken = () => {
+  return useRequest<any[]>({
+    url: methods.token,
+    timeout: 10000,
+    method: 'get',
+    onFinish: (e) => e,
   });
 };
 
