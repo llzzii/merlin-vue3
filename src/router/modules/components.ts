@@ -79,5 +79,16 @@ export const ComponentsDemo: AppRouteRecordRaw = {
         hideTab: false,
       },
     },
+    {
+      path: 'canvas',
+      name: 'canvas',
+      component: import('@/views/components/canvas.vue'),
+      meta: {
+        title: 'canvas',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
   ],
 };

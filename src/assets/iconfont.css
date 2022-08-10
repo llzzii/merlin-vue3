@@ -1,7 +1,7 @@
 @font-face {
     font-family:"iconfont";
     /* Project id 2809767 */
-    src: url('//at.alicdn.com/t/font_2809767_uzek3dbyz2h.woff2?t=1654573581720') format('woff2'), url('//at.alicdn.com/t/font_2809767_uzek3dbyz2h.woff?t=1654573581720') format('woff'), url('//at.alicdn.com/t/font_2809767_uzek3dbyz2h.ttf?t=1654573581720') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_2809767_vg6695mh1kg.woff2?t=1660034893565') format('woff2'), url('//at.alicdn.com/t/c/font_2809767_vg6695mh1kg.woff?t=1660034893565') format('woff'), url('//at.alicdn.com/t/c/font_2809767_vg6695mh1kg.ttf?t=1660034893565') format('truetype');
 }
 .iconfont {
     font-family:"iconfont" !important;
@@ -9,6 +9,81 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+.icon-fill:before {
+    content:"\e658";
+}
+.icon-tianchongxing-:before {
+    content:"\e640";
+}
+.icon-rubber:before {
+    content:"\ea15";
+}
+.icon-ziti:before {
+    content:"\e602";
+}
+.icon-tubiao-zhexiantu:before {
+    content:"\eb96";
+}
+.icon-Group-:before {
+    content:"\e6a6";
+}
+.icon-biaodanzujian-biaoge:before {
+    content:"\ec15";
+}
+.icon-dapingfuwu:before {
+    content:"\e665";
+}
+.icon-kebianjibiaoge:before {
+    content:"\e720";
+}
+.icon-md:before {
+    content:"\e803";
+}
+.icon-wenjianliebiao:before {
+    content:"\e65a";
+}
+.icon-canvas:before {
+    content:"\e6aa";
+}
+.icon-zhuangshi:before {
+    content:"\e6ab";
+}
+.icon-shujuhuizong:before {
+    content:"\e627";
+}
+.icon-waibiankuang:before {
+    content:"\e624";
+}
+.icon-timeAxis:before {
+    content:"\e645";
+}
+.icon-24gl-chartBarUpward:before {
+    content:"\e846";
+}
+.icon-tansuotianjiatubiao:before {
+    content:"\e644";
+}
+.icon-ercikaifashili:before {
+    content:"\ee21";
+}
+.icon-tuozhuai:before {
+    content:"\e611";
+}
+.icon-drag_2:before {
+    content:"\e616";
+}
+.icon-tuozhuai1:before {
+    content:"\e636";
+}
+.icon-bianji:before {
+    content:"\e600";
+}
+.icon-shanchu:before {
+    content:"\e8b6";
+}
+.icon-huanyuan:before {
+    content:"\e648";
 }
 .icon-zidingyilie:before {
     content:"\e6b6";
