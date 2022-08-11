@@ -33,6 +33,7 @@ import TimeLine from './TimeLine/index.vue';
 import AzLine from './AzLine/index.vue';
 import UploadFile from './UploadFile/index.vue';
 import FileView from './UploadFile/file-view.vue';
+import ContextmenuComponent from './Contextmenu/index.vue';
 
 export {
   DefaultTableWapper,
@@ -72,4 +73,5 @@ export {
   AzLine,
   UploadFile,
   FileView,
+  ContextmenuComponent,
 };

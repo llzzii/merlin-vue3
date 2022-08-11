@@ -6,6 +6,7 @@ import { setupRoute } from './setupRoute';
 import { setupVxeTable } from './setupVxeTable';
 import VueViewer from 'v-viewer';
 import 'viewerjs/dist/viewer.css';
+import { setupDirective } from './setupDirective';
 
 export function setupThirdLib(app) {
   app.use(VueViewer);
@@ -17,4 +18,5 @@ export function setup(app: App<Element>) {
   setupVxeTable(app);
   setupGlobalComponents(app);
   setupThirdLib(app);
+  setupDirective(app);
 }

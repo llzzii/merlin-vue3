@@ -8,6 +8,7 @@
         笔画粗细:
         <a-slider v-model:value="strokesWidth" :min="5" :max="50" @change="changeStrokes" />
       </div>
+      <a-button type="primary" @click="exportImgUrl">导出</a-button>
     </a-space>
   </div>
 
@@ -49,8 +50,8 @@
         class="pen"
         v-if="options.model === 'pen'"
         :style="{
-          left: mouse.x - penSize / 2 + 'px',
-          top: mouse.y - penSize * 6 + penSize / 2 + 'px',
+          left: mouse.x + 'px',
+          top: mouse.y + 'px',
           color: options.color,
         }"
       >
@@ -60,7 +61,7 @@
       <div
         class="pen"
         :style="{
-          left: mouse.x - markSize / 2 + 'px',
+          left: mouse.x + 'px',
           top: mouse.y + 'px',
           color: options.color,
         }"
@@ -74,6 +75,7 @@
 
 <script lang="ts" setup>
   import { useCanvas } from '@/hooks/useCanvas';
+  import handleCopyImg from '@/hooks/useImgeCopy';
   import { onMounted, ref } from 'vue';
 
   const canvasRef = ref<HTMLCanvasElement>();
@@ -93,11 +95,18 @@
     markSize,
     options,
     mouse,
+    getImageDataURL,
   } = useCanvas(canvasRef, { width: 1000 });
 
   const drawHandle = (model) => {
     // updateCtx('eraser');
     options.model = model;
+  };
+
+  const exportImgUrl = () => {
+    const url = getImageDataURL();
+    console.log('🚀 ~ file: canvas.vue ~ line 107 ~ exportImgUrl ~ url', url);
+    handleCopyImg(url);
   };
   const changeStrokes = (e?) => {
     console.log('🚀 ~ file: canvas.vue ~ line 104 ~ changeStrokes ~ e', e);
