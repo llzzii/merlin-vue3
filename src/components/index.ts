@@ -34,6 +34,7 @@ import AzLine from './AzLine/index.vue';
 import UploadFile from './UploadFile/index.vue';
 import FileView from './UploadFile/file-view.vue';
 import ContextmenuComponent from './Contextmenu/index.vue';
+import BorderLine from './BorderLine/index.vue';
 
 export {
   DefaultTableWapper,
@@ -74,4 +75,5 @@ export {
   UploadFile,
   FileView,
   ContextmenuComponent,
+  BorderLine,
 };

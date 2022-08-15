@@ -194,6 +194,13 @@ const components = {
       path: '/components/canvas',
       children: [],
     },
+    {
+      id: '6-7',
+      icon: 'icon-canvas',
+      name: 'mouseSelection',
+      path: '/components/mouseSelection',
+      children: [],
+    },
   ],
 };
 const menuList = [dashboard, management, components, demos, echarts, system];

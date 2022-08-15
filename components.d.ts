@@ -61,6 +61,7 @@ declare module '@vue/runtime-core' {
     'BBox8 copy 3': typeof import('./src/components/BorderBox/BBox8 copy 3.vue')['default']
     'BBox8 copy 4': typeof import('./src/components/BorderBox/BBox8 copy 4.vue')['default']
     BBox9: typeof import('./src/components/BorderBox/BBox9.vue')['default']
+    BorderLine: typeof import('./src/components/BorderLine/index.vue')['default']
     Contextmenu: typeof import('./src/components/Contextmenu/index.vue')['default']
     CountTo: typeof import('./src/components/CountTo/index.vue')['default']
     CustomDragElement: typeof import('./src/components/GridLayout/CustomDragElement.vue')['default']

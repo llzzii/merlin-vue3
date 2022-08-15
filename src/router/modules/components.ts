@@ -90,5 +90,16 @@ export const ComponentsDemo: AppRouteRecordRaw = {
         hideTab: false,
       },
     },
+    {
+      path: 'mouseSelection',
+      name: 'mouseSelection',
+      component: import('@/views/components/mouseSelection.vue'),
+      meta: {
+        title: 'mouseSelection',
+        hideBreadcrumb: false,
+        hideMenu: false,
+        hideTab: false,
+      },
+    },
   ],
 };
