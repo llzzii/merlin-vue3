@@ -7,4 +7,5 @@ import { setup } from './setup';
 
 const app = createApp(App);
 setup(app);
+
 app.mount('#app');

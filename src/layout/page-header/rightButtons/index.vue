@@ -3,11 +3,16 @@
     <a class="h-btn" href="https://github.com/llzzii/merlin-vue3-template" target="_blank">
       <i class="iconfont icon-github-fill"></i>
     </a>
-    <a class="h-btn">
-      <i class="iconfont icon-quanping"></i>
+    <a class="h-btn" @click="changeFullScreen">
+      <i
+        class="iconfont"
+        :class="{ 'icon-fullscreen-expand': !isFULL, 'icon-fullscreen-shrink': isFULL }"
+      ></i>
     </a>
-    <a class="h-btn">
-      <i class="iconfont icon-tongzhi"></i>
+    <a class="h-btn" @click="notificationShow">
+      <a-badge :count="notificationCount">
+        <i class="iconfont icon-tongzhi"></i>
+      </a-badge>
     </a>
     <a class="h-btn">
       <i class="iconfont icon-zhuti_o"></i>
@@ -34,12 +39,52 @@
     </a-dropdown>
   </a-space>
 </template>
+
+<script lang="ts" setup>
+  import { useDesktopMsg } from '@/hooks/useDesktopMsg';
+  import { enterFullscreen, exitFullscreen, isFullscreen } from '@/utils/fullscreen';
+  import { ref } from 'vue';
+  import tzImg from '@/assets/img/tz.gif';
+
+  const isFULL = ref(isFullscreen());
+  const notificationCount = ref(10);
+
+  const changeFullScreen = () => {
+    if (isFULL.value) {
+      exitFullscreen();
+      isFULL.value = false;
+    } else {
+      enterFullscreen();
+      isFULL.value = true;
+    }
+  };
+
+  const notificationShow = () => {
+    const option = {
+      title: '通知',
+      body: '起来跳个舞吧',
+      icon: tzImg,
+      cb: () => {
+        notificationCount.value--;
+      },
+    };
+
+    let n = useDesktopMsg(option as any);
+    if (n) {
+      n.onerror = (e) => {
+        console.log(e);
+      };
+    }
+  };
+</script>
 <style lang="less" scoped>
   .header-r-buttons {
     .h-btn {
       display: flex;
       padding: 0 3px;
       color: rgb(51, 54, 57);
+      height: 48px;
+      align-items: center;
       &:hover {
         background-color: rgb(246, 246, 246);
       }
@@ -49,7 +94,7 @@
       font-size: 20px;
     }
     .icon-avatar {
-      margin-top: 5px;
+      margin-top: -3px;
     }
   }
 </style>
