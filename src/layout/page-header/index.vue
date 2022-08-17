@@ -4,12 +4,16 @@
       <div class="header-left">
         <Breadcrumb />
       </div>
+      <div class="header-right">
+        <RightButtons />
+      </div>
     </div>
     <Tabs />
   </a-layout-header>
 </template>
 <script lang="ts" setup>
   import Breadcrumb from './breadcrumb/index.vue';
+  import RightButtons from './rightButtons/index.vue';
   import Tabs from './tabs/index.vue';
   import { useAppStore } from '@/stores/modules/app';
   import { computed } from 'vue';
@@ -45,6 +49,11 @@
         display: flex;
         height: 100%;
         align-items: center;
+      }
+      .header-right {
+        height: 100%;
+        align-items: center;
+        padding: 0 10px;
       }
     }
   }

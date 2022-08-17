@@ -1,7 +1,7 @@
 @font-face {
     font-family:"iconfont";
     /* Project id 2809767 */
-    src: url('//at.alicdn.com/t/c/font_2809767_vg6695mh1kg.woff2?t=1660034893565') format('woff2'), url('//at.alicdn.com/t/c/font_2809767_vg6695mh1kg.woff?t=1660034893565') format('woff'), url('//at.alicdn.com/t/c/font_2809767_vg6695mh1kg.ttf?t=1660034893565') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_2809767_c2zkieay0ra.woff2?t=1660705799921') format('woff2'), url('//at.alicdn.com/t/c/font_2809767_c2zkieay0ra.woff?t=1660705799921') format('woff'), url('//at.alicdn.com/t/c/font_2809767_c2zkieay0ra.ttf?t=1660705799921') format('truetype');
 }
 .iconfont {
     font-family:"iconfont" !important;
@@ -9,6 +9,27 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+.icon-tongzhi:before {
+    content:"\e759";
+}
+.icon-sousuo:before {
+    content:"\e651";
+}
+.icon-quanping:before {
+    content:"\e655";
+}
+.icon-github-fill:before {
+    content:"\e885";
+}
+.icon-zhuti_o:before {
+    content:"\eb6f";
+}
+.icon-quanping_o:before {
+    content:"\eb99";
+}
+.icon-suoping:before {
+    content:"\e639";
 }
 .icon-fill:before {
     content:"\e658";

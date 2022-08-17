@@ -214,3 +214,26 @@ export function eachTree(treeDatas: any[], callBack: Fn, parentNode = {}) {
     }
   });
 }
+
+export function getAllParentPath<T = any>(treeData: T[] | undefined, path: string) {
+  const menuList = findPath(treeData, (n) => n.path === path) as any;
+  return (menuList || []).map((item) => item.path);
+}
+
+export function treeFilter<T = any>(
+  tree: T[],
+  func: (n: T) => boolean,
+  config: Partial<TreeHelperConfig> = {},
+): T[] {
+  config = getConfig(config);
+  const children = config.children as string;
+  function listFilter(list: T[]) {
+    return list
+      .map((node: any) => ({ ...node }))
+      .filter((node) => {
+        node[children] = node[children] && listFilter(node[children]);
+        return func(node) || (node[children] && node[children].length);
+      });
+  }
+  return listFilter(tree);
+}

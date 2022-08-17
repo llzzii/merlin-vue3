@@ -104,7 +104,7 @@
 </script>
 <style lang="less" scoped>
   .file-list {
-    height: 439px;
+    max-height: 439px;
     overflow-y: auto;
     margin-bottom: 16px;
     .file-item {

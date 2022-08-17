@@ -16,10 +16,11 @@
   import { REDIRECT_NAME } from '@/constrant';
   import { Menu } from '@/layout/aside/menu/menu';
   import { useMenuStore } from '@/stores/modules/menu';
-  import { getAllParentPath, getMatched, treeFilter } from '@/utils';
+  import { getAllParentPath, treeFilter } from '@/utils/treeHelper';
   import { isString } from '@/utils/is';
   import { ref, watchEffect } from 'vue';
   import { RouteLocationMatched, useRouter } from 'vue-router';
+  import { getMatched } from '@/utils';
 
   const routes = ref<RouteLocationMatched[]>([]);
   const menuStore = useMenuStore();

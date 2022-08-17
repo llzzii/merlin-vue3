@@ -29,7 +29,7 @@
   import SubMenu from '../menu-item/index.vue';
   import { Menu, MenuState } from './menu';
   import { RouteLocationNormalizedLoaded, useRoute, useRouter } from 'vue-router';
-  import { findNode, getAllParentPath } from '@/utils';
+  import { findNode, getAllParentPath } from '@/utils/treeHelper';
   import { listenerRouteChange } from '@/logics/mitt/routeChange';
   import { useMenuStore } from '@/stores/modules/menu';
   const currentRoute = useRoute();
