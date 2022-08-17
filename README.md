@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="./src/assets/img/logo.png"/>
+	<img style="width: 200px;" src="./src/assets/img/logo.png"/>
 	<h1>Merlin Template</h1>
 </div>
 
