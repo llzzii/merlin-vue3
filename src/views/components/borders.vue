@@ -44,7 +44,7 @@
 <style lang="less" scoped>
   .container {
     margin: 10px;
-    background-color: #fff;
+    background-color: #161313;
     padding: 10px;
   }
   .border-container {
@@ -56,5 +56,6 @@
     align-items: center;
     grid-template-rows: 200px;
     grid-auto-rows: 200px;
+    color: #fff;
   }
 </style>

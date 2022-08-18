@@ -38,5 +38,13 @@ export const Management: AppRouteRecordRaw = {
         },
       ],
     },
+    {
+      path: 'linux',
+      name: 'linux',
+      meta: {
+        title: 'linux 命令大全',
+      },
+      component: import('@/views/linux/index.vue'),
+    },
   ],
 };

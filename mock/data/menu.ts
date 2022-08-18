@@ -21,6 +21,13 @@ const management = {
       path: '/manage/document',
       children: [],
     },
+    {
+      id: '2-2',
+      icon: 'icon-navicon-wzgl',
+      name: 'Linux 命令大全',
+      path: '/manage/linux',
+      children: [],
+    },
   ],
 };
 const demos = {

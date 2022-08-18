@@ -52,6 +52,7 @@
     "pinia": "^2.0.13",
     "qiniu": "^7.7.0",
     "qiniu-js": "^3.4.1",
+    "swiper": "^8.3.2",
     "unplugin-vue-components": "^0.19.5",
     "v-viewer": "3.0.6",
     "vue": "^3.2.33",

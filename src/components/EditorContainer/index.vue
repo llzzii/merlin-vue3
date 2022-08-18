@@ -21,7 +21,7 @@
   // 引入基础css
   import 'bytemd/dist/index.min.css';
   // 引入高亮css
-  import 'highlight.js/styles/vs.css';
+  // import 'highlight.js/styles/vs.css';
 
   /**
    * 可用插件地址 https://github.com/bytedance/bytemd/blob/main/README.md

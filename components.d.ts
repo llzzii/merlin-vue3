@@ -109,6 +109,7 @@ declare module '@vue/runtime-core' {
     IconfontIcon: typeof import('./src/components/Icon/component/IconfontIcon.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
+    LockModel: typeof import('./src/components/LockModel/index.vue')['default']
     MenuContent: typeof import('./src/components/Contextmenu/menuContent.vue')['default']
     ResponsiveGridLayout: typeof import('./src/components/GridLayout/ResponsiveGridLayout.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -17,7 +17,7 @@
     <a class="h-btn">
       <i class="iconfont icon-zhuti_o"></i>
     </a>
-    <a class="h-btn">
+    <a class="h-btn" @click="lockScreen">
       <i class="iconfont icon-suoping"></i>
     </a>
     <a class="h-btn">
@@ -45,10 +45,11 @@
   import { enterFullscreen, exitFullscreen, isFullscreen } from '@/utils/fullscreen';
   import { ref } from 'vue';
   import tzImg from '@/assets/img/tz.gif';
+  import { useUserStore } from '@/stores/modules/user';
 
   const isFULL = ref(isFullscreen());
   const notificationCount = ref(10);
-
+  const userStore = useUserStore();
   const changeFullScreen = () => {
     if (isFULL.value) {
       exitFullscreen();
@@ -75,6 +76,10 @@
         console.log(e);
       };
     }
+  };
+  const lockScreen = () => {
+    userStore.setLockStatus(true);
+    console.log('🚀 ~ file: index.vue ~ line 82 ~ lockScreen ~ userStore', userStore.getLockStatus);
   };
 </script>
 <style lang="less" scoped>

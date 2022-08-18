@@ -1,0 +1,2728 @@
+[
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "cat",
+        "param": "cat [-AbeEnstTuv] [--help] [--version] fileName",
+        "name": "cat",
+        "remark": "把档案串连接后传到基本输出",
+        "id": 11,
+        "type": 0
+      },
+      {
+        "code": "chattr",
+        "param": "chattr [-RV][-v<版本编号>][+/-/=<属性>][文件或目录...]",
+        "name": "chattr",
+        "remark": "这项指令可改变存放在ext2文件系统上的文件或目录属性",
+        "id": 12,
+        "type": 0
+      },
+      {
+        "code": "chgrp",
+        "param": "chgrp [-cfhRv][--help][--version][所属群组][文件或目录...] 或 chgrp [-cfhRv][--help][--reference=<参考文件或目录>][--version][文件或目录...] ",
+        "name": "chgrp",
+        "remark": "变更文件或目录的所属群组",
+        "id": 13,
+        "type": 0
+      },
+      {
+        "code": "chmod",
+        "param": "chmod [-cfRv][--help][--version][<权限范围>+/-/=<权限设置...>][文件或目录...] ",
+        "name": "chmod",
+        "remark": "变更文件或目录的权限",
+        "id": 14,
+        "type": 0
+      },
+      {
+        "code": "chown",
+        "param": "chown [-cfhRv][--dereference][--help][--version][拥有者.<所属群组>][文件或目录..] ",
+        "name": "chown",
+        "remark": "变更文件或目录的拥有者或所属群组",
+        "id": 15,
+        "type": 0
+      },
+      {
+        "code": "cksum",
+        "param": "cksum [--help][--version][文件...]",
+        "name": "cksum",
+        "remark": "检查文件的CRC是否正确",
+        "id": 16,
+        "type": 0
+      },
+      {
+        "code": "cmp",
+        "param": "cmp [-clsv][-i <字符数目>][--help][第一个文件][第二个文件]",
+        "name": "cmp",
+        "remark": "比较两个文件是否有差异",
+        "id": 17,
+        "type": 0
+      },
+      {
+        "code": "diff",
+        "param": "diff [-abBcdefHilnNpPqrstTuvwy][-<行数>][-C <行数>][-D <巨集名称>][-I <字符或字符串>][-S <文件>][-W <宽度>][-x <文件或目录>][-X <文件>][--help][--left-column][--suppress-common-line][文件或目录1][文件或目录2]",
+        "name": "diff",
+        "remark": "比较文件的差异",
+        "id": 18,
+        "type": 0
+      },
+      {
+        "code": "file",
+        "param": "file [-beLvz][-f <名称文件>][-m <魔法数字文件>...][文件或目录...]  ",
+        "name": "file",
+        "remark": "辨识文件类型",
+        "id": 19,
+        "type": 0
+      },
+      {
+        "code": "find",
+        "param": "find [目录..]",
+        "name": "find",
+        "remark": "查找文件或目录",
+        "id": 20,
+        "type": 0
+      },
+      {
+        "code": "cut",
+        "param": "cut -cnum1-num2 filename",
+        "name": "cut",
+        "remark": "显示每行从开头算起 num1 到 num2 的文字",
+        "id": 21,
+        "type": 0
+      },
+      {
+        "code": "ln",
+        "param": "ln [-bdfinsv][-S <字尾备份字符串>][-V <备份方式>][--help][--version][源文件或目录][目标文件或目录]",
+        "name": "ln",
+        "remark": "连接文件或目录",
+        "id": 22,
+        "type": 0
+      },
+      {
+        "code": "less",
+        "param": "less [文件]",
+        "name": "less",
+        "remark": "分页显示文件内容",
+        "id": 23,
+        "type": 0
+      },
+      {
+        "code": "locate",
+        "param": "locate [-d <数据库文件>][--help][--version][范本样式...]",
+        "name": "locate",
+        "remark": "查找文件",
+        "id": 24,
+        "type": 0
+      },
+      {
+        "code": "lsattr",
+        "param": "lsattr [-adlRvV][文件或目录...]",
+        "name": "lsattr",
+        "remark": "显示文件属性",
+        "id": 25,
+        "type": 0
+      },
+      {
+        "code": "mdel",
+        "param": "mdel [文件...]",
+        "name": "mdel",
+        "remark": "删除MS-DOS文件",
+        "id": 26,
+        "type": 0
+      },
+      {
+        "code": "mattrib",
+        "param": "mattrib [+/-][ahrs][-/X][文件]",
+        "name": "mattrib",
+        "remark": "变更或显示MS-DOS文件的属性",
+        "id": 27,
+        "type": 0
+      },
+      {
+        "code": "mdir",
+        "param": "mdir [-afwx/][目录]",
+        "name": "mdir",
+        "remark": "显示MS-DOS目录",
+        "id": 28,
+        "type": 0
+      },
+      {
+        "code": "mktemp",
+        "param": "mktemp [-qu][文件名参数]",
+        "name": "mktemp",
+        "remark": "建立暂存文件",
+        "id": 29,
+        "type": 0
+      },
+      {
+        "code": "more",
+        "param": "more [文件]",
+        "name": "more",
+        "remark": "查看文件",
+        "id": 30,
+        "type": 0
+      },
+      {
+        "code": "mmove",
+        "param": "mmove [源文件或目录...][目标文件或目录]",
+        "name": "mmove",
+        "remark": "在MS-DOS文件系统中，移动文件或目录，或更改名称",
+        "id": 31,
+        "type": 0
+      },
+      {
+        "code": "mren",
+        "param": "mren [源文件或目录...][目标文件或目录]",
+        "name": "mren",
+        "remark": "更改MS-DOS文件或目录的名称，或是移动文件或目录",
+        "id": 32,
+        "type": 0
+      },
+      {
+        "code": "mtools",
+        "param": "mtools",
+        "name": "mtools",
+        "remark": "显示mtools支持的指令",
+        "id": 33,
+        "type": 0
+      },
+      {
+        "code": "mtoolstest",
+        "param": "mtoolstest",
+        "name": "mtoolstest",
+        "remark": "测试并显示mtools的相关设置",
+        "id": 34,
+        "type": 0
+      },
+      {
+        "code": "mv",
+        "param": "mv [-bfiuv][--help][--version][-S <附加字尾>][-V <方法>][源文件或目录][目标文件或目录]",
+        "name": "mv",
+        "remark": "移动或更名现有的文件或目录",
+        "id": 35,
+        "type": 0
+      },
+      {
+        "code": "od",
+        "param": "od [-abcdfhilovx][-A <字码基数>][-j <字符数目>][-N <字符数目>][-s <字符串字符数>][-t <输出格式>][-w <每列字符数>][--help][--version][文件...]",
+        "name": "od",
+        "remark": "输出文件内容",
+        "id": 36,
+        "type": 0
+      },
+      {
+        "code": "paste",
+        "param": "paste [-s][-d <间隔字符>][--help][--version][文件...]",
+        "name": "paste",
+        "remark": "合并文件的列",
+        "id": 37,
+        "type": 0
+      },
+      {
+        "code": "patch",
+        "param": "path [-p <剥离层级>] < [修补文件]",
+        "name": "patch",
+        "remark": "修补文件",
+        "id": 38,
+        "type": 0
+      },
+      {
+        "code": "rm",
+        "param": "rm [-dfirv][--help][--version][文件或目录...]",
+        "name": "rm",
+        "remark": "删除文件或目录",
+        "id": 39,
+        "type": 0
+      },
+      {
+        "code": "split",
+        "param": "split [--help][--version][-<行数>][-b <字节>][-C <字节>][-l <行数>][要切割的文件][输出文件名]\r\nsplit [--help][--version][-<行数>][-b <字节>][-C <字节>][-l <行数>][要切割的文件][输出文件名]\r\nsplit [--help][--version][-<行数>][-b <字节>][-C <字节>][-l <行数>][要切割的文件][输出文件名]",
+        "name": "split",
+        "remark": "切割文件",
+        "id": 40,
+        "type": 0
+      },
+      {
+        "code": "tee",
+        "param": "tee [-ai][--help][--version][文件...]",
+        "name": "tee",
+        "remark": "读取标准输入的数据，并将其内容输出成文件",
+        "id": 41,
+        "type": 0
+      },
+      {
+        "code": "touch",
+        "param": "touch [-acfm][-d <日期时间>][-r <参考文件或目录>][-t <日期时间>][--help]　　 [--version][文件或目录...]",
+        "name": "touch",
+        "remark": "改变文件或目录时间",
+        "id": 42,
+        "type": 0
+      },
+      {
+        "code": "umask",
+        "param": "umask [-S][权限掩码]",
+        "name": "umask",
+        "remark": "指定在建立文件时预设的权限掩码",
+        "id": 43,
+        "type": 0
+      },
+      {
+        "code": "which",
+        "param": "which [文件...]",
+        "name": "which",
+        "remark": "查找文件",
+        "id": 44,
+        "type": 0
+      },
+      {
+        "code": "cp",
+        "param": "cp [-abdfilpPrRsuvx][-S <备份字尾字符串>][-V <备份方式>][--help][--spares=<使用时机>][--version][源文件或目录][目标文件或目录] [目的目录]",
+        "name": "cp",
+        "remark": "复制文件或目录",
+        "id": 45,
+        "type": 0
+      },
+      {
+        "code": "mcopy",
+        "param": "mcopy [-bnmpQt/][源文件][目标文件或目录]",
+        "name": "mcopy",
+        "remark": "复制MS-DOS文件",
+        "id": 46,
+        "type": 0
+      },
+      {
+        "code": "mshowfat",
+        "param": "mshowfat [文件...]",
+        "name": "mshowfat",
+        "remark": "显示MS-DOS文件在FAT中的记录",
+        "id": 47,
+        "type": 0
+      },
+      {
+        "code": "whereis",
+        "param": "whereis [-bfmsu][-B <目录>...][-M <目录>...][-S <目录>...][文件...]",
+        "name": "whereis",
+        "remark": "查找文件",
+        "id": 48,
+        "type": 0
+      },
+      {
+        "code": "type",
+        "param": "type [命令]",
+        "name": "type",
+        "remark": "显示指定命令的类型",
+        "id": 49,
+        "type": 0
+      }
+    ],
+    "name": "文件管理",
+    "remark": null,
+    "id": 1,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "cd",
+        "param": "cd [目的目录]",
+        "name": "cd",
+        "remark": "切换目录",
+        "id": 50,
+        "type": 0
+      },
+      {
+        "code": "df",
+        "param": "df [-ahHiklmPT][--block-size=<区块大小>][-t <文件系统类型>][-x <文件系统类型>][--help][--no-sync][--sync][--version][文件或设备]",
+        "name": "df",
+        "remark": "显示磁盘的相关信息",
+        "id": 51,
+        "type": 0
+      },
+      {
+        "code": "dir",
+        "param": "dir [选项] [目录名]",
+        "name": "dir",
+        "remark": "查看目录、文件权限等详细信息",
+        "id": 52,
+        "type": 0
+      },
+      {
+        "code": "dirs",
+        "param": "dirs [+/-n -l]",
+        "name": "dirs",
+        "remark": "显示目录记录",
+        "id": 53,
+        "type": 0
+      },
+      {
+        "code": "du",
+        "param": "du [-abcDhHklmsSx][-L <符号连接>][-X <文件>][--block-size][--exclude=<目录或文件>][--max-depth=<目录层数>][--help][--version][目录或文件]",
+        "name": "du",
+        "remark": "显示目录或文件的大小",
+        "id": 54,
+        "type": 0
+      },
+      {
+        "code": "edquota",
+        "param": "edquota [-p <源用户名称>][-ug][用户或群组名称...]",
+        "name": "edquota",
+        "remark": "编辑用户或群组的quota",
+        "id": 55,
+        "type": 0
+      },
+      {
+        "code": "eject",
+        "param": "eject [-dfhnqrstv][-a <开关>][-c <光驱编号>][设备]",
+        "name": "eject",
+        "remark": "退出抽取式设备",
+        "id": 56,
+        "type": 0
+      },
+      {
+        "code": "mcd",
+        "param": "mcd [目录名称]",
+        "name": "mcd",
+        "remark": "在MS-DOS文件系统中切换工作目录",
+        "id": 57,
+        "type": 0
+      },
+      {
+        "code": "mdeltree",
+        "param": "mdeltree [目录...]",
+        "name": "mdeltree",
+        "remark": "删除MS-DOS目录",
+        "id": 58,
+        "type": 0
+      },
+      {
+        "code": "mdu",
+        "param": "mdu [-as][目录]",
+        "name": "mdu",
+        "remark": "显示MS-DOS目录所占用的磁盘空间",
+        "id": 59,
+        "type": 0
+      },
+      {
+        "code": "mkdir",
+        "param": "mkdir [-p][--help][--version][-m <目录属性>][目录名称]\r\n\r\nmkdir [-p][--help][--version][-m <目录属性>][目录名称]\r\n\r\nmkdir [-p][--help][--version][-m <目录属性>][目录名称]",
+        "name": "mkdir",
+        "remark": "建立目录",
+        "id": 60,
+        "type": 0
+      },
+      {
+        "code": "mlabel",
+        "param": "mlabel [-csvV][驱动器代号][标签名称]\r\nmlabel [-csvV][驱动器代号][标签名称]",
+        "name": "mlabel",
+        "remark": "显示或设置MS-DOS磁盘驱动器的标签名称",
+        "id": 61,
+        "type": 0
+      },
+      {
+        "code": "mmd",
+        "param": "mmd [目录...]",
+        "name": "mmd",
+        "remark": "在MS-DOS文件系统中建立目录",
+        "id": 62,
+        "type": 0
+      },
+      {
+        "code": "mrd",
+        "param": "mrd [目录...]",
+        "name": "mrd",
+        "remark": "删除MS-DOS文件系统中的目录",
+        "id": 63,
+        "type": 0
+      },
+      {
+        "code": "mzip",
+        "param": "mzip [-efpqruwx]",
+        "name": "mzip",
+        "remark": "Zip/Jaz磁盘驱动器控制指令",
+        "id": 64,
+        "type": 0
+      },
+      {
+        "code": "pwd",
+        "param": "pwd [--help][--version]",
+        "name": "pwd",
+        "remark": "显示工作目录",
+        "id": 65,
+        "type": 0
+      },
+      {
+        "code": "quota",
+        "param": "quota [-quvV][用户名称...] 或 quota [-gqvV][群组名称...]",
+        "name": "quota",
+        "remark": "显示磁盘已使用的空间与限制",
+        "id": 66,
+        "type": 0
+      },
+      {
+        "code": "mount",
+        "param": "mount [-hV]",
+        "name": "mount",
+        "remark": "将某个档案的内容解读成档案系统，然后将其挂在目录的某个位置之上",
+        "id": 67,
+        "type": 0
+      },
+      {
+        "code": "mmount",
+        "param": "mmount [驱动器代号][mount参数]",
+        "name": "mmount",
+        "remark": "挂入MS-DOS文件系统",
+        "id": 68,
+        "type": 0
+      },
+      {
+        "code": "rmdir",
+        "param": "rmdir [-p][--help][--ignore-fail-on-non-empty][--verbose][--version][目录...]",
+        "name": "rmdir",
+        "remark": "删除目录",
+        "id": 69,
+        "type": 0
+      },
+      {
+        "code": "stat",
+        "param": "stat [文件或目录]",
+        "name": "stat",
+        "remark": "显示inode内容",
+        "id": 70,
+        "type": 0
+      },
+      {
+        "code": "umount",
+        "param": "umount [-ahnrvV][-t <文件系统类型>][文件系统]",
+        "name": "umount",
+        "remark": "卸除文件系统",
+        "id": 71,
+        "type": 0
+      },
+      {
+        "code": "ls",
+        "param": "ls [-1aAbBcCdDfFgGhHiklLmnNopqQrRsStuUvxX][-I <范本样式>][-T <跳格字数>][-w <每列字符数>][--block-size=<区块大小>][--color=<使用时机>][--format=<列表格式>][--full-time][--help][--indicator-style=<标注样式>][--quoting-style=<引号样式>][--show-control-chars][--sort=<排序方式>][--time=<时间戳记>][--version][文件或目录...]",
+        "name": "ls",
+        "remark": "列出目录内容",
+        "id": 72,
+        "type": 0
+      },
+      {
+        "code": "quotacheck",
+        "param": "quotacheck [-adgRuv][文件系统...]",
+        "name": "quotacheck",
+        "remark": "检查磁盘的使用空间与限制",
+        "id": 73,
+        "type": 0
+      },
+      {
+        "code": "quotaoff",
+        "param": "quotaoff [-aguv][文件系统...]",
+        "name": "quotaoff",
+        "remark": "关闭磁盘空间限制",
+        "id": 74,
+        "type": 0
+      },
+      {
+        "code": "repquota",
+        "param": "repquota [-aguv][文件系统...]",
+        "name": "repquota",
+        "remark": "检查磁盘空间限制的状态",
+        "id": 75,
+        "type": 0
+      },
+      {
+        "code": "quotaon",
+        "param": "quotaon [-aguv][文件系统...]",
+        "name": "quotaon",
+        "remark": "开启磁盘空间限制",
+        "id": 76,
+        "type": 0
+      }
+    ],
+    "name": "磁盘管理",
+    "remark": null,
+    "id": 2,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "col",
+        "param": "col [-bfx][-l<缓冲区列数>]",
+        "name": "col",
+        "remark": "过滤控制字符",
+        "id": 77,
+        "type": 0
+      },
+      {
+        "code": "colrm",
+        "param": "colrm [开始行数编号<结束行数编号>]",
+        "name": "colrm",
+        "remark": "滤掉指定的行",
+        "id": 78,
+        "type": 0
+      },
+      {
+        "code": "comm",
+        "param": "comm [-123][--help][--version][第1个文件][第2个文件]",
+        "name": "comm",
+        "remark": "比较两个已排过序的文件",
+        "id": 79,
+        "type": 0
+      },
+      {
+        "code": "csplit",
+        "param": "csplit [-kqsz][-b<输出格式>][-f<输出字首字符串>][-n<输出文件名位数>][--help][--version][文件][范本样式...]",
+        "name": "csplit",
+        "remark": "分割文件",
+        "id": 80,
+        "type": 0
+      },
+      {
+        "code": "ed",
+        "param": "ed [-][-Gs][-p<字符串>][--help][--version][文件]",
+        "name": "ed",
+        "remark": "文本编辑器",
+        "id": 81,
+        "type": 0
+      },
+      {
+        "code": "egrep",
+        "param": "egrep执行效果如grep -E",
+        "name": "egrep",
+        "remark": "在文件内查找指定的字符串",
+        "id": 82,
+        "type": 0
+      },
+      {
+        "code": "ex",
+        "param": "ex执行效果如同vi -E",
+        "name": "ex",
+        "remark": "在Ex模式下启动vim文本编辑器",
+        "id": 83,
+        "type": 0
+      },
+      {
+        "code": "fgrep",
+        "param": "fgrep [范本样式][文件或目录...]",
+        "name": "fgrep",
+        "remark": "查找文件里符合条件的字符串",
+        "id": 84,
+        "type": 0
+      },
+      {
+        "code": "fmt",
+        "param": "fmt [-cstu][-p<列起始字符串>][-w<每列字符数>][--help][--version][文件...]",
+        "name": "fmt",
+        "remark": "编排文本文件",
+        "id": 85,
+        "type": 0
+      },
+      {
+        "code": "fold",
+        "param": "fold [-bs][-w<每列行数>][--help][--version][文件...]",
+        "name": "fold",
+        "remark": "限制文件列宽",
+        "id": 86,
+        "type": 0
+      },
+      {
+        "code": "grep",
+        "param": "grep [options]",
+        "name": "grep",
+        "remark": "查找文件里符合条件的字符串",
+        "id": 87,
+        "type": 0
+      },
+      {
+        "code": "join",
+        "param": "join [-i][-a<1或2>][-e<字符串>][-o<格式>][-t<字符>][-v<1或2>][-1<栏位>][-2<栏位>][--help][--version][文件1][文件2]",
+        "name": "join",
+        "remark": "将两个文件中，指定栏位内容相同的行连接起来",
+        "id": 88,
+        "type": 0
+      },
+      {
+        "code": "look",
+        "param": "look [-adf][-t<字尾字符串>][字首字符串][字典文件]\r\nlook [-adf][-t<字尾字符串>][字首字符串][字典文件]",
+        "name": "look",
+        "remark": "查询单字",
+        "id": 89,
+        "type": 0
+      },
+      {
+        "code": "mtype",
+        "param": "mtype [-st][文件]",
+        "name": "mtype",
+        "remark": "显示MS-DOS文件的内容",
+        "id": 90,
+        "type": 0
+      },
+      {
+        "code": "sed",
+        "param": "sed [-hnV][-e<script>][-f<script文件>][文本文件]",
+        "name": "sed",
+        "remark": "利用script来处理文本文件",
+        "id": 91,
+        "type": 0
+      },
+      {
+        "code": "sort",
+        "param": "sort [-bcdfimMnr][-o<输出文件>][-t<分隔字符>][+<起始栏位>-<结束栏位>][--help][--verison][文件]",
+        "name": "sort",
+        "remark": "将文本文件内容加以排序",
+        "id": 92,
+        "type": 0
+      },
+      {
+        "code": "tr",
+        "param": "tr [-cdst][--help][--version][第一字符集][第二字符集]",
+        "name": "tr",
+        "remark": "转换字符",
+        "id": 93,
+        "type": 0
+      },
+      {
+        "code": "expr",
+        "param": "expr Expression",
+        "name": "expr",
+        "remark": "求表达式变量的值",
+        "id": 94,
+        "type": 0
+      },
+      {
+        "code": "uniq",
+        "param": "uniq [-cdu][-f<栏位>][-s<字符位置>][-w<字符位置>][--help][--version][输入文件][输出文件]",
+        "name": "uniq",
+        "remark": "检查及删除文本文件中重复出现的行列",
+        "id": 95,
+        "type": 0
+      },
+      {
+        "code": "wc",
+        "param": "wc [-clw][--help][--version][文件...]",
+        "name": "wc",
+        "remark": "计算字数",
+        "id": 96,
+        "type": 0
+      },
+      {
+        "code": "vi",
+        "param": "vi [文件]",
+        "name": "vi",
+        "remark": "编辑文件",
+        "id": 97,
+        "type": 0
+      },
+      {
+        "code": "vim",
+        "param": "vim [文件]",
+        "name": "vim",
+        "remark": "编辑文件",
+        "id": 98,
+        "type": 0
+      }
+    ],
+    "name": "文档编辑",
+    "remark": null,
+    "id": 3,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "lprm",
+        "param": "lprm [P] [file...]",
+        "name": "lprm",
+        "remark": "将一个工作由打印机贮列中移除",
+        "id": 99,
+        "type": 0
+      },
+      {
+        "code": "lpr",
+        "param": "lpr [ -P printer ]",
+        "name": "lpr",
+        "remark": "将档案或是由标准输入送进来的资料送到打印机贮列之中，打印机管理程序 lpd 会在稍后将这个档案送给适当的程序或装置处理。lpr 可以用来将料资送给本地或是远端的主机来处理。",
+        "id": 100,
+        "type": 0
+      },
+      {
+        "code": "lpq",
+        "param": "lpq [l] [P] [user]",
+        "name": "lpq",
+        "remark": "显示列表机贮列中未完成的工作",
+        "id": 101,
+        "type": 0
+      },
+      {
+        "code": "tftp",
+        "param": "tftp [主机名称或IP地址]",
+        "name": "tftp",
+        "remark": "传输文件",
+        "id": 102,
+        "type": 0
+      },
+      {
+        "code": "scp",
+        "param": "scp [[user@]host1:]file1 ... [[user@]host2:]file2",
+        "name": "scp",
+        "remark": "安全复制（远程文件复制程序）",
+        "id": 103,
+        "type": 0
+      }
+    ],
+    "name": "文件传输",
+    "remark": null,
+    "id": 4,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "badblocks",
+        "param": "badblocks [-svw][-b <区块大小>][-o <输出文件>][磁盘装置][磁盘区块数][启始区块]",
+        "name": "badblocks",
+        "remark": "检查磁盘装置中损坏的区块",
+        "id": 104,
+        "type": 0
+      },
+      {
+        "code": "cfdisk",
+        "param": "cfdisk [-avz][-c <柱面数目>-h <磁头数目>-s <盘区数目>][-P <r,s,t>][外围设备代号]",
+        "name": "cfdisk",
+        "remark": "磁盘分区",
+        "id": 105,
+        "type": 0
+      },
+      {
+        "code": "dd",
+        "param": "dd [bs=<字节数>][cbs=<字节数>][conv=<关键字>][count=<区块数>][ibs=<字节数>][if=<文件>][obs=<字节数>][of=<文件>][seek=<区块数>][skip=<区块数>][--help][--version]",
+        "name": "dd",
+        "remark": "读取，转换并输出数据",
+        "id": 106,
+        "type": 0
+      },
+      {
+        "code": "e2fsck",
+        "param": "e2fsck [-acCdfFnprsStvVy][-b <superblock>][-B <区块大小>][-l <文件>][-L <文件>][设备名称]",
+        "name": "e2fsck",
+        "remark": "检查ext2文件系统的正确性",
+        "id": 107,
+        "type": 0
+      },
+      {
+        "code": "fsck",
+        "param": "fsck [-aANPrRsTV][-t <文件系统类型>][文件系统...]",
+        "name": "fsck",
+        "remark": "检查文件系统并尝试修复错误",
+        "id": 108,
+        "type": 0
+      },
+      {
+        "code": "fdformat",
+        "param": "fdformat [-n] device",
+        "name": "fdformat",
+        "remark": "所有使用者",
+        "id": 109,
+        "type": 0
+      },
+      {
+        "code": "mformat",
+        "param": "mformat [-1aCFIKX][-0 <数据传输率>][-2 <磁区数>][-A <数据传输率>][-B <开机区文件>][-c <丛集大小>][-h <磁头数>][-H <隐藏磁区数>][-l <磁盘标签>][-M <磁区大小>][-n <序号>][-r <根目录大小>][-s <磁区数>][-S <磁区大小>][-t <柱面数>][驱动器代号]",
+        "name": "mformat",
+        "remark": "对MS-DOS文件系统的磁盘进行格式化",
+        "id": 110,
+        "type": 0
+      },
+      {
+        "code": "mkdosfs",
+        "param": "mkdosfs [-cv][-f <FAT数目>][-F <FAT记录的单位>][-i <磁盘序号>][-l <文件名>][-m <信息文件>][-n <标签>][-r <根目录项目数>][-s <磁区数>][设备名称][区块数]",
+        "name": "mkdosfs",
+        "remark": "建立MS-DOS文件系统",
+        "id": 111,
+        "type": 0
+      },
+      {
+        "code": "mke2fs",
+        "param": "mke2fs [-cFMqrSvV][-b <区块大小>][-f <不连续区段大小>][-i <字节>][-N <inode数>][-l <文件>][-L <标签>][-m <百分比值>][-R=<区块数>][ 设备名称][区块数]",
+        "name": "mke2fs",
+        "remark": "建立ext2文件系统",
+        "id": 112,
+        "type": 0
+      },
+      {
+        "code": "mkfs",
+        "param": "mkfs [-vV][fs][-f <文件系统类型>][设备名称][区块数]",
+        "name": "mkfs",
+        "remark": "建立各种文件系统",
+        "id": 113,
+        "type": 0
+      },
+      {
+        "code": "mkfs.btrfs",
+        "param": "mkfs.btrfs [options] dev [ dev ... ]",
+        "name": "mkfs.btrfs",
+        "remark": "创建btrfs文件系统",
+        "id": 114,
+        "type": 0
+      },
+      {
+        "code": "mkfs.cramfs",
+        "param": "mkfs.cramfs [options] directory file",
+        "name": "mkfs.cramfs",
+        "remark": "创建压缩的ROM文件系统",
+        "id": 115,
+        "type": 0
+      },
+      {
+        "code": "mkfs.ext2",
+        "param": "mkfs.ext2 [-c|-l filename] [-b block-size] [-C cluster-size]",
+        "name": "mkfs.ext2",
+        "remark": "创建ext2文件系统",
+        "id": 116,
+        "type": 0
+      },
+      {
+        "code": "mkfs.ext3",
+        "param": "mkfs.ext3 [-c|-l filename] [-b block-size] [-C cluster-size]",
+        "name": "mkfs.ext3",
+        "remark": "创建ext3文件系统",
+        "id": 117,
+        "type": 0
+      },
+      {
+        "code": "mkfs.ext4",
+        "param": "mkfs.ext4 [-c|-l filename] [-b block-size] [-C cluster-size]",
+        "name": "mkfs.ext4",
+        "remark": "创建ext4文件系统",
+        "id": 118,
+        "type": 0
+      },
+      {
+        "code": "mkfs.minix",
+        "param": "mkfs.minix [-c | -l filename] [-nXX] [-iXX] /dev/name [blocks]",
+        "name": "mkfs.minix",
+        "remark": "创建Minix文件系统",
+        "id": 119,
+        "type": 0
+      },
+      {
+        "code": "mkfs.xfs",
+        "param": "mkfs.xfs  [  -b  block_size  ]  [  -m  global_metadata_options  ]  [ -d\n       data_section_options ] [ -f ]  [  -i  inode_options  ]  [  -l  log_sec‐\n       tion_options ] [ -n naming_options ] [ -p protofile ] [ -q ] [ -r real‐\n       time_section_options ] [ -s sector_size ] [ -L label ] [ -N ]  [  -K  ]\n       device",
+        "name": "mkfs.xfs",
+        "remark": "创建xfs文件系统",
+        "id": 120,
+        "type": 0
+      },
+      {
+        "code": "mkinitrd",
+        "param": "mkinitrd [OPTION...] [<initrd-image>] <kernel-version>",
+        "name": "mkinitrd",
+        "remark": "产生initramfs",
+        "id": 121,
+        "type": 0
+      },
+      {
+        "code": "mkswap",
+        "param": "mkswap [-cf][-v0][-v1][设备名称或文件][交换区大小]",
+        "name": "mkswap",
+        "remark": "设置交换区(swap area)",
+        "id": 122,
+        "type": 0
+      },
+      {
+        "code": "swapon",
+        "param": "swapon [-ahsV][-p <优先顺序>][设备]",
+        "name": "swapon",
+        "remark": "启动系统交换区",
+        "id": 123,
+        "type": 0
+      },
+      {
+        "code": "sync",
+        "param": "sync [--help][--version]",
+        "name": "sync",
+        "remark": "将内存缓冲区内的数据写入磁盘",
+        "id": 124,
+        "type": 0
+      },
+      {
+        "code": "mbadblocks",
+        "param": "mbadblocks [驱动器代号]",
+        "name": "mbadblocks",
+        "remark": "检查MS-DOS文件系统的磁盘是否有损坏的磁区",
+        "id": 125,
+        "type": 0
+      },
+      {
+        "code": "mkfs",
+        "param": "mkfs [-vV][fs][-f <文件系统类型>][设备名称][区块数]",
+        "name": "mkfs",
+        "remark": "建立各种文件系统",
+        "id": 126,
+        "type": 0
+      },
+      {
+        "code": "fsck.ext2",
+        "param": "fsck.ext2 [-acdfFnprsStvVy][-b <分区第一个磁区地址>][-B <区块大小>][-C <反叙述器>][-I <inode缓冲区块数>][-l/L <损坏区块文件>][-P <处理inode大小>][外围设备代号]",
+        "name": "fsck.ext2",
+        "remark": "检查文件系统并尝试修复错误",
+        "id": 127,
+        "type": 0
+      },
+      {
+        "code": "fdisk",
+        "param": "fdisk [-b <分区大小>][-uv][外围设备代号] 或 fdisk [-l][-b <分区大小>][-uv][外围设备代号...] 或 fdisk [-s <分区编号>]",
+        "name": "fdisk",
+        "remark": "磁盘分区",
+        "id": 128,
+        "type": 0
+      },
+      {
+        "code": "losetup",
+        "param": "losetup [-d][-e <加密方式>][-o <平移数目>][循环设备代号][文件]",
+        "name": "losetup",
+        "remark": "设置循环设备",
+        "id": 129,
+        "type": 0
+      },
+      {
+        "code": "sfdisk",
+        "param": "sfdisk [-?Tvx][-d <硬盘>][-g <硬盘>][-l <硬盘>][-s <分区>][-V <硬盘>]",
+        "name": "sfdisk",
+        "remark": "磁盘分区工具程序",
+        "id": 130,
+        "type": 0
+      },
+      {
+        "code": "swapoff",
+        "param": "swapoff [设备]",
+        "name": "swapoff",
+        "remark": "关闭系统交换区",
+        "id": 131,
+        "type": 0
+      },
+      {
+        "code": "dmsetup",
+        "param": "dmsetup [--version] [-h|--help [-c|-C|--columns]]",
+        "name": "dmsetup",
+        "remark": "底层逻辑卷管理",
+        "id": 132,
+        "type": 0
+      }
+    ],
+    "name": "磁盘维护",
+    "remark": null,
+    "id": 5,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "nc",
+        "param": "nc [-hlnruz][-g<网关...>][-G<指向器数目>][-i<延迟秒数>][-o<输出文件>][-p<通信端口>][-s<来源位址>][-v...][-w<超时秒数>][主机名称][通信端口...]",
+        "name": "nc",
+        "remark": "设置路由器",
+        "id": 133,
+        "type": 0
+      },
+      {
+        "code": "ifconfig",
+        "param": "ifconfig [网络设备][down up -allmulti -arp -promisc][add<地址>][del<地址>][<hw<网络设备类型><硬件地址>][io_addr<I/O地址>][irq<IRQ地址>][media<网络媒介类型>][mem_start<内存地址>][metric<数目>][mtu<字节>][netmask<子网掩码>][tunnel<地址>][-broadcast<地址>][-pointopoint<地址>][IP地址]",
+        "name": "ifconfig",
+        "remark": "显示或设置网络设备",
+        "id": 134,
+        "type": 0
+      },
+      {
+        "code": "mesg",
+        "param": "mesg [ny]",
+        "name": "mesg",
+        "remark": "设置终端机的写入权限",
+        "id": 135,
+        "type": 0
+      },
+      {
+        "code": "wall",
+        "param": "wall [公告信息]",
+        "name": "wall",
+        "remark": "传送信息",
+        "id": 136,
+        "type": 0
+      },
+      {
+        "code": "netstat",
+        "param": "netstat [-acCeFghilMnNoprstuvVwx][-A<网络类型>][--ip]",
+        "name": "netstat",
+        "remark": "显示网络状态",
+        "id": 137,
+        "type": 0
+      },
+      {
+        "code": "ping",
+        "param": "ping [-dfnqrRv][-c<完成次数>][-i<间隔秒数>][-I<网络界面>][-l<前置载入>][-p<范本样式>][-s<数据包大小>][-t<存活数值>][主机名称或IP地址]",
+        "name": "ping",
+        "remark": "检测主机",
+        "id": 138,
+        "type": 0
+      },
+      {
+        "code": "pppstats",
+        "param": "pppstats [-adrv][-c<执行次数>][-w<间隔秒数>][网络界面]",
+        "name": "pppstats",
+        "remark": "显示PPP连线状态",
+        "id": 139,
+        "type": 0
+      },
+      {
+        "code": "setserial",
+        "param": "setserial [-abgGqvVz][设备][串口参数]",
+        "name": "setserial",
+        "remark": "设置或显示串口的相关信息",
+        "id": 140,
+        "type": 0
+      },
+      {
+        "code": "traceroute",
+        "param": "traceroute [-dFlnrvx][-f<存活数值>][-g<网关>...][-i<网络界面>][-m<存活数值>][-p<通信端口>][-s<来源地址>][-t<服务类型>][-w<超时秒数>][主机名称或IP地址][数据包大小]",
+        "name": "traceroute",
+        "remark": "显示数据包到主机间的路径",
+        "id": 141,
+        "type": 0
+      },
+      {
+        "code": "tty",
+        "param": "tty [-s][--help][--version]",
+        "name": "tty",
+        "remark": "显示终端机连接标准输入设备的文件名称",
+        "id": 142,
+        "type": 0
+      },
+      {
+        "code": "newaliases",
+        "param": null,
+        "name": "newaliases",
+        "remark": "Postfix to Sendmail兼容性接口",
+        "id": 143,
+        "type": 0
+      },
+      {
+        "code": "write",
+        "param": "write [用户名称][终端机编号]",
+        "name": "write",
+        "remark": "传送信息",
+        "id": 144,
+        "type": 0
+      },
+      {
+        "code": "tcpdump",
+        "param": "tcpdump [-adeflnNOpqStvx][-c<数据包数目>][-dd][-ddd][-F<表达文件>][-i<网络界面>][-r<数据包文件>][-s<数据包大小>][-tt][-T<数据包类型>][-vv][-w<数据包文件>][输出数据栏位]",
+        "name": "tcpdump",
+        "remark": "倾倒网络传输数据",
+        "id": 145,
+        "type": 0
+      },
+      {
+        "code": "testparm",
+        "param": "testparm [-s][配置文件][<主机名称><IP地址>]",
+        "name": "testparm",
+        "remark": "测试Samba的设置是否正确无误",
+        "id": 146,
+        "type": 0
+      },
+      {
+        "code": "smbclient",
+        "param": "smbclient [-?EgBVNkPeC] [-?|--help] [--usage]",
+        "name": "smbclient",
+        "remark": "可存取SMB/CIFS服务器的用户端程序",
+        "id": 147,
+        "type": 0
+      },
+      {
+        "code": "arp",
+        "param": "ARP -s inet_addr eth_addr [if_addr]",
+        "name": "arp",
+        "remark": "显示和修改地址解析协议",
+        "id": 148,
+        "type": 0
+      },
+      {
+        "code": "arping",
+        "param": "arping [-fqbDUAV] [-c count] [-w timeout] [-I device] [-s source]  ip地址",
+        "name": "arping",
+        "remark": "向邻近的主机发生ARP REQUEST数据包",
+        "id": 149,
+        "type": 0
+      },
+      {
+        "code": "ip",
+        "param": "ip [ OPTIONS ] OBJECT { COMMAND | help }",
+        "name": "ip",
+        "remark": "显示/修改路由、设备、策略和通道",
+        "id": 150,
+        "type": 0
+      },
+      {
+        "code": "ethtool",
+        "param": "ethtool devname",
+        "name": "ethtool",
+        "remark": "查询或修改网络驱动和硬件设置",
+        "id": 151,
+        "type": 0
+      },
+      {
+        "code": "route",
+        "param": " route [-CFvnNee] [-A family |-4|-6]",
+        "name": "route",
+        "remark": "显示修改IP路由表",
+        "id": 152,
+        "type": 0
+      },
+      {
+        "code": "ssh",
+        "param": "ssh [hostname] -u user",
+        "name": "ssh",
+        "remark": "OpenSSH的SSH客户端（远程登录程序）",
+        "id": 153,
+        "type": 0
+      },
+      {
+        "code": "sshd",
+        "param": " sshd [-46DdeiqTt] [-b bits] [-C connection_spec]",
+        "name": "sshd",
+        "remark": "OpenSSH的SSH进程",
+        "id": 154,
+        "type": 0
+      },
+      {
+        "code": "pppd",
+        "param": "pppd",
+        "name": "pppd",
+        "remark": "点对点协议进程",
+        "id": 155,
+        "type": 0
+      },
+      {
+        "code": "brctl",
+        "param": "brctl [command]",
+        "name": "brctl",
+        "remark": "以太网桥接管理工具",
+        "id": 156,
+        "type": 0
+      },
+      {
+        "code": "bridge",
+        "param": "bridge [ OPTIONS ] OBJECT { COMMAND | help }",
+        "name": "bridge",
+        "remark": "显示修改桥接地址和设备",
+        "id": 157,
+        "type": 0
+      },
+      {
+        "code": "iptables",
+        "param": "iptables [-t table] {-A|-C|-D} chain rule-specification",
+        "name": "iptables",
+        "remark": "iptables/ip6tables管理员工具",
+        "id": 158,
+        "type": 0
+      }
+    ],
+    "name": "网络通讯",
+    "remark": null,
+    "id": 6,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "adduser",
+        "param": "adduser",
+        "name": "adduser",
+        "remark": "新增用户帐号",
+        "id": 159,
+        "type": 0
+      },
+      {
+        "code": "chfn",
+        "param": "chfn [-f <真实姓名>][-h <家中电话>][-o <办公地址>][-p <办公电话>][-uv][帐号名称]",
+        "name": "chfn",
+        "remark": "改变finger指令显示的信息",
+        "id": 160,
+        "type": 0
+      },
+      {
+        "code": "useradd",
+        "param": "useradd [-mMnr][-c <备注>][-d <登入目录>][-e <有效期限>][-f <缓冲天数>][-g <群组>][-G <群组>][-s <shell>][-u <uid>][用户帐号] 或 useradd -D [-b][-e <有效期限>][-f <缓冲天数>][-g <群组>][-G <群组>][-s <shell>]",
+        "name": "useradd",
+        "remark": "建立用户帐号",
+        "id": 161,
+        "type": 0
+      },
+      {
+        "code": "date",
+        "param": "date [-d <字符串>][-u][+%H%I%K%l%M%P%r%s%S%T%X%Z%a%A%b%B%c%d%D%j%m%U%w%x%y%Y%n%t] 或date [-s <字符串>][-u][MMDDhhmmCCYYss] 或 date [--help][--version]",
+        "name": "date",
+        "remark": "显示或设置系统时间与日期",
+        "id": 162,
+        "type": 0
+      },
+      {
+        "code": "exit",
+        "param": "exit [状态值]",
+        "name": "exit",
+        "remark": "退出目前的shell",
+        "id": 163,
+        "type": 0
+      },
+      {
+        "code": "sleep",
+        "param": "sleep [--help] [--version] number[smhd]",
+        "name": "sleep",
+        "remark": "睡眠",
+        "id": 164,
+        "type": 0
+      },
+      {
+        "code": "suspend",
+        "param": "suspend [-f]",
+        "name": "suspend",
+        "remark": "暂停执行shell",
+        "id": 165,
+        "type": 0
+      },
+      {
+        "code": "groupdel",
+        "param": "groupdel [群组名称]",
+        "name": "groupdel",
+        "remark": "删除群组",
+        "id": 166,
+        "type": 0
+      },
+      {
+        "code": "groupmod",
+        "param": "groupmod [-g <群组识别码> <-o>][-n <新群组名称>][群组名称]",
+        "name": "groupmod",
+        "remark": "更改群组识别码或名称",
+        "id": 167,
+        "type": 0
+      },
+      {
+        "code": "halt",
+        "param": "halt [-dfinpw]",
+        "name": "halt",
+        "remark": "关闭系统",
+        "id": 168,
+        "type": 0
+      },
+      {
+        "code": "kill",
+        "param": "kill [-s <信息名称或编号>][程序]　或　kill [-l <信息编号>]",
+        "name": "kill",
+        "remark": "删除执行中的程序或工作",
+        "id": 169,
+        "type": 0
+      },
+      {
+        "code": "last",
+        "param": "last [-adRx][-f <记录文件>][-n <显示列数>][帐号名称...][终端机编号...]",
+        "name": "last",
+        "remark": "列出目前与过去登入系统的用户相关信息",
+        "id": 170,
+        "type": 0
+      },
+      {
+        "code": "lastb",
+        "param": "lastb [-adRx][-f <记录文件>][-n <显示列数>][帐号名称...][终端机编号...]",
+        "name": "lastb",
+        "remark": "列出登入系统失败的用户相关信息",
+        "id": 171,
+        "type": 0
+      },
+      {
+        "code": "login",
+        "param": "login",
+        "name": "login",
+        "remark": "登入系统",
+        "id": 172,
+        "type": 0
+      },
+      {
+        "code": "logname",
+        "param": "logname [--help][--version]",
+        "name": "logname",
+        "remark": "显示用户名称",
+        "id": 173,
+        "type": 0
+      },
+      {
+        "code": "logout",
+        "param": "logout",
+        "name": "logout",
+        "remark": "退出系统",
+        "id": 174,
+        "type": 0
+      },
+      {
+        "code": "ps",
+        "param": "ps",
+        "name": "ps",
+        "remark": "报告程序状况",
+        "id": 175,
+        "type": 0
+      },
+      {
+        "code": "nice",
+        "param": "nice [-n <优先等级>][--help][--version][执行指令]",
+        "name": "nice",
+        "remark": "设置优先权",
+        "id": 176,
+        "type": 0
+      },
+      {
+        "code": "top",
+        "param": "top [bciqsS][d <间隔秒数>][n <执行次数>]",
+        "name": "top",
+        "remark": "显示，管理执行中的程序",
+        "id": 177,
+        "type": 0
+      },
+      {
+        "code": "pstree",
+        "param": "pstree [-acGhlnpuUV][-H <程序识别码>][<程序识别码>/<用户名称>]",
+        "name": "pstree",
+        "remark": "以树状图显示程序",
+        "id": 178,
+        "type": 0
+      },
+      {
+        "code": "reboot",
+        "param": "reboot [-dfinw]",
+        "name": "reboot",
+        "remark": "重新开机",
+        "id": 179,
+        "type": 0
+      },
+      {
+        "code": "shutdown",
+        "param": "shutdown [-efFhknr][-t 秒数][时间][警告信息]",
+        "name": "shutdown",
+        "remark": "系统关机指令",
+        "id": 180,
+        "type": 0
+      },
+      {
+        "code": "sudo",
+        "param": "sudo [-bhHpV][-s <shell>][-u <用户>][指令] 或 sudo [-klv]",
+        "name": "sudo",
+        "remark": "以其他身份来执行指令",
+        "id": 181,
+        "type": 0
+      },
+      {
+        "code": "tload",
+        "param": "tload [-V][-d <间隔秒数>][-s <刻度大小>][终端机编号]\r\n",
+        "name": "tload",
+        "remark": "显示系统负载状况",
+        "id": 182,
+        "type": 0
+      },
+      {
+        "code": "logrotate",
+        "param": "logrotate [-?dfv][-s <状态文件>][--usage][配置文件]\r\nlogrotate [-?dfv][-s <状态文件>][--usage][配置文件]\r\n",
+        "name": "logrotate",
+        "remark": "管理记录文件",
+        "id": 183,
+        "type": 0
+      },
+      {
+        "code": "uname",
+        "param": "uname [-amnrsv][--help][--version]\r\n",
+        "name": "uname",
+        "remark": "显示系统信息",
+        "id": 184,
+        "type": 0
+      },
+      {
+        "code": "chsh",
+        "param": "chsh [-luv][-s <shell 名称>][用户名称]",
+        "name": "chsh",
+        "remark": "更换登入系统时使用的shell",
+        "id": 185,
+        "type": 0
+      },
+      {
+        "code": "userdel",
+        "param": "userdel [-r][用户帐号]",
+        "name": "userdel",
+        "remark": "删除用户帐号",
+        "id": 186,
+        "type": 0
+      },
+      {
+        "code": "usermod",
+        "param": "usermod [-LU][-c <备注>][-d <登入目录>][-e <有效期限>][-f <缓冲天数>][-g <群组>][-G <群组>][-l <帐号名称>][-s <shell>][-u <uid>][用户帐号]",
+        "name": "usermod",
+        "remark": "修改用户帐号",
+        "id": 187,
+        "type": 0
+      },
+      {
+        "code": "vlock",
+        "param": "vlock [-achv]",
+        "name": "vlock",
+        "remark": "锁住虚拟终端",
+        "id": 188,
+        "type": 0
+      },
+      {
+        "code": "who",
+        "param": "who [-Himqsw][--help][--version][am i][记录文件]",
+        "name": "who",
+        "remark": "显示目前登入系统的用户信息",
+        "id": 189,
+        "type": 0
+      },
+      {
+        "code": "whoami",
+        "param": "whoami [--help][--version]",
+        "name": "whoami",
+        "remark": "显示自身的用户名称",
+        "id": 190,
+        "type": 0
+      },
+      {
+        "code": "newgrp",
+        "param": "newgrp [群组名称]",
+        "name": "newgrp",
+        "remark": "登入另一个群组",
+        "id": 191,
+        "type": 0
+      },
+      {
+        "code": "renice",
+        "param": "renice [优先等级][-g <程序群组名称>...][-p <程序识别码>...][-u <用户名称>...]",
+        "name": "renice",
+        "remark": "调整优先权",
+        "id": 192,
+        "type": 0
+      },
+      {
+        "code": "su",
+        "param": "su [-flmp][--help][--version][-][-c <指令>][-s <shell>][用户帐号]",
+        "name": "su",
+        "remark": "变更用户身份",
+        "id": 193,
+        "type": 0
+      },
+      {
+        "code": "skill",
+        "param": "skill [signal to send] [options] 选择程序的规则",
+        "name": "skill",
+        "remark": "送个讯号给正在执行的程序,预设的讯息为 TERM (中断) , 较常使用的讯息为 HUP , INT , KILL , STOP , CONT ,和 0 ",
+        "id": 194,
+        "type": 0
+      },
+      {
+        "code": "w",
+        "param": "w [-fhlsuV][用户名称]",
+        "name": "w",
+        "remark": "显示目前登入系统的用户信息",
+        "id": 195,
+        "type": 0
+      },
+      {
+        "code": "id",
+        "param": "id [-gGnru][--help][--version][用户名称]",
+        "name": "id",
+        "remark": "显示用户的ID，以及所属群组的ID",
+        "id": 196,
+        "type": 0
+      },
+      {
+        "code": "free",
+        "param": "free [-bkmotV][-s <间隔秒数>]",
+        "name": "free",
+        "remark": "显示内存状态",
+        "id": 197,
+        "type": 0
+      },
+      {
+        "code": "ss",
+        "param": "locale [ 参数 ]",
+        "name": "ss",
+        "remark": "显示查看网络状态信息，包括TCP、UDP连接，端口",
+        "id": 198,
+        "type": 0
+      },
+      {
+        "code": "lspci",
+        "param": "lspci [ 参数 ]",
+        "name": "lspci",
+        "remark": "列出所有PCI设备",
+        "id": 199,
+        "type": 0
+      },
+      {
+        "code": "locale",
+        "param": "locale [ 参数 ]",
+        "name": "locale",
+        "remark": "地域定义文件的描述",
+        "id": 200,
+        "type": 0
+      },
+      {
+        "code": "lscpu",
+        "param": "lscpu [-a|-b|-c] [-x] [-s directory] [-e[=list]|-p[=list]]",
+        "name": "lscpu",
+        "remark": "查看cpu信息概要",
+        "id": 201,
+        "type": 0
+      },
+      {
+        "code": "lsblk",
+        "param": "lsblk [options] [device...]",
+        "name": "lsblk",
+        "remark": "列出所有的块设备，而且还能显示他们之间的依赖关系",
+        "id": 202,
+        "type": 0
+      },
+      {
+        "code": "lsof",
+        "param": "lsof ［参数］ filename",
+        "name": "lsof",
+        "remark": "列出当前系统打开文件的工具",
+        "id": 203,
+        "type": 0
+      },
+      {
+        "code": "getconf",
+        "param": "getconf [ -v specification ] [ SystemwideConfiguration | PathConfiguration PathName ] [ DeviceVariable DeviceName]",
+        "name": "getconf",
+        "remark": "提供有关系统的配置信息，如系统的内存大小、硬盘空间、上一次的启动设备、以及硬件是32位还是64位等多项信息。getconf命令使用系统的ODM库程序从系统的设备配置库中获取信息",
+        "id": 204,
+        "type": 0
+      }
+    ],
+    "name": "系统管理",
+    "remark": null,
+    "id": 7,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "reset",
+        "param": "tset [-IQqrs] [-] [-e ch] [-i ch] [-k ch] [-m mapping] [terminal]",
+        "name": "reset, tset",
+        "remark": "设定终端机的状态",
+        "id": 205,
+        "type": 0
+      },
+      {
+        "code": "clear",
+        "param": "clear",
+        "name": "clear",
+        "remark": "清除萤幕",
+        "id": 206,
+        "type": 0
+      },
+      {
+        "code": "alias",
+        "param": "alias[别名]=[指令名称]",
+        "name": "alias",
+        "remark": "设置指令的别名",
+        "id": 207,
+        "type": 0
+      },
+      {
+        "code": "dircolors",
+        "param": "dircolors [色彩配置文件] 或 dircolors [-bcp][--help][--version]",
+        "name": "dircolors",
+        "remark": "设置 ls 指令在显示目录或文件时所用的色彩",
+        "id": 208,
+        "type": 0
+      },
+      {
+        "code": "aumix",
+        "param": "aumix [-123bcilmoprstvwWx][(+/-)强度][PqR][-dfhILqS]",
+        "name": "aumix",
+        "remark": "设置音效装置",
+        "id": 209,
+        "type": 0
+      },
+      {
+        "code": "bind",
+        "param": "bind [-dlv][-f <按键配置文件>][-m <按键配置>][-q <功能>]",
+        "name": "bind",
+        "remark": "显示或设置键盘按键与其相关的功能",
+        "id": 210,
+        "type": 0
+      },
+      {
+        "code": "chroot",
+        "param": "chroot [--help][--version][目的目录][执行指令...]",
+        "name": "chroot",
+        "remark": "改变根目录",
+        "id": 211,
+        "type": 0
+      },
+      {
+        "code": "clock",
+        "param": "clock [--adjust][--debug][--directisa][--getepoch][--hctosys][--set --date=\"<日期时间>\"][--setepoch --epoch=< >][--show][--systohc][--test][--utc][--version]",
+        "name": "clock",
+        "remark": "调整 RTC 时间",
+        "id": 212,
+        "type": 0
+      },
+      {
+        "code": "crontab",
+        "param": "crontab [-u <用户名称>][配置文件] 或 crontab [-u <用户名称>][-elr]",
+        "name": "crontab",
+        "remark": "设置计时器",
+        "id": 213,
+        "type": 0
+      },
+      {
+        "code": "declare",
+        "param": "declare [+/-][rxi][变量名称＝设置值] 或 declare -f",
+        "name": "declare",
+        "remark": "声明 shell 变量",
+        "id": 214,
+        "type": 0
+      },
+      {
+        "code": "depmod",
+        "param": "depmod [-adeisvV][-m <文件>][--help][模块名称]",
+        "name": "depmod",
+        "remark": "分析可载入模块的相依性",
+        "id": 215,
+        "type": 0
+      },
+      {
+        "code": "dmesg",
+        "param": "dmesg [-cn][-s <缓冲区大小>]",
+        "name": "dmesg",
+        "remark": "显示开机信息",
+        "id": 216,
+        "type": 0
+      },
+      {
+        "code": "enable",
+        "param": "enable [-n][-all][内建指令]",
+        "name": "enable",
+        "remark": "启动或关闭 shell 内建指令",
+        "id": 217,
+        "type": 0
+      },
+      {
+        "code": "eval",
+        "param": "eval [参数]",
+        "name": "eval",
+        "remark": "重新运算求出参数的内容",
+        "id": 218,
+        "type": 0
+      },
+      {
+        "code": "export",
+        "param": "export [-fnp][变量名称]=[变量设置值]",
+        "name": "export",
+        "remark": "设置或显示环境变量",
+        "id": 219,
+        "type": 0
+      },
+      {
+        "code": "pwunconv",
+        "param": "pwunconv",
+        "name": "pwunconv",
+        "remark": "关闭用户的投影密码",
+        "id": 220,
+        "type": 0
+      },
+      {
+        "code": "grpconv",
+        "param": "grpconv",
+        "name": "grpconv",
+        "remark": "开启群组的投影密码",
+        "id": 221,
+        "type": 0
+      },
+      {
+        "code": "rpm",
+        "param": "rpm [-acdhilqRsv][-b<完成阶段><套间档>+][-e<套件挡>][-f<文件>+][-i<套件档>][-p<套件档>＋][-U<套件档>][-vv][--addsign<套件档>+][--allfiles][--allmatches][--badreloc][--buildroot<根目录>][--changelog][--checksig<套件档>+][--clean][--dbpath<数据库目录>][--dump][--excludedocs][--excludepath<排除目录>][--force][--ftpproxy<主机名称或IP地址>][--ftpport<通信端口>][--help][--httpproxy<主机名称或IP地址>][--httpport<通信端口>][--ignorearch][--ignoreos][--ignoresize][--includedocs][--initdb][justdb][--nobulid][--nodeps][--nofiles][--nogpg][--nomd5][--nopgp][--noorder][--noscripts][--notriggers][--oldpackage][--percent][--pipe<执行指令>]",
+        "name": "rpm",
+        "remark": "管理套件",
+        "id": 222,
+        "type": 0
+      },
+      {
+        "code": "insmod",
+        "param": "insmod [-fkmpsvxX][-o <模块名称>][模块文件][符号名称 = 符号值]",
+        "name": "insmod",
+        "remark": "载入模块",
+        "id": 223,
+        "type": 0
+      },
+      {
+        "code": "lsmod",
+        "param": "lsmod",
+        "name": "lsmod",
+        "remark": "显示已载入系统的模块",
+        "id": 224,
+        "type": 0
+      },
+      {
+        "code": "minfo",
+        "param": "</>minfo [-v][驱动器代号]",
+        "name": "minfo",
+        "remark": "显示MS-DOS文件系统的各项参数.minfo为mtools工具指令",
+        "id": 225,
+        "type": 0
+      },
+      {
+        "code": "set",
+        "param": "set [+-abCdefhHklmnpPtuvx]",
+        "name": "set",
+        "remark": "设置shell",
+        "id": 226,
+        "type": 0
+      },
+      {
+        "code": "modprobe",
+        "param": "modprobe [-acdlrtvV][--help][模块文件][符号名称 = 符号值]",
+        "name": "modprobe",
+        "remark": "自动处理可载入模块",
+        "id": 227,
+        "type": 0
+      },
+      {
+        "code": "ntsysv",
+        "param": "ntsysv [--back][--level <等级代号>]",
+        "name": "ntsysv",
+        "remark": "设置系统的各种服务",
+        "id": 228,
+        "type": 0
+      },
+      {
+        "code": "passwd",
+        "param": "passwd [-dklS][-u <-f>][用户名称]",
+        "name": "passwd",
+        "remark": "设置密码",
+        "id": 229,
+        "type": 0
+      },
+      {
+        "code": "pwconv",
+        "param": "pwconv",
+        "name": "pwconv",
+        "remark": "开启用户的投影密码",
+        "id": 230,
+        "type": 0
+      },
+      {
+        "code": "rdate",
+        "param": "rdate [-ps][主机名称或IP地址...]",
+        "name": "rdate",
+        "remark": "显示其他主机的日期与时间",
+        "id": 231,
+        "type": 0
+      },
+      {
+        "code": "rmmod",
+        "param": "rmmod [-as][模块名称...]",
+        "name": "rmmod",
+        "remark": "删除模块",
+        "id": 232,
+        "type": 0
+      },
+      {
+        "code": "grpunconv",
+        "param": "grpunconv",
+        "name": "grpunconv",
+        "remark": "关闭群组的投影密码",
+        "id": 233,
+        "type": 0
+      },
+      {
+        "code": "modinfo",
+        "param": "modinfo [-adhpV][模块文件]",
+        "name": "modinfo",
+        "remark": "显示kernel模块的信息",
+        "id": 234,
+        "type": 0
+      },
+      {
+        "code": "time",
+        "param": "timeconfig [--arc][--back][--test][--utc][时区名称]",
+        "name": "time",
+        "remark": "设置时区",
+        "id": 235,
+        "type": 0
+      },
+      {
+        "code": "setup",
+        "param": "setup",
+        "name": "setup",
+        "remark": "设置公用程序",
+        "id": 236,
+        "type": 0
+      },
+      {
+        "code": "ulimit",
+        "param": "ulimit [-aHS][-c <core文件上限>][-d <数据节区大小>][-f <文件大小>][-m <内存大小>][-n <文件数目>][-p <缓冲区大小>][-s <堆叠大小>][-t <CPU时间>][-u <程序数目>][-v <虚拟内存大小>]",
+        "name": "ulimit",
+        "remark": "控制shell程序的资源",
+        "id": 237,
+        "type": 0
+      },
+      {
+        "code": "unset",
+        "param": "unset [-fv][变量或函数名称]",
+        "name": "unset",
+        "remark": "删除变量或函数",
+        "id": 238,
+        "type": 0
+      },
+      {
+        "code": "chkconfig",
+        "param": "chkconfig [--add][--del][--list][系统服务] 或 chkconfig [--level <等级代号>][系统服务][on/off/reset]",
+        "name": "chkconfig",
+        "remark": "检查，设置系统的各种服务",
+        "id": 239,
+        "type": 0
+      },
+      {
+        "code": "hwclock",
+        "param": "hwclock [--adjust][--debug][--directisa][--hctosys][--show][--systohc][--test][--utc][--version][--set --date=<日期与时间>]",
+        "name": "hwclock",
+        "remark": "显示与设定硬件时钟",
+        "id": 240,
+        "type": 0
+      },
+      {
+        "code": "unalias",
+        "param": "unalias [-a][别名]",
+        "name": "unalias",
+        "remark": "删除别名",
+        "id": 241,
+        "type": 0
+      }
+    ],
+    "name": "系统设置",
+    "remark": null,
+    "id": 8,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "ar",
+        "param": "ar[-dmpqrtx][cfosSuvV][a<成员文件>][b<成员文件>][i<成员文件>][备存文件][成员文件]",
+        "name": "ar",
+        "remark": "建立或修改备存文件，或是从备存文件中抽取文件",
+        "id": 242,
+        "type": 0
+      },
+      {
+        "code": "bunzip2",
+        "param": "bunzip2 [-fkLsvV][.bz2压缩文件]",
+        "name": "bunzip2",
+        "remark": ".bz2文件的解压缩程序",
+        "id": 243,
+        "type": 0
+      },
+      {
+        "code": "bzip2",
+        "param": "bzip2 [-cdfhkLstvVz][--repetitive-best][--repetitive-fast][- 压缩等级][要压缩的文件]",
+        "name": "bzip2",
+        "remark": ".bz2文件的压缩程序",
+        "id": 244,
+        "type": 0
+      },
+      {
+        "code": "bzip2recover",
+        "param": "bzip2recover [.bz2 压缩文件]",
+        "name": "bzip2recover",
+        "remark": "用来修复损坏的.bz2文件",
+        "id": 245,
+        "type": 0
+      },
+      {
+        "code": "gunzip",
+        "param": "gunzip [-acfhlLnNqrtvV][-s <压缩字尾字符串>][文件...] 或 gunzip [-acfhlLnNqrtvV][-s <压缩字尾字符串>][目录]",
+        "name": "gunzip",
+        "remark": "解压文件",
+        "id": 246,
+        "type": 0
+      },
+      {
+        "code": "unarj",
+        "param": "unarj [eltx][.arj压缩文件]",
+        "name": "unarj",
+        "remark": "解压缩.arj文件",
+        "id": 247,
+        "type": 0
+      },
+      {
+        "code": "compress",
+        "param": "compress [-cdfrvV][-b <压缩效率>][文件或目录...]",
+        "name": "compress",
+        "remark": "压缩或解压文件",
+        "id": 248,
+        "type": 0
+      },
+      {
+        "code": "cpio",
+        "param": "cpio [-0aABckLovV][-C <输入/输出大小>][-F <备份档>][-H <备份格式>][-O <备份档>][--block-size=<区块大小>][--force-local][--help][--quiet][--version] 或 cpio [-bBcdfikmnrsStuvV][-C <输入/输出大小>][-E <范本文件>][-F <备份档>][-H <备份格式>][-I <备份档>][-M <回传信息>][-R <拥有者><:/.><所属群组>][--block-size=<区块大小>][--force-local][--help][--no-absolute-filenames][--no-preserve-owner][--only-verify-crc][--quiet][--sparse][--version][范本样式...] 或 cpio [-0adkiLmpuvV][-R <拥有者><:/.><所属群组>][--help][--no-preserve-owner][--quiet][--sparse][--version][目的目]",
+        "name": "cpio",
+        "remark": "备份文件",
+        "id": 249,
+        "type": 0
+      },
+      {
+        "code": "dump",
+        "param": "dump [-cnu][-0123456789][-b <区块大小>][-B <区块数目>][-d <密度>][-f <设备名称>][-h <层级>][-s <磁带长度>][-T <日期>][目录或文件系统] 或 dump [-wW]",
+        "name": "dump",
+        "remark": "备份文件系统",
+        "id": 250,
+        "type": 0
+      },
+      {
+        "code": "uuencode",
+        "param": "uuencode [-hv] [sourcefile] targetfile",
+        "name": "uuencode",
+        "remark": "可以将二进位档转换成七位元的档案，传送到另一架机器上再以 uudecode 还原。最常见的是用在以电子邮件传送二进位档。uuencode 编码后的资料都以 begin 开始，以 end 作为结束。",
+        "id": 251,
+        "type": 0
+      },
+      {
+        "code": "gzexe",
+        "param": "gzexe [-d][执行文件...]",
+        "name": "gzexe",
+        "remark": "压缩执行文件",
+        "id": 252,
+        "type": 0
+      },
+      {
+        "code": "gzip",
+        "param": "gzip [-acdfhlLnNqrtvV][-S <压缩字尾字符串>][-<压缩效率>][--best/fast][文件...] 或 gzip [-acdfhlLnNqrtvV][-S <压缩字尾字符串>][-<压缩效率>][--best/fast][目录]",
+        "name": "gzip",
+        "remark": "压缩文件",
+        "id": 253,
+        "type": 0
+      },
+      {
+        "code": "restore",
+        "param": "restore [-cCvy][-b <区块大小>][-D <文件系统>][-f <备份文件>][-s <文件编号>] 或 restore [-chimvy][-b <区块大小>][-f <备份文件>][-s <文件编号>] 或 restore [-crvy][-b <区块大小>][-f <备份文件>][-s <文件编号>] 或 restore [-cRvy][-b <区块大小>][-D <文件系统>][-f <备份文件>][-s <文件编号>] 或 restore [chtvy][-b <区块大小>][-D <文件系统>][-f <备份文件>][-s <文件编号>][文件...] 或 restore [-chmvxy][-b <区块大小>][-D <文件系统>][-f <备份文件>][-s <文件编号>][文件...]",
+        "name": "restore",
+        "remark": "还原(Restore)由倾倒(Dump)操作所备份下来的文件或整个文件系统(一个分区)。",
+        "id": 254,
+        "type": 0
+      },
+      {
+        "code": "tar",
+        "param": "tar [-ABcdgGhiklmMoOpPrRsStuUvwWxzZ][-b <区块数目>][-C <目的目录>][-f <备份文件>][-F <Script文件>][-K <文件>][-L <媒体容量>][-N <日期时间>][-T <范本文件>][-V <卷册名称>][-X <范本文件>][-<设备编号><存储密度>][--after-date=<日期时间>][--atime-preserve][--backuup=<备份方式>][--checkpoint][--concatenate][--confirmation][--delete][--exclude=<范本样式>][--force-local][--group=<群组名称>][--help][--ignore-failed-read][--new-volume-script=<Script文件>][--newer-mtime][--no-recursion][--null][--numeric-owner][--owner=<用户名称>][--posix][--erve][--preserve-order][--preserve-permissions][--record-size=<区块数目>][--recursive-unlink][--remove-files][--rsh-command=<执行指令>][--same-owner][--suffix=<备份字尾字符串>][--totals][--use-compress-program=<执行指令>][--version][--volno-file=<编号文件>][文件或目录...]",
+        "name": "tar",
+        "remark": "备份文件",
+        "id": 255,
+        "type": 0
+      },
+      {
+        "code": "uudecode",
+        "param": "uuencode [-hv] [file1 ...]",
+        "name": "uudecode",
+        "remark": "uudecode 将 uuencode 编码后的档案还原， uudecode 只会将 begin 与 end 标记之间的编码资料还原，程序会跳过标记以外的资料。",
+        "id": 256,
+        "type": 0
+      },
+      {
+        "code": "unzip",
+        "param": "unzip [-cflptuvz][-agCjLMnoqsVX][-P <密码>][.zip文件][文件][-d <目录>][-x <文件>] 或 unzip [-Z]",
+        "name": "unzip",
+        "remark": "解压缩zip文件",
+        "id": 257,
+        "type": 0
+      },
+      {
+        "code": "zip",
+        "param": "zip [-AcdDfFghjJKlLmoqrSTuvVwXyz$][-b <工作目录>][-ll][-n <字尾字符串>][-t <日期时间>][-<压缩效率>][压缩文件][文件...][-i <范本样式>][-x <范本样式>]",
+        "name": "zip",
+        "remark": "压缩文件",
+        "id": 258,
+        "type": 0
+      },
+      {
+        "code": "zipinfo",
+        "param": "zipinfo [-12hlmMstTvz][压缩文件][文件...][-x <范本样式>]",
+        "name": "zipinfo",
+        "remark": "列出压缩文件信息",
+        "id": 259,
+        "type": 0
+      }
+    ],
+    "name": "备份压缩",
+    "remark": null,
+    "id": 9,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "setleds",
+        "param": "setleds [-v] [-L] [-D] [-F] [{+|-}num] [{+|-}caps] [{+|-}scroll]",
+        "name": "setleds",
+        "remark": "用来设定键盘上方三个 LED 的状态。在 Linux 中，每一个虚拟主控台都有独立的设定",
+        "id": 260,
+        "type": 0
+      },
+      {
+        "code": "loadkeys",
+        "param": "loadkeys [ -d --default ] [ -h --help ] [ -q --quiet ] [ -v --verbose [ -v --verbose ]...] [ -m --mktable ] [ -c --clearcompose ] [ -s --clearstrings ] [ filename... ]",
+        "name": "loadkeys",
+        "remark": "根据一个键盘定义表改变 linux 键盘驱动程序转译键盘输入过程",
+        "id": 261,
+        "type": 0
+      },
+      {
+        "code": "dumpkeys",
+        "param": "dumpkeys [ -hilfn1 -Sshape -ccharset --help --short-info --long-info --numeric --full-table --separate-lines --shape=shape --funcs-only --keys-only --compose-only --charset=charset ]",
+        "name": "dumpkeys",
+        "remark": "将键盘的对映表写到标准输出之中，输出的格式可以被 loadkeys 命令载入",
+        "id": 262,
+        "type": 0
+      },
+      {
+        "code": "udev",
+        "param": "udev",
+        "name": "udev",
+        "remark": "动态设备管理程序",
+        "id": 263,
+        "type": 0
+      },
+      {
+        "code": "udevadm",
+        "param": "udevadm [--help] [--version] [--debug] COMMAND [COMMAND OPTIONS]",
+        "name": "udevadm",
+        "remark": "udev 管理工具",
+        "id": 264,
+        "type": 0
+      }
+    ],
+    "name": "设备管理",
+    "remark": null,
+    "id": 10,
+    "type": 1
+  },
+  {
+    "code": "",
+    "param": "",
+    "children": [
+      {
+        "code": "!",
+        "param": "! [cmd[args]]",
+        "name": "!",
+        "remark": "在本地机中执行交互shell，exit回到ftp环境，如：!ls*.zip ",
+        "id": 10703,
+        "type": 0
+      },
+      {
+        "code": "$",
+        "param": "$ [macro-ame] [args]",
+        "name": "$",
+        "remark": "执行宏定义macro-name",
+        "id": 10704,
+        "type": 0
+      },
+      {
+        "code": "account",
+        "param": "account [password]",
+        "name": "account",
+        "remark": "提供登录远程系统成功后访问系统资源所需的补充口令",
+        "id": 10705,
+        "type": 0
+      },
+      {
+        "code": "append",
+        "param": "append [local-file] [remote-file]",
+        "name": "append",
+        "remark": "将本地文件追加到远程系统主机，若未指定远程系统文件名，则使用本地文件名",
+        "id": 10706,
+        "type": 0
+      },
+      {
+        "code": "ascii",
+        "param": "ascii",
+        "name": "ascii",
+        "remark": "使用ascii类型传输方式",
+        "id": 10707,
+        "type": 0
+      },
+      {
+        "code": "bell",
+        "param": "bell",
+        "name": "bell",
+        "remark": "每个命令执行完毕后计算机响铃一次",
+        "id": 10708,
+        "type": 0
+      },
+      {
+        "code": "bin",
+        "param": "bin",
+        "name": "bin",
+        "remark": "使用二进制文件传输方式",
+        "id": 10709,
+        "type": 0
+      },
+      {
+        "code": "bye",
+        "param": "bye",
+        "name": "bye",
+        "remark": "退出ftp会话过程",
+        "id": 10710,
+        "type": 0
+      },
+      {
+        "code": "cd",
+        "param": "cd [remote-dir]",
+        "name": "cd",
+        "remark": "进入远程主机目录",
+        "id": 10711,
+        "type": 0
+      },
+      {
+        "code": "cdup",
+        "param": "cdup",
+        "name": "cdup",
+        "remark": "进入远程主机目录的父目录",
+        "id": 10712,
+        "type": 0
+      },
+      {
+        "code": "chmod",
+        "param": "chmod [mode] [file-name]",
+        "name": "chmod",
+        "remark": "将远程主机文件file-name的存取方式设置为mode，如：chmod 777 a.out",
+        "id": 10713,
+        "type": 0
+      },
+      {
+        "code": "close",
+        "param": "close",
+        "name": "close",
+        "remark": "中断与远程服务器的ftp会话(与open对应)",
+        "id": 10714,
+        "type": 0
+      },
+      {
+        "code": "cr",
+        "param": "cr",
+        "name": "cr",
+        "remark": "使用ascii方式传输文件时，将回车换行转换为回行",
+        "id": 10715,
+        "type": 0
+      },
+      {
+        "code": "delete",
+        "param": "delete [remote-file]",
+        "name": "delete",
+        "remark": "删除远程主机文件",
+        "id": 10716,
+        "type": 0
+      },
+      {
+        "code": "debug",
+        "param": "debug [debug-value]",
+        "name": "debug",
+        "remark": "设置调试方式，显示发送至远程主机的每条命令，如：debug 3，若设为0，表示取消debug",
+        "id": 10717,
+        "type": 0
+      },
+      {
+        "code": "dir",
+        "param": "dir [remote-dir] [local-file]",
+        "name": "dir",
+        "remark": "显示远程主机目录，并将结果存入本地文件local-file",
+        "id": 10718,
+        "type": 0
+      },
+      {
+        "code": "disconnect",
+        "param": "disconnect",
+        "name": "disconnect",
+        "remark": "同close",
+        "id": 10719,
+        "type": 0
+      },
+      {
+        "code": "form",
+        "param": "form format",
+        "name": "form",
+        "remark": "将文件传输方式设置为format，缺省为file方式",
+        "id": 10720,
+        "type": 0
+      },
+      {
+        "code": "get",
+        "param": "get [remote-file] [local-file]",
+        "name": "get",
+        "remark": "将远程主机的文件remote-file传至本地硬盘的local-file",
+        "id": 10721,
+        "type": 0
+      },
+      {
+        "code": "glob",
+        "param": "glob",
+        "name": "glob",
+        "remark": "设置mdelete，mget，mput的文件名扩展，缺省时不扩展文件名，同命令行的-g参数",
+        "id": 10722,
+        "type": 0
+      },
+      {
+        "code": "hash",
+        "param": "hash",
+        "name": "hash",
+        "remark": "每传输1024字节，显示一个hash符号(#)",
+        "id": 10723,
+        "type": 0
+      },
+      {
+        "code": "help",
+        "param": "help [cmd]",
+        "name": "help",
+        "remark": "显示ftp内部命令cmd的帮助信息，如：help get",
+        "id": 10724,
+        "type": 0
+      },
+      {
+        "code": "idle",
+        "param": "idle [seconds]",
+        "name": "idle",
+        "remark": "将远程服务器的休眠计时器设为[seconds]秒",
+        "id": 10725,
+        "type": 0
+      },
+      {
+        "code": "image",
+        "param": "image",
+        "name": "image",
+        "remark": "设置二进制传输方式(同binary)",
+        "id": 10726,
+        "type": 0
+      },
+      {
+        "code": "lcd",
+        "param": "lcd [dir]",
+        "name": "lcd",
+        "remark": "将本地工作目录切换至dir",
+        "id": 10727,
+        "type": 0
+      },
+      {
+        "code": "ls",
+        "param": "ls [remote-dir] [local-file]",
+        "name": "ls",
+        "remark": "显示远程目录remote-dir，并存入本地文件local-file",
+        "id": 10728,
+        "type": 0
+      },
+      {
+        "code": "macdef",
+        "param": "macdef [macro-name]",
+        "name": "macdef ",
+        "remark": "定义一个宏，遇到macdef下的空行时，宏定义结束",
+        "id": 10729,
+        "type": 0
+      },
+      {
+        "code": "mdelete",
+        "param": "mdelete [remote-file]",
+        "name": "mdelete",
+        "remark": "删除远程主机文件",
+        "id": 10730,
+        "type": 0
+      },
+      {
+        "code": "mdir",
+        "param": "mdir [remote-files] [local-file]",
+        "name": "mdir",
+        "remark": "与dir类似，但可指定多个远程文件，如：mdir *.o.*.zipoutfile",
+        "id": 10731,
+        "type": 0
+      },
+      {
+        "code": "mget",
+        "param": "mget [remote-files]",
+        "name": "mget",
+        "remark": "传输多个远程文件",
+        "id": 10732,
+        "type": 0
+      },
+      {
+        "code": "mkdir",
+        "param": "mkdir [dir-name]",
+        "name": "mkdir",
+        "remark": "在远程主机中建一目录",
+        "id": 10733,
+        "type": 0
+      },
+      {
+        "code": "mls",
+        "param": "mls [remote-file] [local-file]",
+        "name": "mls",
+        "remark": "同nlist，但可指定多个文件名",
+        "id": 10734,
+        "type": 0
+      },
+      {
+        "code": "mode",
+        "param": "mode [modename]",
+        "name": "mode",
+        "remark": "将文件传输方式设置为modename，缺省为stream方式",
+        "id": 10735,
+        "type": 0
+      },
+      {
+        "code": "modtime",
+        "param": "modtime [file-name]",
+        "name": "modtime",
+        "remark": "显示远程主机文件的最后修改时间",
+        "id": 10736,
+        "type": 0
+      },
+      {
+        "code": "mput",
+        "param": "mput [local-file]",
+        "name": "mput",
+        "remark": "将多个文件传输至远程主机",
+        "id": 10737,
+        "type": 0
+      },
+      {
+        "code": "newer",
+        "param": "newer [file-name]",
+        "name": "newer",
+        "remark": "如果远程机中file-name的修改时间比本地硬盘同名文件的时间更近，则重传该文件",
+        "id": 10738,
+        "type": 0
+      },
+      {
+        "code": "nlist",
+        "param": "nlist [remote-dir] [local-file]",
+        "name": "nlist",
+        "remark": "显示远程主机目录的文件清单，并存入本地硬盘的local-file",
+        "id": 10739,
+        "type": 0
+      },
+      {
+        "code": "nmap",
+        "param": "nmap [inpattern outpattern]",
+        "name": "nmap",
+        "remark": "设置文件名映射机制，使得文件传输时，文件中的某些字符相互转换，如：nmap $1.$2.$3[$1，$2].[$2，$3]，则传输文件a1.a2.a3时，文件名变为a1，a2。该命令特别适用于远程主机为非UNIX机的情况",
+        "id": 10740,
+        "type": 0
+      },
+      {
+        "code": "ntrans",
+        "param": "ntrans [inchars[outchars]]",
+        "name": "ntrans",
+        "remark": "设置文件名字符的翻译机制，如ntrans 1R，则文件名LLL将变为RRR",
+        "id": 10741,
+        "type": 0
+      },
+      {
+        "code": "open",
+        "param": "open host [port]",
+        "name": "open",
+        "remark": "建立指定ftp服务器连接，可指定连接端口",
+        "id": 10742,
+        "type": 0
+      },
+      {
+        "code": "passive",
+        "param": "passive",
+        "name": "passive",
+        "remark": "进入被动传输方式",
+        "id": 10743,
+        "type": 0
+      },
+      {
+        "code": "prompt",
+        "param": "prompt",
+        "name": "prompt",
+        "remark": "设置多个文件传输时的交互提示",
+        "id": 10744,
+        "type": 0
+      },
+      {
+        "code": "proxy",
+        "param": "proxy [ftp-cmd]",
+        "name": "proxy",
+        "remark": "在次要控制连接中，执行一条ftp命令，该命令允许连接两个ftp服务器，以在两个服务器间传输文件。第一条ftp命令必须为open，以首先建立两个服务器间的连接",
+        "id": 10745,
+        "type": 0
+      },
+      {
+        "code": "put",
+        "param": "put [local-file] [remote-file]",
+        "name": "put",
+        "remark": "将本地文件local-file传送至远程主机",
+        "id": 10746,
+        "type": 0
+      },
+      {
+        "code": "pwd",
+        "param": "pwd",
+        "name": "pwd",
+        "remark": "显示远程主机的当前工作目录",
+        "id": 10747,
+        "type": 0
+      },
+      {
+        "code": "quit",
+        "param": "quit",
+        "name": "quit",
+        "remark": "同bye，退出ftp会话",
+        "id": 10748,
+        "type": 0
+      },
+      {
+        "code": "quote",
+        "param": "quote [arg1,arg2...]",
+        "name": "quote",
+        "remark": "将参数逐字发至远程ftp服务器，如：quote syst",
+        "id": 10749,
+        "type": 0
+      },
+      {
+        "code": "recv",
+        "param": "recv [remote-file] [local-file]",
+        "name": "recv",
+        "remark": "同get",
+        "id": 10750,
+        "type": 0
+      },
+      {
+        "code": "reget",
+        "param": "reget [remote-file] [local-file]",
+        "name": "reget",
+        "remark": "类似于get，但若local-file存在，则从上次传输中断处续传",
+        "id": 10751,
+        "type": 0
+      },
+      {
+        "code": "rhelp",
+        "param": "rhelp [cmd-name]",
+        "name": "rhelp",
+        "remark": "请求获得远程主机的帮助",
+        "id": 10752,
+        "type": 0
+      },
+      {
+        "code": "rstatus",
+        "param": "rstatus [file-name]",
+        "name": "rstatus",
+        "remark": "若未指定文件名，则显示远程主机的状态，否则显示文件状态",
+        "id": 10753,
+        "type": 0
+      },
+      {
+        "code": "rename",
+        "param": "rename [from] [to]",
+        "name": "rename",
+        "remark": "更改远程主机文件名",
+        "id": 10754,
+        "type": 0
+      },
+      {
+        "code": "reset",
+        "param": "reset",
+        "name": "reset",
+        "remark": "清除回答队列",
+        "id": 10755,
+        "type": 0
+      },
+      {
+        "code": "restart",
+        "param": "restart [marker]",
+        "name": "restart",
+        "remark": "从指定的标志marker处，重新开始get或put，如：restart 130",
+        "id": 10756,
+        "type": 0
+      },
+      {
+        "code": "rmdir",
+        "param": "rmdir [dir-name]",
+        "name": "rmdir",
+        "remark": "删除远程主机目录",
+        "id": 10757,
+        "type": 0
+      },
+      {
+        "code": "runique",
+        "param": "runique",
+        "name": "runique",
+        "remark": "设置文件名唯一性存储，若文件存在，则在原文件后加后缀.1,.2等",
+        "id": 10758,
+        "type": 0
+      },
+      {
+        "code": "send",
+        "param": "send [local-file] [remote-file]",
+        "name": "send",
+        "remark": "同put",
+        "id": 10759,
+        "type": 0
+      },
+      {
+        "code": "sendport",
+        "param": "sendport",
+        "name": "sendport",
+        "remark": "设置port命令的使用",
+        "id": 10760,
+        "type": 0
+      },
+      {
+        "code": "site",
+        "param": "site [arg1,arg2...]",
+        "name": "site",
+        "remark": "将参数作为site命令逐字发送至远程ftp主机",
+        "id": 10761,
+        "type": 0
+      },
+      {
+        "code": "size",
+        "param": "size [file-name]",
+        "name": "size",
+        "remark": "显示远程主机文件大小",
+        "id": 10762,
+        "type": 0
+      },
+      {
+        "code": "status",
+        "param": "status",
+        "name": "status",
+        "remark": "显示当前ftp状态",
+        "id": 10763,
+        "type": 0
+      },
+      {
+        "code": "struct",
+        "param": "struct [struct-name]",
+        "name": "struct",
+        "remark": "将文件传输结构设置为struct-name，缺省时使用stream结构",
+        "id": 10764,
+        "type": 0
+      },
+      {
+        "code": "sunique",
+        "param": "sunique",
+        "name": "sunique",
+        "remark": "将远程主机文件名存储设置为唯一(与runique对应)",
+        "id": 10765,
+        "type": 0
+      },
+      {
+        "code": "system",
+        "param": "system",
+        "name": "system",
+        "remark": "显示远程主机的操作系统类型",
+        "id": 10766,
+        "type": 0
+      },
+      {
+        "code": "tenex",
+        "param": "tenex",
+        "name": "tenex",
+        "remark": "将文件传输类型设置为tenex机的所需的类型",
+        "id": 10767,
+        "type": 0
+      },
+      {
+        "code": "tick",
+        "param": "tick",
+        "name": "tick",
+        "remark": "设置传输时的字节计数器",
+        "id": 10768,
+        "type": 0
+      },
+      {
+        "code": "trace",
+        "param": "trace",
+        "name": "trace",
+        "remark": "设置包跟踪",
+        "id": 10769,
+        "type": 0
+      },
+      {
+        "code": "type",
+        "param": "type [type-name]",
+        "name": "type",
+        "remark": "设置文件传输类型为type-name，缺省为ascii，如：type binary，设置二进制传输方式",
+        "id": 10770,
+        "type": 0
+      },
+      {
+        "code": "umask",
+        "param": "umask [newmask]",
+        "name": "umask",
+        "remark": "将远程服务器的缺省umask设置为newmask，如：umask 3",
+        "id": 10771,
+        "type": 0
+      },
+      {
+        "code": "user",
+        "param": "user [user-name] [password] [account]",
+        "name": "user",
+        "remark": "向远程主机表明自己的身份，需要口令时，必须输入口令，如：user anonymous my@email",
+        "id": 10772,
+        "type": 0
+      },
+      {
+        "code": "verbose",
+        "param": "verbose",
+        "name": "verbose",
+        "remark": "同命令行的-v参数，即设置详尽报告方式，ftp服务器的所有响应都将显示给用户，缺省为on",
+        "id": 10773,
+        "type": 0
+      },
+      {
+        "code": "?",
+        "param": "? [cmd]",
+        "name": "?",
+        "remark": "同help",
+        "id": 10774,
+        "type": 0
+      },
+      {
+        "code": "exit",
+        "param": "exit",
+        "name": "exit",
+        "remark": "退出当前的shell",
+        "id": 10775,
+        "type": 0
+      }
+    ],
+    "name": "FTP管理",
+    "remark": null,
+    "id": 10702,
+    "type": 1
+  }
+]

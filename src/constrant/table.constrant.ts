@@ -15,17 +15,17 @@ export const defaultTableConfig: VxeTableProps = {
   rowClassName: 'ml-table-row',
   headerRowClassName: 'ml-table-header',
   footerRowClassName: 'ml-table-footer',
-  footerMethod: ({ columns }) => {
-    const footerData = [
-      columns.map((column, _columnIndex) => {
-        if (_columnIndex === 0) {
-          return '合计';
-        }
-        return null;
-      }),
-    ];
-    return footerData;
-  },
+  // footerMethod: ({ columns }) => {
+  //   // const footerData = [
+  //   //   columns.map((column, _columnIndex) => {
+  //   //     if (_columnIndex === 0) {
+  //   //       return '合计';
+  //   //     }
+  //   //     return null;
+  //   //   }),
+  //   // ];
+  //   // return footerData;
+  // },
   seqConfig: {
     startIndex: 1,
     seqMethod({ rowIndex }) {
