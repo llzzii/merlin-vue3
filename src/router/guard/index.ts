@@ -14,15 +14,10 @@ function createPageGuard(router: Router) {
   const userStore = useUserStoreWithOut();
 
   const loadedPageMap = new Map<string, boolean>();
-  router.beforeEach(async (to, from) => {
+  router.beforeEach(async (to) => {
     // The page has already been loaded, it will be faster to open it again, you don’t need to do loading and other processing
     to.meta.loaded = !!loadedPageMap.get(to.path);
-    console.log(
-      '🚀 ~ file: index.ts ~ line 21 ~ router.beforeEach ~ userStore.getLockStatus',
-      userStore.getLockStatus,
-      from,
-      to,
-    );
+
     if (userStore.getLockStatus) {
       // next(from);
       userStore.setLockStatus(true);

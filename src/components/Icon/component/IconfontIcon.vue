@@ -2,16 +2,7 @@
   <i :class="[props.class, 'iconfont ml-icon']" :style="getWrapStyle"></i>
 </template>
 <script lang="ts" setup>
-  import {
-    defineComponent,
-    ref,
-    watch,
-    onMounted,
-    nextTick,
-    unref,
-    computed,
-    CSSProperties,
-  } from 'vue';
+  import { computed, CSSProperties } from 'vue';
 
   const props = withDefaults(
     defineProps<{

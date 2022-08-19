@@ -11,15 +11,18 @@
         width="120"
         height="40"
         class="cursor-pointer"
-        @click="getImgCode"
+        @click="setNum()"
       ></canvas>
+
+      <a-button v-loading.fullscreen="loading" @click="loading = !loading"> loading </a-button>
     </a-space>
   </div>
 </template>
 <script lang="ts" setup>
   import { UploadFile } from '@/components';
   import { useImageVerify } from '@/hooks/useImageVerify';
-  import { onMounted } from 'vue';
+  import { randomNum } from '@/utils';
+  import { onMounted, ref } from 'vue';
   const contextmenu = () => {
     return [
       {
@@ -58,9 +61,14 @@
       },
     ];
   };
-  const { domRef, imgCode, setImgCode, getImgCode } = useImageVerify();
+  const setNum = () => {
+    let c = randomNum(1000, 10000);
+    setImgCode(c);
+  };
+  const { domRef, imgCode, setImgCode } = useImageVerify();
+  const loading = ref(false);
   onMounted(() => {
-    setImgCode(5689);
+    setNum();
   });
 </script>
 <style lang="less" scoped>

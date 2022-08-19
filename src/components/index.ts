@@ -36,6 +36,7 @@ import FileView from './UploadFile/file-view.vue';
 import ContextmenuComponent from './Contextmenu/index.vue';
 import BorderLine from './BorderLine/index.vue';
 import LockModel from './LockModel/index.vue';
+import Loading from './Loading/index.vue';
 
 export {
   DefaultTableWapper,
@@ -78,4 +79,5 @@ export {
   ContextmenuComponent,
   BorderLine,
   LockModel,
+  Loading,
 };

@@ -6,7 +6,8 @@ import { RouteLocationNormalized, RouteLocationRaw, Router } from 'vue-router';
 import { getRawRoute } from '@/utils';
 import { PageEnum } from '@/constrant';
 import { PAGE_NOT_FOUND_ROUTE } from '@/router/modules/error';
-import { toRaw, unref } from 'vue';
+import { nextTick, toRaw, unref } from 'vue';
+import { useRedo } from '@/hooks/useTabs';
 
 interface MenuState {
   // project config
@@ -14,6 +15,7 @@ interface MenuState {
   cacheTabList: Set<string>;
   tabList: RouteLocationNormalized[];
   lastDragEndIndex: number;
+  reloadFlag: boolean;
 }
 export const useMenuStore = defineStore({
   id: 'menu',
@@ -26,6 +28,7 @@ export const useMenuStore = defineStore({
       tabList: sessionCache().get('tabList') || [],
       // Index of the last moved tab
       lastDragEndIndex: 0,
+      reloadFlag: true,
     };
   },
   getters: {
@@ -153,6 +156,36 @@ export const useMenuStore = defineStore({
       if (index !== -1) {
         await this.closeTab(this.tabList[index], router);
       }
+    },
+    /**
+     * Refresh tabs
+     */
+    async refreshPage(router: Router) {
+      const { currentRoute } = router;
+      const route = unref(currentRoute);
+      const name = route.name;
+
+      const findTab = this.getCachedTabList.find((item) => item === name);
+      console.log('🚀 ~ file: menu.ts ~ line 169 ~ refreshPage ~ findTab', findTab);
+      if (findTab) {
+        this.cacheTabList.delete(findTab);
+      }
+      const redo = useRedo(router);
+      await redo();
+    },
+    async reloadPage(duration = 0) {
+      this.reloadFlag = false;
+      await nextTick();
+      if (duration) {
+        setTimeout(() => {
+          this.reloadFlag = true;
+        }, duration);
+      } else {
+        this.reloadFlag = true;
+      }
+      setTimeout(() => {
+        document.documentElement.scrollTo({ left: 0, top: 0 });
+      }, 100);
     },
   },
 });

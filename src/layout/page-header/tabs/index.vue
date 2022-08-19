@@ -26,18 +26,47 @@
           </template>
         </a-tab-pane>
       </template>
+      <template #rightExtra>
+        <span class="refresh-page" @click="handleMenuClick({ key: 'refresh' })">
+          <redo-outlined :spin="loading" />
+        </span>
+        <a-dropdown>
+          <span class="refresh-page" @click.prevent>
+            <DownOutlined />
+          </span>
+          <template #overlay>
+            <a-menu @click="handleMenuClick">
+              <a-menu-item key="refresh">
+                <redo-outlined :spin="loading" />
+                <span class="dropdown-title">重新加载</span>
+              </a-menu-item>
+              <a-menu-item key="2">
+                <close-outlined />
+                <span class="dropdown-title">关闭当前页</span>
+              </a-menu-item>
+              <a-menu-item key="3">
+                <minus-outlined />
+                <span class="dropdown-title">关闭全部页</span>
+              </a-menu-item>
+            </a-menu>
+          </template>
+        </a-dropdown>
+      </template>
     </a-tabs>
   </div>
 </template>
 <script lang="ts" setup>
   import { REDIRECT_NAME } from '@/constrant';
+  import { useTabs } from '@/hooks/useTabs';
   import { listenerRouteChange } from '@/logics/mitt/routeChange';
   import { useMenuStore } from '@/stores/modules/menu';
+  import { RedoOutlined, DownOutlined, CloseOutlined, MinusOutlined } from '@ant-design/icons-vue';
+  import { MenuProps } from 'ant-design-vue';
   import { computed, ref, unref } from 'vue';
   import { RouteLocationNormalized, useRouter } from 'vue-router';
-
   const menuStore = useMenuStore();
   const router = useRouter();
+  const loading = ref(false);
 
   const activeKeyRef = ref('');
   const getTabsState = computed(() => {
@@ -78,7 +107,18 @@
 
     push(activeKey);
   };
+  const { refreshPage } = useTabs();
 
+  const handleMenuClick: MenuProps['onClick'] = async (e) => {
+    loading.value = true;
+    console.log('click', e, loading);
+
+    if (e.key == 'refresh') {
+      await refreshPage();
+    }
+    loading.value = false;
+    console.log('click', loading);
+  };
   // Close the current tab
   const handleEdit = (targetKey: string) => {
     menuStore.closeTabByKey(targetKey, router);
@@ -86,4 +126,19 @@
 </script>
 <style lang="less" scoped>
   @import url('./tabs.less');
+
+  .refresh-page {
+    display: inline-block;
+    width: 36px;
+    height: 30px;
+    line-height: 30px;
+    color: #00000073;
+    text-align: center;
+    cursor: pointer;
+    border-left: 1px solid #d9d9d9;
+  }
+  .dropdown-title {
+    display: inline-block;
+    margin-left: 5px;
+  }
 </style>

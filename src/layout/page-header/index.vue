@@ -45,6 +45,7 @@
       background-color: #fff;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid #ddd;
       .header-left {
         display: flex;
         height: 100%;

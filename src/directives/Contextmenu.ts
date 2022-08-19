@@ -49,7 +49,7 @@ export const ContextmenuDirective: Directive = {
     el[CTX_CONTEXTMENU_HANDLER] = (event: MouseEvent) => contextmenuListener(el, event, binding);
     el.addEventListener('contextmenu', el[CTX_CONTEXTMENU_HANDLER]);
   },
-  unmounted: (el: HTMLElement, binding) => {
+  unmounted: (el: HTMLElement) => {
     if (el && el[CTX_CONTEXTMENU_HANDLER]) {
       el.removeEventListener('contextmenu', el[CTX_CONTEXTMENU_HANDLER]);
       delete el[CTX_CONTEXTMENU_HANDLER];

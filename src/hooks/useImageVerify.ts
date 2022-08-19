@@ -1,5 +1,5 @@
 import { randomColor, randomNum } from '@/utils';
-import { onMounted, ref } from 'vue';
+import { ref, watch } from 'vue';
 
 export const useImageVerify = (width = 120, height = 40) => {
   const domRef = ref<HTMLCanvasElement>();
@@ -9,14 +9,14 @@ export const useImageVerify = (width = 120, height = 40) => {
   };
 
   const getImgCode = () => {
-    imgCode.value = drawImage();
+    drawImage(imgCode.value);
     console.log(
       '🚀 ~ file: useImageVerify.ts ~ line 13 ~ getImgCode ~ imgCode.value',
       imgCode.value,
     );
   };
-  const drawImage = () => {
-    let code = '';
+  const drawImage = (code = '') => {
+    // let code = '';
     if (!domRef.value) return code;
     const NUMBER_STRING = '0123456789';
     const ctx = domRef.value.getContext('2d');
@@ -24,8 +24,8 @@ export const useImageVerify = (width = 120, height = 40) => {
     ctx.fillStyle = randomColor(180, 230);
     ctx.fillRect(0, 0, width, height);
     for (let i = 0; i < 4; i += 1) {
-      const text = NUMBER_STRING[randomNum(0, NUMBER_STRING.length)];
-      code += text;
+      const text = code == '' ? NUMBER_STRING[randomNum(0, NUMBER_STRING.length)] : (code + '')[i];
+      // code += text;
       const fontSize = randomNum(18, 41);
       const deg = randomNum(-30, 30);
       ctx.font = `${fontSize}px Simhei`;
@@ -52,10 +52,15 @@ export const useImageVerify = (width = 120, height = 40) => {
       ctx.fillStyle = randomColor(150, 200);
       ctx.fill();
     }
-    return code;
+    // return code;
+    console.log('🚀 ~ file: useImageVerify.ts ~ line 57 ~ drawImage ~ code', imgCode, code);
   };
-  onMounted(() => {
-    getImgCode();
-  });
+
+  watch(
+    () => imgCode.value,
+    () => {
+      getImgCode();
+    },
+  );
   return { setImgCode, getImgCode, domRef, imgCode };
 };

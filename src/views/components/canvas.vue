@@ -1,75 +1,77 @@
 <template>
-  <div class="header">
-    <a-space>
-      <a-button type="primary" @click="drawHandle('pen')">画笔</a-button>
-      <a-button type="primary" @click="clearCanvas">清空画布</a-button>
-      <a-button type="primary" @click="drawHandle('eraser')">橡皮擦</a-button>
-      <div class="strokes-width">
-        笔画粗细:
-        <a-slider v-model:value="strokesWidth" :min="5" :max="50" @change="changeStrokes" />
-      </div>
-      <a-button type="primary" @click="exportImgUrl">导出</a-button>
-    </a-space>
-  </div>
+  <div>
+    <div class="header">
+      <a-space>
+        <a-button type="primary" @click="drawHandle('pen')">画笔</a-button>
+        <a-button type="primary" @click="clearCanvas">清空画布</a-button>
+        <a-button type="primary" @click="drawHandle('eraser')">橡皮擦</a-button>
+        <div class="strokes-width">
+          笔画粗细:
+          <a-slider v-model:value="strokesWidth" :min="5" :max="50" @change="changeStrokes" />
+        </div>
+        <a-button type="primary" @click="exportImgUrl">导出</a-button>
+      </a-space>
+    </div>
 
-  <div class="canvas-container">
-    <canvas
-      ref="canvasRef"
-      :style="{
-        width: canvasWidth + 'px',
-        height: canvasHeight + 'px',
-      }"
-      @mousedown="($event) => handleMousedown($event)"
-      @mousemove="($event) => handleMousemove($event)"
-      @mouseup="handleMouseup()"
-      @touchstart="($event) => handleMousedown($event)"
-      @touchmove="($event) => handleMousemove($event)"
-      @touchend="
-        handleMouseup();
-        mouseInCanvas = false;
-      "
-      @mouseleave="
-        handleMouseup();
-        mouseInCanvas = false;
-      "
-      @mouseenter="mouseInCanvas = true"
-      @wheel="($event) => mousewheelListener($event)"
-    ></canvas>
-    <template v-if="mouseInCanvas">
-      <div
-        class="eraser"
+    <div class="canvas-container">
+      <canvas
+        ref="canvasRef"
         :style="{
-          left: mouse.x - rubberSize / 2 + 'px',
-          top: mouse.y - rubberSize / 2 + 'px',
-          width: rubberSize + 'px',
-          height: rubberSize + 'px',
+          width: canvasWidth + 'px',
+          height: canvasHeight + 'px',
         }"
-        v-if="options && options?.model === 'eraser'"
-      ></div>
-      <div
-        class="pen"
-        v-if="options.model === 'pen'"
-        :style="{
-          left: mouse.x + 'px',
-          top: mouse.y + 'px',
-          color: options.color,
-        }"
-      >
-        <i class="iconfont icon icon-fill" v-if="options.model === 'pen'"></i>
-        <!-- <IconWrite class="icon" :size="penSize * 6" /> -->
-      </div>
-      <div
-        class="pen"
-        :style="{
-          left: mouse.x + 'px',
-          top: mouse.y + 'px',
-          color: options.color,
-        }"
-        v-if="options.model === 'mark'"
-      >
-        <!-- <IconHighLight class="icon" :size="markSize * 1.5" v-if="options.model === 'mark'" /> -->
-      </div>
-    </template>
+        @mousedown="($event) => handleMousedown($event)"
+        @mousemove="($event) => handleMousemove($event)"
+        @mouseup="handleMouseup()"
+        @touchstart="($event) => handleMousedown($event)"
+        @touchmove="($event) => handleMousemove($event)"
+        @touchend="
+          handleMouseup();
+          mouseInCanvas = false;
+        "
+        @mouseleave="
+          handleMouseup();
+          mouseInCanvas = false;
+        "
+        @mouseenter="mouseInCanvas = true"
+        @wheel="($event) => mousewheelListener($event)"
+      ></canvas>
+      <template v-if="mouseInCanvas">
+        <div
+          class="eraser"
+          :style="{
+            left: mouse.x - rubberSize / 2 + 'px',
+            top: mouse.y - rubberSize / 2 + 'px',
+            width: rubberSize + 'px',
+            height: rubberSize + 'px',
+          }"
+          v-if="options && options?.model === 'eraser'"
+        ></div>
+        <div
+          class="pen"
+          v-if="options.model === 'pen'"
+          :style="{
+            left: mouse.x + 'px',
+            top: mouse.y + 'px',
+            color: options.color,
+          }"
+        >
+          <i class="iconfont icon icon-fill" v-if="options.model === 'pen'"></i>
+          <!-- <IconWrite class="icon" :size="penSize * 6" /> -->
+        </div>
+        <div
+          class="pen"
+          :style="{
+            left: mouse.x + 'px',
+            top: mouse.y + 'px',
+            color: options.color,
+          }"
+          v-if="options.model === 'mark'"
+        >
+          <!-- <IconHighLight class="icon" :size="markSize * 1.5" v-if="options.model === 'mark'" /> -->
+        </div>
+      </template>
+    </div>
   </div>
 </template>
 
