@@ -1,4 +1,4 @@
-import type { RouteRecordRaw, RouteMeta } from "vue-router";
+import type { RouteRecordRaw, RouteMeta } from 'vue-router';
 
 export interface Menu {
   name: string;
@@ -27,7 +27,7 @@ export interface Menu {
 }
 
 export interface MenuTag {
-  type?: "primary" | "error" | "warn" | "success";
+  type?: 'primary' | 'error' | 'warn' | 'success';
   content?: string;
   dot?: boolean;
 }

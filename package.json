@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite ",
     "test": "vite --mode test",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "node --max_old_space_size=16384 ./node_modules/vite/bin/vite.js build",
+    "build2": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
     "test:unit": "vitest --environment jsdom",
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",

@@ -4,7 +4,6 @@ import {
   defaultTableFunc,
 } from '@/constrant/table.constrant';
 import { reactive, ref } from 'vue';
-import { VxeColumnProps } from 'vxe-table';
 
 export const toolbar = {
   custom: {

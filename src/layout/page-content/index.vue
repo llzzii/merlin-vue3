@@ -15,7 +15,6 @@
         @before-leave="handleBeforeLeave"
         @after-enter="handleAfterEnter"
       >
-        <!-- :include="routeStore.cacheRoutes" -->
         <keep-alive :include="getCaches">
           <component :is="Component" v-if="menuStore.reloadFlag" :key="route.fullPath" />
         </keep-alive>
@@ -37,19 +36,13 @@
     },
   );
   const getCaches = computed((): string[] => {
-    console.log(
-      '🚀 ~ file: index.vue ~ line 40 ~ getCaches ~ menuStore.getCachedTabList',
-      menuStore.getCachedTabList,
-    );
     return menuStore.getCachedTabList;
   });
   function handleBeforeLeave() {
     loading.value = true;
-    console.log('handleBeforeLeave,hide-main-overflow');
   }
   function handleAfterEnter() {
     loading.value = false;
-    console.log('handleAfterEnter,hide-main-overflow');
   }
 </script>
 <style lang="less" scoped>

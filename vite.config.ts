@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'url';
 import Components from 'unplugin-vue-components/vite';
-import type { ConfigEnv, UserConfig } from 'vite';
+import type { ConfigEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 import VitePluginCertificate from 'vite-plugin-mkcert';
@@ -8,7 +8,7 @@ import { viteMockServe } from 'vite-plugin-mock';
 import { loadEnv } from 'vite';
 
 // https://vitejs.dev/config/
-export default ({ command, mode }: ConfigEnv): UserConfig => {
+export default ({ mode }: ConfigEnv) => {
   const root = process.cwd();
 
   const { VITE_PORT } = loadEnv(mode, root);
@@ -48,7 +48,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     build: {
       target: 'es2019',
       cssTarget: 'chrome80',
-      sourcemap: true,
+      sourcemap: false,
+      commonjsOptions: {
+        sourceMap: false,
+      },
       terserOptions: {
         //打包后移除console和注释
         compress: {
@@ -59,6 +62,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
     server: {
       https: true,
+
       // Listening on all local IPs
       host: true,
       port: Number(VITE_PORT),

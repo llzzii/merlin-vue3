@@ -1,4 +1,4 @@
-import type { App } from "vue";
+import type { App } from 'vue';
 
 import {
   Modal,
@@ -43,9 +43,9 @@ import {
   Collapse,
   Badge,
   Space,
-} from "ant-design-vue";
+} from 'ant-design-vue';
 
-import "ant-design-vue/dist/antd.less";
+import 'ant-design-vue/dist/antd.less';
 
 export function setupAntDesign(app: App<Element>) {
   app

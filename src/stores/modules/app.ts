@@ -1,15 +1,15 @@
-import { defineStore } from "pinia";
-import { store } from "@/stores";
-import _ from "lodash";
+import { defineStore } from 'pinia';
+import { store } from '@/stores';
+import _ from 'lodash';
 
-import type { HeaderSetting, ProjectConfig, MenuSetting } from "@/types/config";
+import type { HeaderSetting, ProjectConfig, MenuSetting } from '@/types/config';
 
 interface AppState {
   // project config
   projectConfig: ProjectConfig | null;
 }
 export const useAppStore = defineStore({
-  id: "app",
+  id: 'app',
   state: (): AppState => {
     return {
       projectConfig: {

@@ -10,7 +10,7 @@ export interface MenuSetting {
   mode?: string;
   type?: string;
   theme?: string;
-  topMenuAlign?: "start" | "center" | "end";
+  topMenuAlign?: 'start' | 'center' | 'end';
   trigger?: string;
   accordion?: boolean;
   closeMixSidebarOnChange?: boolean;

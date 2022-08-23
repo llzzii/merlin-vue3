@@ -14,101 +14,99 @@
   ></span>
 </template>
 <script lang="ts" setup>
-import {
-  defineComponent,
-  ref,
-  watch,
-  onMounted,
-  nextTick,
-  unref,
-  computed,
-  CSSProperties,
-} from "vue";
-import SvgIcon from "./SvgIcon.vue";
-import Iconify from "@purge-icons/generated";
+  import {
+    defineComponent,
+    ref,
+    watch,
+    onMounted,
+    nextTick,
+    unref,
+    computed,
+    CSSProperties,
+  } from 'vue';
+  import SvgIcon from './SvgIcon.vue';
+  import Iconify from '@purge-icons/generated';
 
-const SVG_END_WITH_FLAG = "|svg";
-const elRef = ref<ElRef>(null);
-const props = withDefaults(
-  defineProps<{
-    icon?: string;
-    color?: string;
-    prefix?: string;
-    size?: string | number;
-    spin?: boolean;
-  }>(),
-  {
-    icon: "",
-    color: "",
-    size: 16,
-    spin: false,
-    prefix: "",
-  }
-);
-const isSvgIcon = computed(() => props.icon?.endsWith(SVG_END_WITH_FLAG));
-const getSvgIcon = computed(() => props.icon.replace(SVG_END_WITH_FLAG, ""));
-const getIconRef = computed(
-  () => `${props.prefix ? props.prefix + ":" : ""}${props.icon}`
-);
+  const SVG_END_WITH_FLAG = '|svg';
+  const elRef = ref<ElRef>(null);
+  const props = withDefaults(
+    defineProps<{
+      icon?: string;
+      color?: string;
+      prefix?: string;
+      size?: string | number;
+      spin?: boolean;
+    }>(),
+    {
+      icon: '',
+      color: '',
+      size: 16,
+      spin: false,
+      prefix: '',
+    },
+  );
+  const isSvgIcon = computed(() => props.icon?.endsWith(SVG_END_WITH_FLAG));
+  const getSvgIcon = computed(() => props.icon.replace(SVG_END_WITH_FLAG, ''));
+  const getIconRef = computed(() => `${props.prefix ? props.prefix + ':' : ''}${props.icon}`);
 
-const update = async () => {
-  if (unref(isSvgIcon)) return;
+  const update = async () => {
+    if (unref(isSvgIcon)) return;
 
-  const el = unref(elRef);
-  if (!el) return;
+    const el = unref(elRef);
+    if (!el) return;
 
-  await nextTick();
-  const icon = unref(getIconRef);
-  if (!icon) return;
+    await nextTick();
+    const icon = unref(getIconRef);
+    if (!icon) return;
 
-  const svg = Iconify.renderSVG(icon, {});
-  if (svg) {
-    el.textContent = "";
-    el.appendChild(svg);
-  } else {
-    const span = document.createElement("span");
-    span.className = "iconify";
-    span.dataset.icon = icon;
-    el.textContent = "";
-    el.appendChild(span);
-  }
-};
-
-const getWrapStyle = computed((): CSSProperties => {
-  const { size, color } = props;
-  let fs = size;
-  if (typeof size == "string") {
-    fs = parseInt(size, 10);
-  }
-
-  return {
-    fontSize: `${fs}px`,
-    color: color,
-    display: "inline-flex",
+    const svg = Iconify.renderSVG(icon, {});
+    if (svg) {
+      el.textContent = '';
+      el.appendChild(svg);
+    } else {
+      const span = document.createElement('span');
+      span.className = 'iconify';
+      span.dataset.icon = icon;
+      el.textContent = '';
+      el.appendChild(span);
+    }
   };
-});
 
-watch(() => props.icon, update, { flush: "post" });
+  const getWrapStyle = computed((): CSSProperties => {
+    const { size, color } = props;
+    let fs = size;
+    if (typeof size == 'string') {
+      fs = parseInt(size, 10);
+    }
 
-onMounted(update);
+    return {
+      fontSize: `${fs}px`,
+      color: color,
+      display: 'inline-flex',
+    };
+  });
+
+  watch(() => props.icon, update, { flush: 'post' });
+
+  onMounted(update);
 </script>
 <style lang="less">
-.app-iconify {
-  display: inline-block;
-  // vertical-align: middle;
+  .app-iconify {
+    display: inline-block;
+    // vertical-align: middle;
 
-  &-spin {
-    svg {
-      animation: loadingCircle 1s infinite linear;
+    &-spin {
+      svg {
+        animation: loadingCircle 1s infinite linear;
+      }
     }
   }
-}
 
-span.iconify {
-  display: block;
-  min-width: 1em;
-  min-height: 1em;
-  background-color: rgba(85, 85, 85, 0.067);
-  border-radius: 100%;
-}
+  span.iconify {
+    display: block;
+    min-width: 1em;
+    min-height: 1em;
+    background-color: rgba(85, 85, 85, 0.067);
+    border-radius: 100%;
+  }
 </style>

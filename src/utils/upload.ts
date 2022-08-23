@@ -1,11 +1,3 @@
-const App = {
-  Bucket: 'qtestbucket',
-  SignUrl: 'token.php',
-  //qiniu test account
-  AK: 'iN7NgwM31j4-BZacMjPrOQBs34UG1maYCAQmhdCV',
-  SK: '6QTOr2Jg1gcZEWDQXKOGZh5PziC2MCV5KsntT70j',
-};
-
 /* utf.js - UTF-8 <=> UTF-16 convertion
  *
  * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>

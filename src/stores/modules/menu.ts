@@ -166,26 +166,11 @@ export const useMenuStore = defineStore({
       const name = route.name;
 
       const findTab = this.getCachedTabList.find((item) => item === name);
-      console.log('🚀 ~ file: menu.ts ~ line 169 ~ refreshPage ~ findTab', findTab);
       if (findTab) {
         this.cacheTabList.delete(findTab);
       }
       const redo = useRedo(router);
       await redo();
-    },
-    async reloadPage(duration = 0) {
-      this.reloadFlag = false;
-      await nextTick();
-      if (duration) {
-        setTimeout(() => {
-          this.reloadFlag = true;
-        }, duration);
-      } else {
-        this.reloadFlag = true;
-      }
-      setTimeout(() => {
-        document.documentElement.scrollTo({ left: 0, top: 0 });
-      }, 100);
     },
   },
 });
