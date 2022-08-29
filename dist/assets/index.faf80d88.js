@@ -1,0 +1,1 @@
+import{n as a,q as n,F as s,G as t,c as _,I as c,ap as r,bw as i}from"./index.efc8215b.js";const p={},u=c("Back Home");function d(x,l){const e=r,o=i;return n(),s(o,{status:"404",title:"404","sub-title":"Sorry, the page you visited does not exist."},{extra:t(()=>[_(e,{type:"primary"},{default:t(()=>[u]),_:1})]),_:1})}var f=a(p,[["render",d]]);export{f as default};

@@ -1,3 +1,4 @@
+import { unref } from 'vue';
 import { decodeByBase64, encryptByBase64 } from '.';
 import { isNullOrUnDef } from './is';
 
@@ -39,7 +40,7 @@ class WebStorage {
    */
   set(key: string, value: any, expire: number | null = null) {
     const storageData = JSON.stringify({
-      value: value,
+      value: unref(value),
       time: Date.now(),
       expire: !isNullOrUnDef(expire) ? new Date().getTime() + expire * 1000 : null,
     });
