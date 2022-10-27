@@ -112,13 +112,13 @@ const system = {
   id: '4',
   icon: 'icon-xitong',
   name: '系统',
-  path: '/management',
+  path: '/system',
   children: [
     {
       id: '4-1',
       icon: 'icon-zuozhe',
       name: '个人设置',
-      path: '/manage/document',
+      path: '/system/user',
       children: [],
     },
   ],
@@ -210,7 +210,29 @@ const components = {
     },
   ],
 };
-const menuList = [dashboard, management, components, demos, echarts, system];
+const cssDemo = {
+  id: '9',
+  icon: 'icon-CSS-',
+  name: '奇妙的css',
+  path: '/css',
+  children: [
+    {
+      id: '9-1',
+      icon: 'icon-ziyuan1672',
+      name: 'cssDemo',
+      path: '/css/demo1',
+      children: [],
+    },
+    {
+      id: '9-2',
+      icon: 'icon-ziyuan1672',
+      name: 'cssDemo2',
+      path: '/css/demo2',
+      children: [],
+    },
+  ],
+};
+const menuList = [dashboard, management, components, demos, echarts, system, cssDemo];
 export default [
   {
     url: '/basic-api/system/getMenuList',

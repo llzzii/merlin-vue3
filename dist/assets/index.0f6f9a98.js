@@ -1,1 +1,0 @@
-import{n as o,E as n,q as a,s as c,c as r,G as s,I as e}from"./index.efc8215b.js";const _={},d=e(" \u8FD9\u662F\u4E00\u4E2A\u5B50\u9875\u9762 "),i=e("\u6253\u5F00\u8BE6\u60C5");function l(m,u){const t=n("router-link");return a(),c("div",null,[d,r(t,{to:"/manage/document/detail"},{default:s(()=>[i]),_:1})])}var p=o(_,[["render",l]]);export{p as default};

@@ -1,1 +1,0 @@
-import{d as n,q as s,s as o,c as t,D as a,bD as c}from"./index.efc8215b.js";const d=n({__name:"index",setup(r){const e={};return(_,i)=>(s(),o("div",null,[t(a(c),{gridOptions:e})]))}});export{d as default};

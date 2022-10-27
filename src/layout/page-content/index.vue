@@ -5,8 +5,8 @@
         <component :is="Component" :key="route.fullPath" />
       </keep-alive>
     </template>
-  </RouterView> -->
-  <div class="h-full ease-in-out" v-loading="loading">
+  </RouterView> v-loading="loading" -->
+  <div class="h-full ease-in-out">
     <router-view v-slot="{ Component, route }">
       <transition
         name="fade-slide"
@@ -16,7 +16,7 @@
         @after-enter="handleAfterEnter"
       >
         <keep-alive :include="getCaches">
-          <component :is="Component" v-if="menuStore.reloadFlag" :key="route.fullPath" />
+          <component :is="Component" :key="route.fullPath" />
         </keep-alive>
       </transition>
     </router-view>
@@ -40,9 +40,11 @@
   });
   function handleBeforeLeave() {
     loading.value = true;
+    console.log('🚀 ~ file: index.vue ~ line 43 ~ handleBeforeLeave ~ loading', loading);
   }
   function handleAfterEnter() {
     loading.value = false;
+    console.log('🚀 ~ file: index.vue ~ line 47 ~ handleAfterEnter ~ loading', loading);
   }
 </script>
 <style lang="less" scoped>

@@ -2,6 +2,7 @@ import { Recordable } from 'vite-plugin-mock';
 import { defineComponent } from 'vue';
 import { RouteMeta, RouteRecordRaw } from 'vue-router';
 import { ComponentsDemo } from './modules/components';
+import { CssDemo } from './modules/css';
 import { OtherDemo } from './modules/demo';
 import { DragDemo } from './modules/drag';
 import { EchartsDemo } from './modules/echarts';
@@ -35,6 +36,7 @@ const routers = [
   VxeDemo,
   DragDemo,
   OtherDemo,
+  CssDemo,
   EchartsDemo,
   REDIRECT_ROUTE,
   ComponentsDemo,

@@ -39,7 +39,7 @@ export class HttpService {
       if (e.code === 0) {
         return e.result;
       } else {
-        console.error(e.message);
+        console.error(e?.message || 'error');
         return [];
       }
     },

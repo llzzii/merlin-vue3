@@ -1,3 +1,5 @@
-<template>这是一个详情页</template>
+<template>
+  <div>这是一个详情页</div>
+</template>
 
 <script setup lang="ts"></script>
