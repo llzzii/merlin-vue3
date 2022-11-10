@@ -9,6 +9,7 @@
   <div class="h-full ease-in-out"  v-loading="loading">
     <router-view v-slot="{ Component, route }">
       <transition
+        v-if="!route.meta.hideTab"
         name="fade-slide"
         mode="out-in"
         :appear="true"
@@ -26,11 +27,12 @@
       -->
 
         <keep-alive >
-          <component :is="Component" :key="route.name" />
+          <component :is="Component" :key="route.name"  />
         </keep-alive>
-        <!-- <component :is="Component" :key="route.name" v-if="!route.meta.keepAlice" /> -->
+        
 
       </transition>
+      <component :is="Component" :key="route.name" v-if="route.meta.hideTab" />
     </router-view>
   </div>
 </template>

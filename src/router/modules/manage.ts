@@ -24,19 +24,20 @@ export const Management: AppRouteRecordRaw = {
         hideTab: false,
       },
       children: [
-        {
-          path: 'detail',
-          name: 'detail',
-          component: ()=>import('@/views/management/document/detail/index.vue'),
-          meta: {
-            title: '详情',
-            hideBreadcrumb: false,
-            hideMenu: true,
-            hideTab: true,
-            currentActiveMenu: '/manage/document',
-          },
-        },
+       
       ],
+    },
+    {
+      path: 'document/detail',
+      name: 'detail',
+      component: ()=>import('@/views/management/document/detail/index.vue'),
+      meta: {
+        title: '详情',
+        hideBreadcrumb: false,
+        hideMenu: true,
+        hideTab: true,
+        currentActiveMenu: '/manage/document',
+      },
     },
     {
       path: 'linux',
