@@ -1,0 +1,78 @@
+.shape-wrapper {
+  margin-top: 20px;
+}
+
+.btn1 {
+  position: relative;
+  width: 280px;
+  height: 120px;
+  margin: auto;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  display: inline-block;
+
+  &:hover .rect {
+    stroke-dasharray: 640px;
+    stroke-dashoffset: 0;
+  }
+}
+
+.hover-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  line-height: 80px;
+  width: 240px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rect {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-dasharray: 640px;
+  stroke-dashoffset: 640px;
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(0 0 2px #f24983) drop-shadow(0 0 4px #f24983) drop-shadow(0 0 8px #f24983)
+    drop-shadow(0 0 12px #f24983);
+}
+.btn {
+  margin: 20px;
+  flex-shrink: 0;
+  width: 160px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  // filter: drop-shadow(0 0 5px #000);
+
+  &:hover {
+    top: -1px;
+  }
+  &:active {
+    top: 1px;
+  }
+}
+.parallelogram {
+  position: relative;
+  width: 160px;
+  height: 64px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #03f463;
+    transform: skewX(15deg);
+  }
+}

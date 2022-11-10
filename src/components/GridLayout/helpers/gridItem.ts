@@ -6,6 +6,7 @@ import { setTopLeft, setTopRight, setTransform, setTransformRtl, gridEmitter } f
 import { ItemState, ItemProps } from '../types';
 
 export function useGridItem(itemState: ItemState, itemProps: ItemProps, gridItem) {
+  
   const renderRtl = computed(() => {
     const x = itemState.layout?.isMirrored ? !itemState.rtl : itemState.rtl;
     return x;
@@ -136,7 +137,9 @@ export function useGridItem(itemState: ItemState, itemProps: ItemProps, gridItem
     return colWidth;
   };
   const tryMakeResizable = () => {
-    if (itemState.interactObj == null) {
+
+    if (itemState.interactObj == null&&unref(gridItem)!=null) {
+     
       itemState.interactObj = interact(unref(gridItem));
     }
 
@@ -164,7 +167,7 @@ export function useGridItem(itemState: ItemState, itemProps: ItemProps, gridItem
           },
         },
       };
-      itemState.interactObj.resizable(opts);
+      itemState.interactObj?.resizable(opts);
 
       if (!itemState.resizeEventSet) {
         itemState.resizeEventSet = true;
@@ -173,7 +176,7 @@ export function useGridItem(itemState: ItemState, itemProps: ItemProps, gridItem
         });
       }
     } else {
-      itemState.interactObj.resizable({
+      itemState?.interactObj?.resizable({
         enabled: false,
       });
     }

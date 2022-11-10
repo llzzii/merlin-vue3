@@ -16,7 +16,7 @@ export const DragDemo: AppRouteRecordRaw = {
     {
       path: 'demo1',
       name: 'dragDemo1',
-      component: import('@/views/drag/demo/index.vue'),
+      component: ()=>import('@/views/drag/demo/index.vue'),
       meta: {
         title: 'vueUse拖拽',
         hideBreadcrumb: false,
@@ -27,7 +27,7 @@ export const DragDemo: AppRouteRecordRaw = {
     {
       path: 'demo2',
       name: 'dragDemo2',
-      component: import('@/views/drag/demo2/index.vue'),
+      component: ()=>import('@/views/drag/demo2/index.vue'),
       meta: {
         title: 'vueUse放入',
         hideBreadcrumb: false,
@@ -38,7 +38,7 @@ export const DragDemo: AppRouteRecordRaw = {
     {
       path: 'demo3',
       name: 'dragDemo3',
-      component: import('@/views/drag/demo3/index.vue'),
+      component: ()=>import('@/views/drag/demo3/index.vue'),
       meta: {
         title: '拖拽布局',
         hideBreadcrumb: false,
@@ -49,7 +49,7 @@ export const DragDemo: AppRouteRecordRaw = {
     {
       path: 'demo4',
       name: 'dragDemo4',
-      component: import('@/views/cnchar/index.vue'),
+      component: ()=>import('@/views/cnchar/index.vue'),
       meta: {
         title: '字体',
         hideBreadcrumb: false,

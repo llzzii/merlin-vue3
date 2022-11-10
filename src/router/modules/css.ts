@@ -16,7 +16,7 @@ export const CssDemo: AppRouteRecordRaw = {
     {
       path: 'demo1',
       name: 'cssDemo1',
-      component: import('@/views/css/index1.vue'),
+      component: ()=>import('@/views/css/index1.vue'),
       meta: {
         title: 'css示例1',
         hideBreadcrumb: false,
@@ -27,7 +27,7 @@ export const CssDemo: AppRouteRecordRaw = {
     {
       path: 'demo2',
       name: 'cssDemo2',
-      component: import('@/views/css/index2.vue'),
+      component: ()=>import('@/views/css/index2.vue'),
       meta: {
         title: 'css示例2',
         hideBreadcrumb: false,

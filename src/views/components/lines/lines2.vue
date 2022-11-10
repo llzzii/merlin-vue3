@@ -42,6 +42,7 @@
   let checkedTimeImgsData = ref<any>([]);
   let checkedCategoryImgsMap = new Map();
   let checkedCategoryImgsData = ref<any>([]);
+  const activeKey=ref('timeLine')
   const imgs = [
     '2022-11-01',
     '2022-09-01',

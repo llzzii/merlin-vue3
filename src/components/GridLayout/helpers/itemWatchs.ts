@@ -94,6 +94,7 @@ export function useGridItemWatchs(itemState: ItemState, itemProps: ItemProps, gr
       emitContainerResized();
     });
     gridEmitter.on('containerWidth', (data) => {
+      console.log("🚀 ~ file: itemWatchs.ts ~ line 97 ~ gridEmitter.on ~ data", data)
       itemState.containerWidth = data;
       updateStyle();
     });

@@ -16,7 +16,7 @@ export const Management: AppRouteRecordRaw = {
     {
       path: 'document',
       name: 'Document',
-      component: import('@/views/management/document/index.vue'),
+      component: ()=>import('@/views/management/document/index.vue'),
       meta: {
         title: '文章',
         hideBreadcrumb: false,
@@ -27,7 +27,7 @@ export const Management: AppRouteRecordRaw = {
         {
           path: 'detail',
           name: 'detail',
-          component: import('@/views/management/document/detail/index.vue'),
+          component: ()=>import('@/views/management/document/detail/index.vue'),
           meta: {
             title: '详情',
             hideBreadcrumb: true,
@@ -44,7 +44,7 @@ export const Management: AppRouteRecordRaw = {
       meta: {
         title: 'linux 命令大全',
       },
-      component: import('@/views/linux/index.vue'),
+      component: ()=>import('@/views/linux/index.vue'),
     },
   ],
 };

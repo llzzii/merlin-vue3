@@ -16,7 +16,7 @@ export const OtherDemo: AppRouteRecordRaw = {
     {
       path: 'demo1',
       name: 'editorDemo',
-      component: import('@/views/editor/index.vue'),
+      component: ()=>import('@/views/editor/index.vue'),
       meta: {
         title: 'md编辑器',
         hideBreadcrumb: false,

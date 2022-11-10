@@ -16,7 +16,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'index',
       name: 'indexDemo',
-      component: import('@/views/components/index.vue'),
+      component: ()=>import('@/views/components/index.vue'),
       meta: {
         title: '汇总',
         hideBreadcrumb: false,
@@ -27,7 +27,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'borders',
       name: 'bordersDemo',
-      component: import('@/views/components/borders.vue'),
+      component: ()=>import('@/views/components/borders.vue'),
       meta: {
         title: '边框',
         hideBreadcrumb: false,
@@ -38,7 +38,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'decoration',
       name: 'decorationsDemo',
-      component: import('@/views/components/decorations.vue'),
+      component: ()=>import('@/views/components/decorations.vue'),
       meta: {
         title: '装饰',
         hideBreadcrumb: false,
@@ -49,7 +49,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'lines1',
       name: 'lines1Demo',
-      component: import('@/views/components/lines/lines1.vue'),
+      component: ()=>import('@/views/components/lines/lines1.vue'),
       meta: {
         title: '时间轴',
         hideBreadcrumb: false,
@@ -60,7 +60,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'lines2',
       name: 'lines2Demo',
-      component: import('@/views/components/lines/lines2.vue'),
+      component: ()=>import('@/views/components/lines/lines2.vue'),
       meta: {
         title: '分类轴',
         hideBreadcrumb: false,
@@ -71,7 +71,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'fileList',
       name: 'fileList',
-      component: import('@/views/components/file-list.vue'),
+      component: ()=>import('@/views/components/file-list.vue'),
       meta: {
         title: '文件列表',
         hideBreadcrumb: false,
@@ -82,7 +82,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'canvas',
       name: 'canvas',
-      component: import('@/views/components/canvas.vue'),
+      component: ()=>import('@/views/components/canvas.vue'),
       meta: {
         title: 'canvas',
         hideBreadcrumb: false,
@@ -93,7 +93,7 @@ export const ComponentsDemo: AppRouteRecordRaw = {
     {
       path: 'mouseSelection',
       name: 'mouseSelection',
-      component: import('@/views/components/mouseSelection.vue'),
+      component: ()=>import('@/views/components/mouseSelection.vue'),
       meta: {
         title: 'mouseSelection',
         hideBreadcrumb: false,

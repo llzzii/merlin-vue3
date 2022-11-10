@@ -16,7 +16,7 @@ export const EchartsDemo: AppRouteRecordRaw = {
     {
       path: 'demo1',
       name: 'echartDemo',
-      component: import('@/views/echarts/demo1/index.vue'),
+      component: ()=>import('@/views/echarts/demo1/index.vue'),
       meta: {
         title: 'chart示例1',
         hideBreadcrumb: false,
@@ -27,7 +27,7 @@ export const EchartsDemo: AppRouteRecordRaw = {
     {
       path: 'demo2',
       name: 'echartDemo1',
-      component: import('@/views/echarts/demo2/index.vue'),
+      component: ()=>import('@/views/echarts/demo2/index.vue'),
       meta: {
         title: 'chart示例2',
         hideBreadcrumb: false,

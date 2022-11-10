@@ -100,10 +100,12 @@
   );
   let x = ref();
   provide('layoutInstance', x);
-  init();
 
   onMounted(() => {
+    console.log("🚀 ~ file: GridLayout.vue ~ line 106 ~ onMounted ~ x.value", x.value)
+  init();
     x.value = getCurrentInstance();
+    console.log("🚀 ~ file: GridLayout.vue ~ line 107 ~ onMounted ~ x.value", x.value)
     gridEmitter.emit('layout-mounted', props.layout);
     gridEmitter.emit('layoutInstance', x);
   });

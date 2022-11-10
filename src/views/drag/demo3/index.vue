@@ -83,6 +83,8 @@
     { x: 0, y: 9, w: 2, h: 3, i: '18', resizable: false, draggable: false, static: false },
     { x: 2, y: 6, w: 2, h: 2, i: '19', resizable: false, draggable: false, static: false },
   ];
+  console.log("🚀 ~ file: index.vue ~ line 86 ~ testLayout", testLayout)
+  
 </script>
 <style lang="less" scoped>
   .grid-item {

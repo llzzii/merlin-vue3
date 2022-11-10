@@ -22,11 +22,12 @@
     </div>
     <div class="shape-wrapper">
       <button class="btn1">
-        <svg width="300" height="140" OK xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="30" class="rect" height="80px" width="240px"></rect>
+        <svg width="280" height="120" OK xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" class="rect" height="80px" width="240px"></rect>
         </svg>
         <span class="hover-text">HOVER ME</span>
       </button>
+      <div class="btn parallelogram">Parallelogram</div>
     </div>
   </div>
 </template>
@@ -87,6 +88,7 @@
   }
 </style>
 <style lang="scss" scoped>
+  @import './shape.scss';
   @function randomNum($max, $min: 0, $u: 1) {
     @return ($min + random($max)) * $u;
   }
@@ -99,8 +101,8 @@
     $shadow: 0 0 0 0 randomColor();
 
     @for $i from 0 through $count {
-      $x: #{random(10000) / 10000 * $maxWidth};
-      $y: #{random(10000) / 10000 * $maxHeight};
+      $x: #{calc(random(10000) / 10000) * $maxWidth};
+      $y: #{calc(random(10000) / 10000) * $maxHeight};
 
       $shadow: $shadow, #{$x} #{$y} 0 #{random(5)}px randomColor();
     }

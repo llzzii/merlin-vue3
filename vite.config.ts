@@ -62,7 +62,7 @@ export default ({ mode }: ConfigEnv) => {
       terserOptions: {
         //打包后移除console和注释
         compress: {
-          drop_console: true,
+          drop_console: false,
           drop_debugger: true,
         },
       },

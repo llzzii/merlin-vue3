@@ -40,11 +40,11 @@
   });
   function handleBeforeLeave() {
     loading.value = true;
-    console.log('🚀 ~ file: index.vue ~ line 43 ~ handleBeforeLeave ~ loading', loading);
+    console.log('🚀 ~ file: index.vue ~ line 43 ~ handleBeforeLeave ~ loading', loading,getCaches);
   }
   function handleAfterEnter() {
     loading.value = false;
-    console.log('🚀 ~ file: index.vue ~ line 47 ~ handleAfterEnter ~ loading', loading);
+    console.log('🚀 ~ file: index.vue ~ line 47 ~ handleAfterEnter ~ loading', loading,getCaches);
   }
 </script>
 <style lang="less" scoped>

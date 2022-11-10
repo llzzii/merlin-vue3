@@ -114,10 +114,10 @@
   //   // }
   // });
   gridEmitter.on('layoutInstance', (parent) => {
-    // console.log('layoutInstance', parent);
+    console.log('layoutInstance', parent,unref(parent).props.width);
     if (parent && parent.value) {
       state.rowHeight = unref(parent).props.rowHeight;
-      state.containerWidth = unref(parent).props.width !== null ? unref(parent).props.width : 100;
+      state.containerWidth = unref(parent).props.width != null ? unref(parent).props.width : 100;
       state.margin =
         unref(parent).props.margin !== undefined ? unref(parent).props.margin : [10, 10];
       state.maxRows = unref(parent).props.maxRows;
