@@ -1,8 +1,10 @@
 <template>
-  <EditorContainer v-model:content="content" :style="{ height: '300px' }" />
-  <a-button type="primary" @click="getContent()">获取</a-button>
+  <div>
+    <EditorContainer v-model:content="content" :style="{ height: '300px' }" />
+    <a-button type="primary" @click="getContent()">获取</a-button>
 
-  <EditorContainer :is-edit="false" :style="{ height: '300px' }" :content="content" />
+    <EditorContainer :is-edit="false" :style="{ height: '300px' }" :content="content" />
+  </div>
 </template>
 
 <script lang="ts" setup>

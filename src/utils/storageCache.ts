@@ -40,11 +40,18 @@ class WebStorage {
    */
   set(key: string, value: any, expire: number | null = null) {
     let storageData = '';
+    let cache:any=[]
     try {
       storageData = JSON.stringify({
         value: toRaw(value),
         time: Date.now(),
         expire: !isNullOrUnDef(expire) ? new Date().getTime() + expire * 1000 : null,
+      },function(k,v){
+        if(typeof v==='object' && v!=null){
+          if(cache.includes(v)) return
+          cache.push(v)
+        }
+        return cache
       });
     } catch (e) {
       console.log('🚀 ~ file: storageCache.ts ~ line 50 ~ WebStorage ~ set ~ e', e);

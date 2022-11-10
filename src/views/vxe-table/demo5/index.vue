@@ -1,10 +1,12 @@
 <template>
-  <div class="toolbar">
-    <a-space>
-      <a-button @click="reduceColumn">减一列</a-button>
-    </a-space>
+  <div>
+    <div class="toolbar">
+      <a-space>
+        <a-button @click="reduceColumn">减一列</a-button>
+      </a-space>
+    </div>
+    <a-table :data-source="tableData" :columns="state.columns" />
   </div>
-  <a-table :data-source="tableData" :columns="state.columns" />
 </template>
 <script setup lang="ts">
   import { getTableData } from '@/api/demo';
