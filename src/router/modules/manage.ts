@@ -30,7 +30,7 @@ export const Management: AppRouteRecordRaw = {
           component: ()=>import('@/views/management/document/detail/index.vue'),
           meta: {
             title: '详情',
-            hideBreadcrumb: true,
+            hideBreadcrumb: false,
             hideMenu: true,
             hideTab: true,
             currentActiveMenu: '/manage/document',

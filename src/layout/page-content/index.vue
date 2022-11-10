@@ -20,11 +20,16 @@
         @after-leave="onAfterLeave"
         @leave-cancelled="onLeaveCancelled"
       >
-      <!-- @leave="onLeave" -->
+      <!-- @leave="onLeave" :include="getCaches" 
+      keep-alive属性“include，exclude”的使用:
+       注意：使用include，exclude 属性需要给所有vue类的name赋值，否则 include，exclude将不生效
+      -->
 
-        <keep-alive :include="getCaches">
-          <component :is="Component" :key="route.fullPath" />
+        <keep-alive >
+          <component :is="Component" :key="route.name" />
         </keep-alive>
+        <!-- <component :is="Component" :key="route.name" v-if="!route.meta.keepAlice" /> -->
+
       </transition>
     </router-view>
   </div>
@@ -43,12 +48,16 @@
     },
   );
   const getCaches = computed((): string[] => {
+    console.log("🚀 ~ file: index.vue ~ line 47 ~ getCaches ~  menuStore.getCachedTabList",  menuStore.getCachedTabList)
     return menuStore.getCachedTabList;
+
   });
   const handleBeforeLeave=() =>{
     console.log('🚀 ~ file: index.vue ~ line 43 ~ handleBeforeLeave ~ loading', loading, getCaches);
   }
+  // 当进入过渡完成时调用。
   const handleAfterEnter=()=> {
+    loading.value = false;
 
     console.log('🚀 ~ file: index.vue ~ line 47 ~ handleAfterEnter ~ loading', loading, getCaches);
   }
@@ -58,7 +67,6 @@
     // 调用回调函数 done 表示过渡结束
     // 如果与 CSS 结合使用，则这个回调是可选参数
     done();
-    loading.value = false;
 
   }
   // 在元素被插入到 DOM 之前被调用
@@ -89,4 +97,13 @@
     height: 100%;
     overflow: auto;
   }
+  .fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+}
 </style>
