@@ -13,9 +13,11 @@
       ref="xTable"
       :data="tableData"
       :loading="loading"
-      v-bind="tableConfig"
+      :height="tableConfig.height"
       v-on="tableFunc"
     >
+    <!-- v-bind="tableConfig" -->
+
       <vxe-column v-if="showCheckbox" type="checkbox" fixed="left" width="50" />
       <vxe-column v-if="showSeq" type="seq" fixed="left" title="序号" width="80" />
       <template v-for="columnData in columns" :key="columnData.id">
@@ -146,6 +148,7 @@
     VxeToolbarInstance,
     VxeToolbarProps,
   } from 'vxe-table';
+import { setTableHeight } from '@/utils/tableFn';
 
   const props = withDefaults(
     defineProps<{
@@ -198,7 +201,14 @@
       const $toolbar = xToolbar.value;
       $table.connect($toolbar);
     }
+    if(!props.tableConfig?.height){
+      props.tableConfig.height=setTableHeight(props)
+      // props.tableConfig.height=1000
+      xTable.value.refreshScroll()
+    }
+    console.log("🚀 ~ file: DefaultTable.vue:208 ~ nextTick ~ props.tableConfig", props.tableConfig)
   });
+    
 </script>
 
 <style lang="less">

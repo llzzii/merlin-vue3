@@ -6,11 +6,10 @@ export const defaultTableConfig: VxeTableProps = {
   size: 'small', // 'medium, small, mini'
   showHeader: true,
   showFooter: true,
-  maxHeight: '400px',
   resizable: true,
   showHeaderOverflow: true,
   showOverflow: true,
-  columnConfig: { minWidth: '50px' },
+  columnConfig: { minWidth: '150px' },
   rowConfig: { isCurrent: true, isHover: true },
   rowClassName: 'ml-table-row',
   headerRowClassName: 'ml-table-header',

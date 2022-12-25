@@ -4,9 +4,9 @@ import { Recordable } from 'vite-plugin-mock';
 
 export function resultSuccess<T = Recordable>(result: T, { message = 'ok' } = {}) {
   return {
-    code: 0,
-    result,
-    message,
+    code: '0000',
+    data:result,
+    msg:message,
     type: 'success',
   };
 }
@@ -30,9 +30,9 @@ export function resultPageSuccess<T = any>(
 
 export function resultError(message = 'Request failed', { code = -1, result = null } = {}) {
   return {
-    code,
-    result,
-    message,
+    code: '9999',
+    data:result,
+    msg:message,
     type: 'error',
   };
 }

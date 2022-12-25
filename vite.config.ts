@@ -85,6 +85,11 @@ export default ({ mode }: ConfigEnv) => {
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/qiniu-api/, ''),
         },
+        '/api': {
+          target: 'http://localhost:19080',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
       },
     },
   };

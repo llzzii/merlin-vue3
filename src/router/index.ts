@@ -9,6 +9,7 @@ import { EchartsDemo } from './modules/echarts';
 import { PAGE_NOT_FOUND_ROUTE, REDIRECT_ROUTE } from './modules/error';
 import { Management } from './modules/manage';
 import { VxeDemo } from './modules/vxeDemo';
+import { User } from './modules/user';
 export const LAYOUT = () => import('@/layout/index.vue');
 const routers = [
   {
@@ -37,6 +38,7 @@ const routers = [
   DragDemo,
   OtherDemo,
   CssDemo,
+  User,
   EchartsDemo,
   REDIRECT_ROUTE,
   ComponentsDemo,

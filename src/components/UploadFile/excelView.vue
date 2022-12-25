@@ -19,7 +19,7 @@
 
 <script setup>
   import { ref, onMounted } from 'vue';
-  import { exportExcel } from './export';
+  // import { exportExcel } from './export';
   import LuckyExcel from 'luckyexcel';
 
   const isMaskShow = ref(false);
@@ -143,14 +143,14 @@
     //     document.body.appendChild(elemIF);
     // }
     // elemIF.src = value;
-    exportExcel(luckysheet.getAllSheets(), '下载');
+    // exportExcel(luckysheet.getAllSheets(), '下载');
   };
 
-  // !!! create luckysheet after mounted
+  // !!! create luckysheet after mounted 太慢，先屏蔽
   onMounted(() => {
-    luckysheet.create({
-      container: 'luckysheet',
-    });
+    // luckysheet.create({
+    //   container: 'luckysheet',
+    // });
   });
 </script>
 

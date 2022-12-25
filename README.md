@@ -34,3 +34,5 @@ pnpm dev
 ```bash
 pnpm build
 ```
+
+    // "luckyexcel": "^1.0.1",

@@ -33,13 +33,13 @@ export class HttpService {
     polling: false,
     pollingInterval: 5000,
     // 是否自动调用
-    autoRun: true,
+    autoRun: false,
     // 调用完毕可执行的函数
     onFinish: (e: any) => {
-      if (e.code === 0) {
-        return e.result;
+      if (e.code === '0000') {
+        return e.data;
       } else {
-        console.error(e?.message || 'error');
+        console.error(e?.msg || 'error');
         return [];
       }
     },
@@ -116,41 +116,61 @@ export class HttpService {
       source[key]();
     });
   }
-  promiseRequest = (config: RequestConfig = {}) => {
-    return new Promise((resolve, reject) => {
-      // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
-      if (config.interceptors?.requestInterceptors) {
-        config = config.interceptors.requestInterceptors(config);
-      }
-      const url = config.url;
-      // url存在保存取消请求方法和当前请求url
-      if (url) {
-        this.requestUrlList?.push(url);
-        config.cancelToken = new axios.CancelToken((c) => {
-          this.cancelRequestSourceList?.push({
-            [url]: c,
-          });
+  promiseRequest = async (config: RequestConfig = {}) => {
+    // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
+    if (config.interceptors?.requestInterceptors) {
+      config = config.interceptors.requestInterceptors(config);
+    }
+    const url = config.url;
+    // url存在保存取消请求方法和当前请求url
+    if (url) {
+      this.requestUrlList?.push(url);
+      config.cancelToken = new axios.CancelToken((c) => {
+        this.cancelRequestSourceList?.push({
+          [url]: c,
         });
-      }
-      this.instance
-        .request<any, T>(config)
-        .then((res) => {
-          // 如果我们为单个响应设置拦截器，这里使用单个响应的拦截器
-          if (config.interceptors?.responseInterceptors) {
-            res = config.interceptors.responseInterceptors(res);
-          }
+      });
+    }
+    let res = await this.instance(config);
+    // 如果我们为单个响应设置拦截器，这里使用单个响应的拦截器
+    if (config.interceptors?.responseInterceptors) {
+      res = config.interceptors.responseInterceptors(res);
+    }
+    url && this.delUrl(url);
+    return res;
+    // return new Promise((resolve, reject) => {
+    //   // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
+    //   if (config.interceptors?.requestInterceptors) {
+    //     config = config.interceptors.requestInterceptors(config);
+    //   }
+    //   const url = config.url;
+    //   // url存在保存取消请求方法和当前请求url
+    //   if (url) {
+    //     this.requestUrlList?.push(url);
+    //     config.cancelToken = new axios.CancelToken((c) => {
+    //       this.cancelRequestSourceList?.push({
+    //         [url]: c,
+    //       });
+    //     });
+    //   }
+    //   this.instance(config);
+    //     // .then((res) => {
+    //     //   // 如果我们为单个响应设置拦截器，这里使用单个响应的拦截器
+    //     //   if (config.interceptors?.responseInterceptors) {
+    //     //     res = config.interceptors.responseInterceptors(res);
+    //     //   }
 
-          resolve(res);
-        })
-        .catch((err: any) => {
-          reject(err);
-        })
-        .finally(() => {
-          url && this.delUrl(url);
-        });
-    });
+    //     //   resolve(res);
+    //     // })
+    //     // .catch((err: any) => {
+    //     //   reject(err);
+    //     // })
+    //     // .finally(() => {
+    //     //   url && this.delUrl(url);
+    //     // });
+    // });
   };
-  useRequest = <T>(service: any, options = {}) => {
+  useRequest =  <T>(service: any, options = {}) => {
     // 合并配置项
     const option = Object.assign({}, this.defaultOption, options);
     const loading = ref(false);
@@ -160,6 +180,7 @@ export class HttpService {
       // const option = Object.assign({}, this.defaultOption, options);
       loading.value = true;
       data.value = await promiseRequest(params);
+      console.log('🚀 ~ file: request.ts:163 ~ HttpService ~ run ~ data.value', data.value);
 
       loading.value = false;
       data.value =
@@ -168,7 +189,7 @@ export class HttpService {
       return data.value;
     };
     // 自动调用
-    option.autoRun && run();
+    (option.autoRun) && run();
     // 计算最终使用的函数
     const runComputed = computed(() => {
       //是否开启防抖
@@ -195,6 +216,7 @@ export class HttpService {
   };
 }
 
+export const httpService = new HttpService();
 export interface RequestInterceptors<T> {
   // 请求拦截
   requestInterceptors?: (config: AxiosRequestConfig) => AxiosRequestConfig;

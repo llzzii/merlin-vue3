@@ -232,7 +232,23 @@ const cssDemo = {
     },
   ],
 };
-const menuList = [dashboard, management, components, demos, echarts, system, cssDemo];
+const User = {
+  id: '10',
+  icon: 'icon-CSS-',
+  name: '用户管理',
+  path: '/user',
+  children: [
+    {
+      id: '10-1',
+      icon: 'icon-ziyuan1672',
+      name: '用户列表',
+      path: '/user/list',
+      children: [],
+    },
+   
+  ],
+};
+const menuList = [dashboard, management, components, demos, echarts, system, cssDemo,User];
 export default [
   {
     url: '/basic-api/system/getMenuList',

@@ -19,7 +19,7 @@
   import { renderAsync } from 'docx-preview';
   import axios from 'axios';
   import { previewImageSuffix } from './icon.constrant.js';
-  import LuckyExcel from 'luckyexcel';
+  // import LuckyExcel from 'luckyexcel';
   import { message } from 'ant-design-vue';
   const previewImgUrl = ref('');
   const viewRef = ref(null);
@@ -48,7 +48,7 @@
           docView(props.fileKey);
         }
         if (['xlsx'].includes(suffix)) {
-          excelView(props.fileKey);
+          // excelView(props.fileKey);
         }
       }
     },
@@ -83,36 +83,36 @@
       });
     });
   };
-  const excelView = (url) => {
-    fileVisible.value = true;
+  // const excelView = (url) => {
+  //   fileVisible.value = true;
 
-    // 加载 excel 文件
-    LuckyExcel.transformExcelToLuckyByUrl(url, '', (exportJson, luckysheetfile) => {
-      console.log(exportJson);
-      console.log(luckysheetfile);
-      if (exportJson.sheets == null || exportJson.sheets.length == 0) {
-        message.error('文件读取失败!');
-        return;
-      }
-      // 销毁原来的表格
-      window.luckysheet.destroy();
-      // 重新创建新表格
-      window.luckysheet.create({
-        container: 'fileView', // 设定DOM容器的id
-        showtoolbar: false, // 是否显示工具栏
-        showinfobar: false, // 是否显示顶部信息栏
-        showstatisticBar: false, // 是否显示底部计数栏
-        sheetBottomConfig: false, // sheet页下方的添加行按钮和回到顶部按钮配置
-        allowEdit: false, // 是否允许前台编辑
-        enableAddRow: false, // 是否允许增加行
-        enableAddCol: false, // 是否允许增加列
-        sheetFormulaBar: false, // 是否显示公式栏
-        enableAddBackTop: false, //返回头部按钮
-        data: exportJson.sheets, //表格内容
-        title: exportJson.info.name, //表格标题
-      });
-    });
-  };
+  //   // 加载 excel 文件
+  //   LuckyExcel.transformExcelToLuckyByUrl(url, '', (exportJson, luckysheetfile) => {
+  //     console.log(exportJson);
+  //     console.log(luckysheetfile);
+  //     if (exportJson.sheets == null || exportJson.sheets.length == 0) {
+  //       message.error('文件读取失败!');
+  //       return;
+  //     }
+  //     // 销毁原来的表格
+  //     window.luckysheet.destroy();
+  //     // 重新创建新表格
+  //     window.luckysheet.create({
+  //       container: 'fileView', // 设定DOM容器的id
+  //       showtoolbar: false, // 是否显示工具栏
+  //       showinfobar: false, // 是否显示顶部信息栏
+  //       showstatisticBar: false, // 是否显示底部计数栏
+  //       sheetBottomConfig: false, // sheet页下方的添加行按钮和回到顶部按钮配置
+  //       allowEdit: false, // 是否允许前台编辑
+  //       enableAddRow: false, // 是否允许增加行
+  //       enableAddCol: false, // 是否允许增加列
+  //       sheetFormulaBar: false, // 是否显示公式栏
+  //       enableAddBackTop: false, //返回头部按钮
+  //       data: exportJson.sheets, //表格内容
+  //       title: exportJson.info.name, //表格标题
+  //     });
+  //   });
+  // };
 </script>
 <style lang="less">
   .full-modal {
