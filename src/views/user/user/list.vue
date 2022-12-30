@@ -6,6 +6,7 @@
     :showPagination="true"
     :tableData="tableData"
     :pagination="pagination"
+    @onTableChange="onTableChange"
   >
     <template #toolbar_buttons>
       <form-btn @refresh="refresh"></form-btn>
@@ -26,23 +27,14 @@
   import { onMounted, reactive, unref, ref } from 'vue';
   import _ from 'lodash';
   import formBtn from './form.vue';
-  import { defaultTableConfig, defaultTableFunc } from '@/constrant/table.constrant';
-
   import { VxeColumnProps } from 'vxe-table';
   import { UserService } from '../user.service';
-  const pagination = reactive<any>({
-    currentPage: 1,
-    pageSize: 10,
-    total: 0,
-    onTableChange: ({ type, currentPage, pageSize, $event }) => {
-      pagination.currentPage = currentPage;
-      pagination.pageSize = pageSize;
-      console.log(type, currentPage, pageSize, $event, 111111, pagination.currentPage);
-      handelTableData();
-    },
-  });
+  import {UserListQuery} from "./user.instance"
+
+  const userReq=new UserListQuery()
   const defaultTableWapper = ref({});
-  const { run, data: tableData } = UserService.getUserlist();
+  const { run, data: tableData,pagination,refresh } = UserService.getUserlist();
+
   const columns: VxeColumnProps = [
     {
       key: 'username',
@@ -74,17 +66,11 @@
       title: '创建人',
       width: 100,
     },
-  ];
-  let handelTableDataValue = reactive<Array<any>>([]);
-  const handelTableData = async () => {
-    await run();
-    // if (!unref(tableData)) return [];
-    pagination.total = unref(tableData).length;
-    console.log('🚀 ~ file: list.vue:81 ~ handelTableData ~ tableData', tableData);
-    let start = (pagination.currentPage - 1) * pagination.pageSize;
-    // handelTableDataValue = unref(tableData).slice(start, start + pagination.pageSize);
-    return tableData;
-  };
+  ];   
+  const search=async ()=>{
+    await run({...userReq})
+  }
+
 
   const toolbar = {
     custom: {
@@ -93,12 +79,9 @@
   };
 
  
-  const refresh=async()=>{
-    await handelTableData();
-
-  }
+ 
   onMounted(async () => {
-    await handelTableData();
+    await search();
   });
 </script>
 <style scoped>

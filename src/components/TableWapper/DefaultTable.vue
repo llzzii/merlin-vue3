@@ -11,7 +11,6 @@
     <vxe-table
       class="vxe-table"
       ref="xTable"
-      :data="tableData"
       :loading="loading"
       :height="tableConfig.height"
       v-on="tableFunc"
@@ -122,8 +121,8 @@
           'Sizes',
           pagination.showFullJump ? 'FullJump' : '',
         ]"
-        :current-page="pagination.currentPage"
-        :page-size="pagination.pageSize"
+        v-model:current-page="pagination.currentPage"
+        v-model:page-size="pagination.pageSize"
         :total="pagination.total"
         @page-change="pagination.onTableChange"
         style="height: 48px !important"
@@ -178,19 +177,27 @@ import { setTableHeight } from '@/utils/tableFn';
   );
   let xTable = ref({} as VxeTableInstance);
   let xToolbar = ref({} as VxeToolbarInstance);
+  const emits=defineEmits(['onTableChange'])
   // let configOptions = reactive<any>({});
   // let configPagination = reactive<any>({});
   watch(
     () => props.tableData,
     () => {
-      console.log(
-        '🚀 ~ file: DefaultTable.vue ~ line 210 ~ props.tableData',
-        props.tableData,
-        props.tableFunc,
-      );
+      nextTick(() => {
+        const $table = xTable.value;
+      console.log("🚀 ~ file: DefaultTable.vue:187 ~ $table", $table)
+      if ($table) {
+        $table.reloadData(props.tableData);
+      }
+      })
+     
     },
     { immediate: true, deep: true },
   );
+  const onTableChange = (e) => {
+      e.current = e.currentPage;
+      emits("onTableChange", e);
+    };
   onMounted(() => {
     console.log('1', props);
   });

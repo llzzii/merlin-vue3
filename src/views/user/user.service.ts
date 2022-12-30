@@ -1,12 +1,14 @@
 import { httpService } from "@/api/request";
 
 export class UserService{   
-      static getUserlist() {     
-        return  httpService.useRequest<any[]>({
+      static getUserlist() {            
+          const api= (params) =>httpService.instance({
             url: '/api/user/list',
             timeout: 10000,
             method: 'get',
-          });
+            params
+          })     
+          return  httpService.usePageRequest<any[]>(api);
       }
       static addUser() {
         const api= (data) =>httpService.instance({
